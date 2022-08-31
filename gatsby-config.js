@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `festival-del-chocolate`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Festival del Chocolate`,
+    description: `El 11º festival del chocolate es una homenaje a la cultura olmeca y a su legado, el cacao, del que se nace la bebida ancestral el chocolate.`,
+    siteUrl: `http://www.festivaldelchocolate.mx`,
+    twitterUsername: `@FestivalChoco`,
+    image: `src/assets/images/icon.png`,
+    author: `Fernando Vidal`,
+    keywords: `Cacao, Chocolate, Olmeca, Maya, Azteca, Haciendas, Comalcalco, Cunduacán, Gastronomía, Memorable, Catas`,
   },
   plugins: [
     "gatsby-plugin-image",
