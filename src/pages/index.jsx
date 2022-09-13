@@ -1,8 +1,9 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import React, { useRef, useEffect } from "react";
 import { COLORS } from "../utils/themes/constants";
 import { FacebookOutlined, Instagram, Twitter } from "@mui/icons-material";
+import { StaticImage } from "gatsby-plugin-image";
 
 import VanillaTilt from "vanilla-tilt";
 import Seo from "../assets/components/seo";
@@ -21,254 +22,270 @@ const Index = () => {
   }, [options]);
 
   return (
-    <>
+    <Container
+      maxWidth="xl"
+      style={{
+        height: "100vh",
+        backgroundColor: COLORS.white,
+      }}
+    >
       <Seo />
       <Grid
         container
-        height="100vh"
-        style={{ backgroundColor: COLORS.white }}
-        paddingY={1}
+        direction="column"
+        justifyContent="space-between"
+        spacing={2}
+        height="100%"
       >
-        <Grid item container xs={3} justifyContent="flex-end">
-          <Grid item xs={6} width="100%" />
-          <Grid item container xs={6} justifyContent="right">
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Cacao 01.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 70,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-          <Grid item xs={6}>
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 04.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-          <Grid item xs={6} width="100%" />
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justifyContent="flex-end"
-          alignItems="center"
-        >
-          <Grid item>
-            <img
-              src={require("../assets/images/icon.png").default}
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 420,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-          <Grid item>
-            <Typography textAlign="center" variant="h3" color="primary.dark">
-              16 al 20 de noviembre
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item container xs={3} justifyContent="flex-end">
-          <Grid item container xs={6}>
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 02.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 130,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-
-          <Grid item xs={6} width="100%" />
-          <Grid item xs={6} width="100%" />
-          <Grid item container xs={6} justifyContent="right">
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Canela 02.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 110,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-        </Grid>
-
-        <Grid item container xs={3} justifyContent="flex-start">
-          <Grid item xs={6} width="100%" />
-          <Grid item container xs={6} justifyContent="right">
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 08.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-          <Grid item container xs={6}>
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 01.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-
-          <Grid item xs={6} width="100%" />
-
-          <Grid item xs={6} width="100%" />
-          <Grid item container xs={6} justifyContent="right">
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Canela 02.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 110,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-        </Grid>
-
-        <Grid
-          item
-          container
-          xs={6}
-          justifyContent="center"
-          alignItems="flex-start"
-        >
-          <Grid item>
-            <div ref={tilt}>
-              <img
-                src={require("../assets/images/cacao.png").default}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  maxWidth: 600,
+        <Grid item xs container paddingTop={3}>
+          <Grid item container xs={3} justifyContent="flex-end">
+            <Grid item xs={6} width="100%" />
+            <Grid item container xs={6} justifyContent="right">
+              <StaticImage
+                src="../assets/images/elementosparalanding/Cacao 01.png"
+                alt="Semilla de cacao"
+                placeholder="none"
+                width={90}
+                imgStyle={{
+                  maxHeight: 90,
+                  maxWidth: 90,
                   objectFit: "contain",
+                  width: "100%",
                 }}
-                alt="logo chocolate"
-                loading="lazy"
               />
-            </div>
+            </Grid>
+            <Grid item xs={6}>
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 04.png"
+                alt="Trozo de chocolate"
+                placeholder="none"
+                width={150}
+                imgStyle={{
+                  maxHeight: 150,
+                  maxWidth: 150,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item xs={6} width="100%" />
+          </Grid>
+          <Grid
+            item
+            xs={6}
+            container
+            direction="column"
+            justifyContent="flex-end"
+            alignItems="center"
+          >
+            <Grid item>
+              <StaticImage
+                src="../assets/images/icon.png"
+                alt="Logo"
+                placeholder="none"
+                width={420}
+                imgStyle={{
+                  maxHeight: 200,
+                  maxWidth: 420,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <Typography textAlign="center" variant="h3" color="primary.dark">
+                16 al 20 de noviembre
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid item container xs={3} justifyContent="flex-end">
+            <Grid item container xs={6}>
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 02.png"
+                alt="Trozo de cacao"
+                placeholder="none"
+                width={110}
+                imgStyle={{
+                  maxHeight: 110,
+                  maxWidth: 110,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={6} width="100%" />
+            <Grid item xs={6} width="100%" />
+            <Grid item container xs={6} justifyContent="right">
+              <StaticImage
+                src="../assets/images/elementosparalanding/Canela 02.png"
+                alt="Canela"
+                placeholder="none"
+                width={110}
+                imgStyle={{
+                  maxHeight: 110,
+                  maxWidth: 110,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+          </Grid>
+
+          <Grid item container xs={3} justifyContent="flex-start">
+            <Grid item xs={6} width="100%" />
+            <Grid item container xs={6} justifyContent="right">
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 08.png"
+                alt="Trozo de chocolate"
+                placeholder="none"
+                width={130}
+                imgStyle={{
+                  maxHeight: 130,
+                  maxWidth: 130,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+            <Grid item container xs={6}>
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 01.png"
+                alt="Trozo de chocolate"
+                placeholder="none"
+                width={130}
+                imgStyle={{
+                  maxHeight: 130,
+                  maxWidth: 130,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={6} width="100%" />
+
+            <Grid item xs={6} width="100%" />
+            <Grid item container xs={6} justifyContent="right">
+              <StaticImage
+                src="../assets/images/elementosparalanding/Canela 02.png"
+                alt="Canela"
+                placeholder="none"
+                width={110}
+                imgStyle={{
+                  maxHeight: 110,
+                  maxWidth: 110,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            container
+            xs={6}
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <Grid item>
+              <div ref={tilt}>
+                <StaticImage
+                  src="../assets/images/cacao.png"
+                  alt="Cacao"
+                  placeholder="none"
+                  width={570}
+                  imgStyle={{
+                    maxHeight: 570,
+                    maxWidth: 570,
+                    objectFit: "contain",
+                    width: "100%",
+                  }}
+                />
+              </div>
+            </Grid>
+          </Grid>
+
+          <Grid item container xs={3} justifyContent="flex-start">
+            <Grid item container xs={6}>
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 07.png"
+                alt="Trozo de chocolate"
+                placeholder="none"
+                width={120}
+                imgStyle={{
+                  maxHeight: 120,
+                  maxWidth: 120,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={6} width="100%" />
+
+            <Grid item xs={6} width="100%" />
+            <Grid item container xs={6} justifyContent="right">
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 03.png"
+                alt="Trozo de chocolate"
+                placeholder="none"
+                width={120}
+                imgStyle={{
+                  maxHeight: 120,
+                  maxWidth: 120,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+
+            <Grid item container xs={6}>
+              <StaticImage
+                src="../assets/images/elementosparalanding/Chocolate 04.png"
+                alt="Chocolate"
+                placeholder="none"
+                width={130}
+                imgStyle={{
+                  maxHeight: 130,
+                  maxWidth: 130,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={6} width="100%" />
           </Grid>
         </Grid>
 
-        <Grid item container xs={3} justifyContent="flex-start">
-          <Grid item container xs={6}>
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 07.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
+        <Grid
+          item
+          container
+          spacing={2}
+          justifyContent="center"
+          alignItems="flex-end"
+        >
+          <Grid item>
+            <Link to="home" style={{ textDecoration: "none" }}>
+              <Button variant="contained">Registro de expositor</Button>
+            </Link>
           </Grid>
-
-          <Grid item xs={6} width="100%" />
-
-          <Grid item xs={6} width="100%" />
-          <Grid item container xs={6} justifyContent="right">
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 03.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
+          <Grid item>
+            <Button variant="outlined">Estado de registro</Button>
           </Grid>
-
-          <Grid item container xs={6}>
-            <img
-              src={
-                require("../assets/images/elementosparalanding/Chocolate 04.png")
-                  .default
-              }
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: 150,
-                objectFit: "contain",
-              }}
-              alt="logo chocolate"
-              loading="lazy"
-            />
-          </Grid>
-
-          <Grid item xs={6} width="100%" />
         </Grid>
-        <Grid item container direction="row" paddingX={4}>
-          <Grid item container spacing={2} xs={4} alignItems="flex-end">
+
+        <Grid item container>
+          <Grid
+            item
+            container
+            spacing={2}
+            xs={12}
+            sm={6}
+            justifyContent={{ xs: "center", sm: "left" }}
+          >
             <Grid item>
               <a href="https://www.facebook.com/FestivaldelChocolate">
                 <FacebookOutlined color="disabled" />
@@ -285,31 +302,15 @@ const Index = () => {
               </a>
             </Grid>
           </Grid>
-          <Grid
-            item
-            container
-            xs={8}
-            justifyContent="right"
-            alignItems="flex-end"
-          >
+
+          <Grid item xs={12} sm={6} textAlign={{ xs: "center", sm: "right" }}>
             <Typography variant="caption" color="GrayText">
               Secretaría de Turismo del estado de Tabasco
             </Typography>
           </Grid>
         </Grid>
-
-        {/*   <Grid item container justifyContent="center" spacing={2}>
-        <Grid item>
-          <Link to="home" style={{ textDecoration: "none" }}>
-            <Button variant="contained">Registro de expositor</Button>
-          </Link>
-        </Grid>
-        <Grid item>
-          <Button variant="outlined">Estado de registro</Button>
-        </Grid>
-      </Grid> */}
       </Grid>
-    </>
+    </Container>
   );
 };
 
