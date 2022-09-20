@@ -31,10 +31,12 @@
     "gatsby-plugin-sitemap": "^5.21.0",
     "gatsby-source-filesystem": "^4.21.1",
     "gatsby-transformer-sharp": "^4.21.0",
+    "material-react-table": "^1.0.11",
     "moment": "^2.29.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.35.0",
     "react-toastify": "^9.0.8",
     "sass": "^1.54.5",
     "vanilla-tilt": "^1.7.2"
