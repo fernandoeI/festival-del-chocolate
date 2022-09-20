@@ -3,6 +3,7 @@ import { Button, Container, Grid, TextField, Typography } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import Seo from "../../assets/components/seo";
 import { StaticImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
 
 const Login = () => {
   const {
@@ -17,6 +18,7 @@ const Login = () => {
   });
 
   const onSubmit = (data) => {
+    navigate("/admin");
     console.log("🚀 ~ file: login.jsx ~ line 16 ~ Login ~ data", data);
   };
 
