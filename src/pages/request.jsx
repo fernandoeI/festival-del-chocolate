@@ -35,7 +35,7 @@ const steps = [
   "Documentación requerida",
 ];
 
-const Home = () => {
+const Request = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [data, setData] = useState({});
   const nextStep = () => setActiveStep(activeStep + 1);
@@ -874,4 +874,4 @@ const Documentation = ({ nextStep, prevStep, data }) => {
   );
 };
 
-export default Home;
+export default Request;

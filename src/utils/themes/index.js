@@ -4,6 +4,9 @@ import { COLORS, BASE_THEME, RADIUS } from "./constants";
 export const theme = createTheme({
   ...BASE_THEME,
   palette: {
+    background: {
+      default: COLORS.white,
+    },
     primary: {
       main: "#864332",
       light: "#FCEADE",

@@ -268,7 +268,7 @@ const Index = () => {
           justifyContent="center"
         >
           <Grid item>
-            <Link to="home" style={{ textDecoration: "none" }}>
+            <Link to="request" style={{ textDecoration: "none" }}>
               <Button variant="contained">Registro de expositor</Button>
             </Link>
           </Grid>
