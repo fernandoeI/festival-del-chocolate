@@ -793,7 +793,8 @@ const Documentation = ({ nextStep, prevStep, data }) => {
         telefono: data?.telefono,
         twitter: data?.twitter,
         createAt: new Date(),
-        status: false,
+        observaciones: "",
+        status: "En revisión",
         documents,
       });
 
