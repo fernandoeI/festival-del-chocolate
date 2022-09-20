@@ -19,23 +19,25 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { toast } from "react-toastify";
 import FileSelector from "../assets/components/FileSelector";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
-import { db } from "../utils/server/firebase";
+import { app } from "../utils/server/firebase";
 import { v4 } from "uuid";
+import { toast } from "react-toastify";
+
+const db = getFirestore(app);
 
 const steps = [
   "Información del solicitante",
   "Datos generales de la empresa",
+  "Requerimientos adicionales",
   "Documentación requerida",
 ];
 
 const Home = () => {
   const [activeStep, setActiveStep] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const nextStep = () => setActiveStep(activeStep + 1);
   const prevStep = () => setActiveStep(activeStep - 1);
   const theme = useTheme();
@@ -49,6 +51,7 @@ const Home = () => {
       alignItems="center"
       justifyContent="center"
       padding={5}
+      bgcolor="transparent"
     >
       <Grid item>
         <Typography variant="h4" color={theme.palette.primary.main}>
@@ -83,6 +86,15 @@ const Home = () => {
         ) : null}
 
         {activeStep === 2 ? (
+          <AditionalRequirements
+            data={data}
+            setData={setData}
+            prevStep={prevStep}
+            nextStep={nextStep}
+          />
+        ) : null}
+
+        {activeStep === 3 ? (
           <Documentation
             data={data}
             setData={setData}
@@ -250,7 +262,7 @@ const PersonalInformation = ({ nextStep, data, setData }) => {
           }}
         >
           <MenuItem value="" disabled selected>
-            Seleccione una Cata
+            Seleccione un estado
           </MenuItem>
           {estados.map((estado, key) => (
             <MenuItem key={key} value={estado}>
@@ -281,16 +293,19 @@ const BusinessInformation = ({ nextStep, prevStep, data, setData }) => {
     "Artesanias",
     "Otro",
   ];
+
   const handleNext = async () => {
     if (
-      !data?.nombre?.trim() ||
-      !data?.rfc?.trim() ||
-      !data?.calle?.trim() ||
-      !data?.ext?.trim() ||
-      !data?.colonia?.trim() ||
-      !data?.cp?.trim() ||
-      !data?.municipio?.trim() ||
-      !data?.estado?.trim()
+      !data?.empresa?.trim() ||
+      !data?.telefono?.trim() ||
+      !data?.email?.trim() ||
+      !data?.facebook?.trim() ||
+      !data?.instagram?.trim() ||
+      !data?.twitter?.trim() ||
+      !data?.giro?.trim() ||
+      !data?.productos ||
+      !data?.operacion?.trim() ||
+      !data?.marca?.trim()
     ) {
       return toast.warning("Favor de llenar todos los campos");
     }
@@ -426,10 +441,25 @@ const BusinessInformation = ({ nextStep, prevStep, data, setData }) => {
               control={
                 <Checkbox
                   color="primary"
-                  checked={data?.producto || ""}
-                  onChange={(e) =>
-                    setData({ ...data, producto: e.target.checked })
+                  checked={
+                    data?.productos &&
+                    data?.productos.some((item) => item === producto)
                   }
+                  onChange={(e) => {
+                    const newProductos = data?.productos
+                      ? [...data.productos]
+                      : [];
+
+                    const found = newProductos.findIndex(
+                      (item) => item === producto
+                    );
+                    if (found !== -1) {
+                      newProductos.splice(found, 1);
+                    } else {
+                      newProductos.push(producto);
+                    }
+                    setData({ ...data, productos: newProductos });
+                  }}
                 />
               }
               label={producto}
@@ -437,12 +467,9 @@ const BusinessInformation = ({ nextStep, prevStep, data, setData }) => {
           ))}
         </FormGroup>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={6} style={{ textAlign: "left" }}>
         <FormControl>
-          <FormLabel
-            id="demo-radio-buttons-group-label"
-            style={{ textAlign: "left" }}
-          >
+          <FormLabel id="demo-radio-buttons-group-label">
             ¿Forma parte del programa Esencia Tabasco?
           </FormLabel>
           <RadioGroup
@@ -490,10 +517,200 @@ const BusinessInformation = ({ nextStep, prevStep, data, setData }) => {
   );
 };
 
-const Documentation = ({ nextStep, prevStep, data, setData }) => {
+const AditionalRequirements = ({ nextStep, prevStep, data, setData }) => {
+  const [isHidden, setIsHidden] = useState(true);
+  const handleNext = async () => {
+    /*   if (
+      !data?.adicional1 ||
+      !data?.adicional2 ||
+      !data?.adicional3 ||
+      !data?.mandil ||
+      !data?.participo ||
+      !data?.reutilizaLugar
+    ) {
+      return toast.warning("Favor de llenar todos los campos");
+    } */
+    /* 
+    const query = db.collection("registro");
+
+    const snapshot = await query.get();
+
+    if (!snapshot.empty) {
+      snapshot.forEach((doc) => {
+        const info = doc.data();
+        if (
+          info.email === data.email ||
+          info.name === data.nombre ||
+          info.apellido === data.apellido
+        ) {
+          return toast.error("Ya existe un registro con esos datos");
+        }
+      });
+    }
+ */
+    nextStep();
+  };
+
+  return (
+    <Grid component="form" container spacing={2} maxWidth="md">
+      <Grid item sm={6}>
+        <TextField
+          style={{ textAlign: "left" }}
+          select
+          fullWidth
+          label="Conexión doble sencilla"
+          color="primary"
+          name="adicional"
+          value={data?.adicional1 || ""}
+          onChange={(e) => {
+            setData({ ...data, adicional1: e.target.value });
+          }}
+        >
+          <MenuItem value="" disabled selected>
+            Seleccione cuantos
+          </MenuItem>
+          {[0, 1, 2].map((item, key) => (
+            <MenuItem key={key} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Grid>{" "}
+      <Grid item sm={6}>
+        <TextField
+          style={{ textAlign: "left" }}
+          select
+          fullWidth
+          label="Conexión 110v especial"
+          color="primary"
+          name="adicional2"
+          value={data?.adicional2 || ""}
+          onChange={(e) => {
+            setData({ ...data, adicional2: e.target.value });
+          }}
+        >
+          <MenuItem value="" disabled selected>
+            Seleccione cuantos
+          </MenuItem>
+          {[0, 1, 2].map((item, key) => (
+            <MenuItem key={key} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Grid>
+      <Grid item sm={6}>
+        <TextField
+          style={{ textAlign: "left" }}
+          select
+          fullWidth
+          label="Conexión 220v"
+          color="primary"
+          name="adicional3"
+          value={data?.adicional3 || ""}
+          onChange={(e) => {
+            setData({ ...data, adicional3: e.target.value });
+          }}
+        >
+          <MenuItem value="" disabled selected>
+            Seleccione cuantos
+          </MenuItem>
+          {[0, 1, 2].map((item, key) => (
+            <MenuItem key={key} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Grid>
+      <Grid item sm={6}>
+        <TextField
+          style={{ textAlign: "left" }}
+          select
+          fullWidth
+          label="Mandiles adicionales"
+          color="primary"
+          name="mandil"
+          value={data?.mandil || ""}
+          onChange={(e) => {
+            setData({ ...data, mandil: e.target.value });
+          }}
+        >
+          <MenuItem value="Seleccione cuantos" disabled selected>
+            Seleccione cuantos
+          </MenuItem>
+          {[0, 1, 2, 3, 4, 5].map((item, key) => (
+            <MenuItem key={key} value={item}>
+              {item}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Grid>
+      <Grid item xs={6} style={{ textAlign: "left" }}>
+        <FormControl>
+          <FormLabel
+            id="demo-radio-buttons-group-label"
+            style={{ textAlign: "left" }}
+          >
+            ¿Participó en el 10mo Festival del Chocolate?
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <FormControlLabel
+              value="si"
+              control={<Radio onChange={() => setIsHidden(false)} />}
+              label="Si"
+            />
+            <FormControlLabel
+              value="No"
+              control={<Radio onChange={() => setIsHidden(true)} />}
+              label="No"
+            />
+          </RadioGroup>
+        </FormControl>
+      </Grid>
+      <Grid
+        item
+        xs={6}
+        display={isHidden ? "none" : "block"}
+        style={{ textAlign: "left" }}
+      >
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">
+            ¿Le gustaría utilizar el mismo espacio fisico de aquella edición?
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+            onChange={(e) => {
+              setData({ ...data, reutilizaLugar: e.target.value });
+            }}
+          >
+            <FormControlLabel value="si" control={<Radio />} label="Si" />
+            <FormControlLabel value="No" control={<Radio />} label="No" />
+          </RadioGroup>
+        </FormControl>
+      </Grid>
+      <Grid item container flexDirection="row" spacing={2}>
+        <Grid item>
+          <Button variant="outlined" onClick={prevStep}>
+            Regresar
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button variant="contained" onClick={handleNext}>
+            Siguiente
+          </Button>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+};
+
+const Documentation = ({ nextStep, prevStep, data }) => {
   const [selected, setSelected] = useState([]);
   const [loading, setLoading] = useState(false);
-  const auth = getAuth();
   const files = [
     {
       code: "csf",
@@ -535,14 +752,7 @@ const Documentation = ({ nextStep, prevStep, data, setData }) => {
         .toLocaleDateString()
         .replace(/\//g, "");
 
-      const rfc = data.rfc.length;
-
-      if (rfc === 12 && files.length !== selected.length)
-        return toast.error("Todos los documentos son obligatorios");
-      if (
-        rfc === 13 &&
-        files.filter((x) => x.maxDigitsRFC === 13).length !== selected.length
-      )
+      if (files.length !== selected.length)
         return toast.error("Todos los documentos son obligatorios");
 
       const uploadPromises = selected.map(async (item) => {
@@ -559,14 +769,29 @@ const Documentation = ({ nextStep, prevStep, data, setData }) => {
 
       const docsRef = collection(db, "request");
       await addDoc(docsRef, {
-        name: data?.nombre?.trim(),
-        lastName: data?.apellidoPaterno?.trim(),
-        motherLastName: data?.apellidoMaterno?.trim(),
-        rfc: data?.rfc?.trim(),
-        email: data?.email?.trim(),
-        giro: data?.giro?.trim(),
-        phone: data.telefono,
-        id: auth.currentUser.uid,
+        conexionDobleSencilla: data?.adicional1,
+        conexionDobleEspecial: data?.adicional2,
+        conexion220: data?.adicional3,
+        calle: data?.calle,
+        colonia: data?.colonia,
+        cp: data?.cp,
+        email: data?.email,
+        empresa: data?.empresa,
+        estado: data?.estado,
+        ext: data?.ext,
+        facebook: data?.facebook,
+        giro: data?.giro,
+        instagram: data?.instagram,
+        mandil: data?.mandil,
+        marca: data?.estado,
+        municipio: data?.municipio,
+        nombre: data?.nombre,
+        operacion: data?.operacion,
+        productos: data?.productos,
+        reutilizaLugar: data?.estado,
+        rfc: data?.rfc,
+        telefono: data?.telefono,
+        twitter: data?.twitter,
         createAt: new Date(),
         status: false,
         documents,
@@ -648,4 +873,5 @@ const Documentation = ({ nextStep, prevStep, data, setData }) => {
     </Grid>
   );
 };
+
 export default Home;

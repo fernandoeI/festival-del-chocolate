@@ -23,7 +23,7 @@ const Index = () => {
 
   return (
     <Container
-      maxWidth="xl"
+      maxWidth={false}
       style={{
         height: "100vh",
         backgroundColor: COLORS.white,
@@ -37,7 +37,7 @@ const Index = () => {
         spacing={2}
         height="100%"
       >
-        <Grid item xs container paddingTop={3}>
+        <Grid item xs container>
           <Grid item container xs={3} justifyContent="flex-end">
             <Grid item xs={6} width="100%" />
             <Grid item container xs={6} justifyContent="right">
@@ -61,7 +61,7 @@ const Index = () => {
                 placeholder="none"
                 width={150}
                 imgStyle={{
-                  maxHeight: 150,
+                  maxHeight: 120,
                   maxWidth: 150,
                   objectFit: "contain",
                   width: "100%",
@@ -83,17 +83,17 @@ const Index = () => {
                 src="../assets/images/icon.png"
                 alt="Logo"
                 placeholder="none"
-                width={420}
+                width={400}
                 imgStyle={{
                   maxHeight: 200,
-                  maxWidth: 420,
+                  maxWidth: 400,
                   objectFit: "contain",
                   width: "100%",
                 }}
               />
             </Grid>
             <Grid item>
-              <Typography textAlign="center" variant="h3" color="primary.dark">
+              <Typography textAlign="center" variant="h4" color="primary.dark">
                 16 al 20 de noviembre
               </Typography>
             </Grid>
@@ -141,7 +141,7 @@ const Index = () => {
                 placeholder="none"
                 width={130}
                 imgStyle={{
-                  maxHeight: 130,
+                  maxHeight: 90,
                   maxWidth: 130,
                   objectFit: "contain",
                   width: "100%",
@@ -173,7 +173,7 @@ const Index = () => {
                 placeholder="none"
                 width={110}
                 imgStyle={{
-                  maxHeight: 110,
+                  maxHeight: 90,
                   maxWidth: 110,
                   objectFit: "contain",
                   width: "100%",
@@ -195,10 +195,10 @@ const Index = () => {
                   src="../assets/images/cacao.png"
                   alt="Cacao"
                   placeholder="none"
-                  width={570}
+                  width={560}
                   imgStyle={{
-                    maxHeight: 570,
-                    maxWidth: 570,
+                    maxHeight: 560,
+                    maxWidth: 560,
                     objectFit: "contain",
                     width: "100%",
                   }}
@@ -233,7 +233,7 @@ const Index = () => {
                 placeholder="none"
                 width={120}
                 imgStyle={{
-                  maxHeight: 120,
+                  maxHeight: 90,
                   maxWidth: 120,
                   objectFit: "contain",
                   width: "100%",
@@ -263,9 +263,9 @@ const Index = () => {
         <Grid
           item
           container
+          paddingTop={-16}
           spacing={2}
           justifyContent="center"
-          alignItems="flex-end"
         >
           <Grid item>
             <Link to="home" style={{ textDecoration: "none" }}>
