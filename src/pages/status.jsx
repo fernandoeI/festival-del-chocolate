@@ -54,7 +54,8 @@ const Status = () => {
     try {
       const q = query(
         collection(db, "request"),
-        where("rfc", "==", formData.rfc)
+        where("rfc", "==", formData.rfc),
+        where("folio", "==", formData.folio)
       );
       const querySnapshot = await getDocs(q);
 
@@ -121,9 +122,13 @@ const Status = () => {
                 label="RFC con homoclave"
                 size="small"
                 onChange={(e) =>
-                  setFormData({ ...formData, rfc: e.target.value })
+                  setFormData({
+                    ...formData,
+                    rfc: e.target.value.toUpperCase(),
+                  })
                 }
                 value={formData?.rfc || ""}
+                inputProps={{ maxLength: 13 }}
               />
             </Grid>
             <Grid item>
@@ -133,7 +138,10 @@ const Status = () => {
                 label="Folio de registro"
                 size="small"
                 onChange={(e) =>
-                  setFormData({ ...formData, folio: e.target.value })
+                  setFormData({
+                    ...formData,
+                    folio: e.target.value.toLowerCase(),
+                  })
                 }
                 value={formData?.folio || ""}
               />
@@ -160,7 +168,7 @@ const Status = () => {
                   <TableCell>Acciones</TableCell>
                 </TableHead>
                 <TableBody>
-                  <TableCell>000</TableCell>
+                  <TableCell>{request?.folio}</TableCell>
                   <TableCell>{request?.nombre}</TableCell>
                   <TableCell>{request?.empresa}</TableCell>
                   <TableCell>{request?.rfc}</TableCell>
@@ -170,7 +178,13 @@ const Status = () => {
                     {request?.createAt?.toDate().toLocaleDateString("es-MX")}
                   </TableCell>
                   <TableCell>
-                    <Button variant="outlined" startIcon={<Upgrade />}>
+                    <Button
+                      variant="outlined"
+                      startIcon={<Upgrade />}
+                      disabled={
+                        request?.status === "En revisión" ? true : false
+                      }
+                    >
                       Modificar documentos
                     </Button>
                   </TableCell>

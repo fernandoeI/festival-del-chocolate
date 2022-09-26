@@ -1,4 +1,12 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { Link } from "gatsby";
 import React, { useRef, useEffect } from "react";
 import { COLORS } from "../utils/themes/constants";
@@ -8,7 +16,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import VanillaTilt from "vanilla-tilt";
 import Seo from "../assets/components/seo";
 
+import emailjs from "@emailjs/browser";
+
 const Index = () => {
+  const theme = useTheme();
   const options = {
     speed: 500,
     max: 15,
@@ -205,6 +216,67 @@ const Index = () => {
                 />
               </div>
             </Grid>
+            <Grid item container justifyContent="center" textAlign="center">
+              <Grid item>
+                <StaticImage
+                  src="../assets/images/Belgica.png"
+                  alt="Bandera belgica"
+                  placeholder="none"
+                  width={70}
+                  imgStyle={{
+                    maxHeight: 70,
+                    maxWidth: 70,
+                    objectFit: "contain",
+                    width: "100%",
+                  }}
+                />
+
+                <Typography variant="subtitle1" color="primary">
+                  PAÍS INVITADO
+                </Typography>
+              </Grid>
+              <Grid item display={{ xs: "none", sm: "flex" }}>
+                <Box
+                  sx={{
+                    content: '""',
+                    width: 2,
+                    height: "100%",
+                    backgroundColor: theme.palette.primary.main,
+                    marginX: 2,
+                  }}
+                ></Box>
+              </Grid>
+              <Grid item>
+                <StaticImage
+                  src="../assets/images/Baja Cal.png"
+                  alt="Bandera belgica"
+                  placeholder="none"
+                  width={70}
+                  imgStyle={{
+                    maxHeight: 70,
+                    maxWidth: 70,
+                    objectFit: "contain",
+                    width: "100%",
+                  }}
+                />
+
+                <Typography variant="subtitle1" color="primary">
+                  ESTADO INVITADO
+                </Typography>
+              </Grid>
+            </Grid>
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria_compressed.pdf?alt=media&token=5085884e-fe80-479d-9cc4-db395ecbf562"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              <Typography
+                color="primary"
+                style={{ textDecoration: "underline" }}
+              >
+                Consulta la convocatoria
+              </Typography>
+            </a>
           </Grid>
 
           <Grid item container xs={3} justifyContent="flex-start">
@@ -273,7 +345,9 @@ const Index = () => {
             </Link>
           </Grid>
           <Grid item>
-            <Button variant="outlined">Estado de registro</Button>
+            <Link to="status" style={{ textDecoration: "none" }}>
+              <Button variant="outlined">Estado de registro</Button>
+            </Link>
           </Grid>
         </Grid>
 
@@ -304,9 +378,11 @@ const Index = () => {
           </Grid>
 
           <Grid item xs={12} sm={6} textAlign={{ xs: "center", sm: "right" }}>
-            <Typography variant="caption" color="GrayText">
-              Secretaría de Turismo del estado de Tabasco
-            </Typography>
+            <a href="https://tabasco.gob.mx/turismo">
+              <Typography variant="caption" color="GrayText">
+                Secretaría de Turismo del estado de Tabasco
+              </Typography>
+            </a>
           </Grid>
         </Grid>
       </Grid>
