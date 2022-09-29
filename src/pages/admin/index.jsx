@@ -14,6 +14,7 @@ import MaterialReactTable from "material-react-table";
 import Seo from "../../assets/components/seo";
 import { app } from "../../utils/server/firebase";
 import RequestDetails from "../../assets/components/RequestDetails";
+import { getRequests } from "../../services/admin";
 
 const Index = () => {
   const theme = useTheme();
@@ -58,22 +59,18 @@ const Index = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const q = query(collection(db, "request"));
-        const snapshot = await getDocs(q);
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      setData(await getRequests());
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        let docData = [];
-        snapshot.forEach((doc) => docData.push(doc.data()));
-        setData(docData);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -126,6 +123,7 @@ const Index = () => {
           open={open}
           setOpen={setOpen}
           request={requestSelected}
+          refresh={fetchData}
         />
       ) : null}
     </Container>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -7,24 +7,40 @@ import {
   List,
   ListItemButton,
   ListItemText,
-  TextField,
   Typography,
 } from "@mui/material";
 import moment from "moment";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import RequestFeedbackForm from "./RequestFeedbackForm";
 import RequestFeedbackHistory from "./RequestFeedbackHistory";
+import { saveFeedback } from "../../services/admin";
 
-const RequestDetails = ({ open, setOpen, request }) => {
+const RequestDetails = ({ open, setOpen, request, refresh }) => {
+  const [loading, setLoading] = useState(false);
   const {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues: {
-      email: "",
+      status: "",
+      observations: "",
     },
   });
+
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      await saveFeedback(data, request.id);
+      reset({ status: "", observations: "" });
+      if (refresh) refresh();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Dialog maxWidth="lg" open={open} onClose={(e) => setOpen(false)}>
@@ -41,6 +57,8 @@ const RequestDetails = ({ open, setOpen, request }) => {
               <RequestFeedbackForm
                 control={control}
                 handleSubmit={handleSubmit}
+                onSubmit={onSubmit}
+                loading={loading}
               />
             </Grid>
             <Grid item xs={12}>
@@ -63,7 +81,7 @@ const RequestDetails = ({ open, setOpen, request }) => {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
-            <RequestFeedbackHistory />
+            <RequestFeedbackHistory feedbacks={request?.feedbacks || []} />
           </Grid>
         </Grid>
       </DialogContent>
