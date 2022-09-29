@@ -4,7 +4,10 @@ import { Controller, useForm } from "react-hook-form";
 import Seo from "../../assets/components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
-
+import "../../utils/server/firebase";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { toast } from "react-toastify";
+const auth = getAuth();
 const Login = () => {
   const {
     control,
@@ -17,8 +20,26 @@ const Login = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    navigate("/admin");
+  const onSubmit = async (data) => {
+    try {
+      if (!data?.email?.trim() || !data?.password?.trim()) {
+        return toast.warning("Todos los datos son obligatorios");
+      }
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      navigate("/admin");
+    } catch (error) {
+      toast.error(
+        error.message === "Firebase: Error (auth/invalid-email)."
+          ? "Email invalido"
+          : error.message === "Firebase: Error (auth/user-not-found)."
+          ? "No se encontró usuario registrado."
+          : error.message === "Firebase: Error (auth/wrong-password)."
+          ? "La contraseña es incorrecta"
+          : error.message
+      );
+      console.log(error.message);
+    }
+
     console.log("🚀 ~ file: login.jsx ~ line 16 ~ Login ~ data", data);
   };
 

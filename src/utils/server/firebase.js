@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCRAH_Wjh1P9FrvPUojLRnCdkznB3AvmEA",
   authDomain: "festival-del-chocolate.firebaseapp.com",
