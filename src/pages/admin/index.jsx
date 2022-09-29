@@ -123,7 +123,6 @@ const Index = () => {
           open={open}
           setOpen={setOpen}
           request={requestSelected}
-          refresh={fetchData}
         />
       ) : null}
     </Container>

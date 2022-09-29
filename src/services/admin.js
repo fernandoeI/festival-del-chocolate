@@ -24,6 +24,10 @@ export const saveFeedback = async (data, requestId) => {
       id: uuid4(),
     }),
   });
+  //   console.log(
+  //     "🚀 ~ file: admin.js ~ line 27 ~ saveFeedback ~ updated",
+  //     updated
+  //   );
 };
 
 export const getRequests = async () => {

@@ -15,7 +15,7 @@ import RequestFeedbackForm from "./RequestFeedbackForm";
 import RequestFeedbackHistory from "./RequestFeedbackHistory";
 import { saveFeedback } from "../../services/admin";
 
-const RequestDetails = ({ open, setOpen, request, refresh }) => {
+const RequestDetails = ({ open, setOpen, request }) => {
   const [loading, setLoading] = useState(false);
   const {
     control,
@@ -34,7 +34,6 @@ const RequestDetails = ({ open, setOpen, request, refresh }) => {
       setLoading(true);
       await saveFeedback(data, request.id);
       reset({ status: "", observations: "" });
-      if (refresh) refresh();
     } catch (error) {
       console.error(error);
     } finally {
@@ -81,7 +80,7 @@ const RequestDetails = ({ open, setOpen, request, refresh }) => {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
-            <RequestFeedbackHistory feedbacks={request?.feedbacks || []} />
+            <RequestFeedbackHistory requestId={request.id} />
           </Grid>
         </Grid>
       </DialogContent>
