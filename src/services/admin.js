@@ -36,3 +36,10 @@ export const getRequests = async () => {
   });
   return docData;
 };
+
+export const assignReviewer = async (requestId, reviewer) => {
+  const docRef = doc(db, "request", requestId);
+  await updateDoc(docRef, {
+    reviewer: reviewer,
+  });
+};

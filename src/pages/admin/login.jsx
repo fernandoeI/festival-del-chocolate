@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Grid, TextField, Typography } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import Seo from "../../assets/components/seo";
@@ -8,6 +8,7 @@ import "../../utils/server/firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 const auth = getAuth();
+
 const Login = () => {
   const {
     control,
@@ -42,6 +43,13 @@ const Login = () => {
 
     console.log("🚀 ~ file: login.jsx ~ line 16 ~ Login ~ data", data);
   };
+
+  useEffect(() => {
+    const fetchData = () => {
+      if (auth.currentUser) navigate("/admin");
+    };
+    fetchData();
+  }, []);
 
   return (
     <Container maxWidth={false} style={{ maxWidth: 730 }}>

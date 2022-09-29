@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, signOut } from "firebase/auth";
+import moment from "moment";
+import "moment/locale/es-mx";
 import {
   Box,
+  Button,
   Container,
   Grid,
   IconButton,
@@ -14,7 +18,10 @@ import MaterialReactTable from "material-react-table";
 import Seo from "../../assets/components/seo";
 import { app } from "../../utils/server/firebase";
 import RequestDetails from "../../assets/components/RequestDetails";
-import { getRequests } from "../../services/admin";
+import { assignReviewer, getRequests } from "../../services/admin";
+import { navigate } from "gatsby";
+
+const auth = getAuth();
 
 const Index = () => {
   const theme = useTheme();
@@ -43,16 +50,38 @@ const Index = () => {
     },
     {
       header: "Fecha de solicitud",
-      accessorFn: (data) => data.createAt.seconds,
+      accessorFn: (data) =>
+        moment.utc(data.createAt.seconds * 1000).format("MMMM DD, YYYY"),
     },
   ];
 
-  const handleAttendRequest = (row) => {
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        navigate("/admin/login");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleAttendRequest = async (row) => {
     try {
+      const request = row.original;
+
       // validate if the request has been attended
+      if (!request?.reviewer) {
+        const attend = window.confirm(
+          "Al aceptar, solo usted podrá dar seguimiento a la solicitud."
+        );
+
+        if (!attend) return;
+
+        await assignReviewer(request.id, auth.currentUser.uid);
+      }
 
       // open modal
-      setRequestSelected(row.original);
+      setRequestSelected(request);
       setOpen(true);
     } catch (error) {
       console.error(error);
@@ -61,8 +90,12 @@ const Index = () => {
 
   const fetchData = async () => {
     try {
-      setLoading(true);
-      setData(await getRequests());
+      if (!auth.currentUser) {
+        navigate("/admin/login");
+      } else {
+        setLoading(true);
+        setData(await getRequests());
+      }
     } catch (error) {
       console.error(error);
     } finally {
@@ -80,15 +113,21 @@ const Index = () => {
 
       <Grid container direction="column" spacing={2}>
         <Grid item>
-          <Typography variant="h1">
-            Bienvenido(a) NOMBRE DEL EMPLEADO
-          </Typography>
+          <Typography variant="h1">Bienvenido(a)</Typography>
           <Typography variant="body2" color="GrayText" marginTop={1}>
             Administre las solicitudes de registro de expositores para el evento
             de Festival de Chocolate. Por temas de seguridad y evitar
             confusiones al usuario, es importante recordar que las solicitudes
             solo estarán asignadas a una persona para su revisión.
           </Typography>
+          <Button
+            variant="outlined"
+            color="error"
+            onClick={logout}
+            style={{ display: "block", marginTop: theme.spacing(2) }}
+          >
+            Cerrar sesión
+          </Button>
         </Grid>
 
         <Grid item width="100%">
@@ -106,10 +145,26 @@ const Index = () => {
             positionActionsColumn="last"
             renderRowActions={({ row }) => (
               <Box>
-                <Tooltip title="Atender" placement="top">
-                  <IconButton onClick={(e) => handleAttendRequest(row)}>
-                    <PlayArrow />
-                  </IconButton>
+                <Tooltip
+                  title={
+                    row.original?.reviewer &&
+                    row.original?.reviewer !== auth.currentUser.uid
+                      ? "En atención"
+                      : "Atender"
+                  }
+                  placement="top"
+                >
+                  <span>
+                    <IconButton
+                      onClick={(e) => handleAttendRequest(row)}
+                      disabled={
+                        row.original?.reviewer &&
+                        row.original?.reviewer !== auth.currentUser.uid
+                      }
+                    >
+                      <PlayArrow />
+                    </IconButton>
+                  </span>
                 </Tooltip>
               </Box>
             )}

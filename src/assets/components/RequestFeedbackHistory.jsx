@@ -52,11 +52,11 @@ const RequestFeedbackHistory = ({ requestId }) => {
         <Grid item>
           {loading ? <CircularProgress size={50} color="primary" /> : null}
 
-          {!loading && feedbacks.length <= 0 ? (
+          {!loading && feedbacks && feedbacks.length <= 0 ? (
             <Typography>No hay historial a mostrar de momento</Typography>
           ) : null}
 
-          {!loading && feedbacks.length > 0 ? (
+          {!loading && feedbacks && feedbacks.length > 0 ? (
             <List dense disablePadding>
               {feedbacks
                 .sort((a, b) => {
