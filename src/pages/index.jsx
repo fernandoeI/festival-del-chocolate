@@ -94,10 +94,10 @@ const Index = () => {
                 src="../assets/images/icon.png"
                 alt="Logo"
                 placeholder="none"
-                width={400}
+                width={310}
                 imgStyle={{
                   maxHeight: 200,
-                  maxWidth: 400,
+                  maxWidth: 310,
                   objectFit: "contain",
                   width: "100%",
                 }}
@@ -206,10 +206,10 @@ const Index = () => {
                   src="../assets/images/cacao.png"
                   alt="Cacao"
                   placeholder="none"
-                  width={560}
+                  width={480}
                   imgStyle={{
-                    maxHeight: 560,
-                    maxWidth: 560,
+                    maxHeight: 480,
+                    maxWidth: 480,
                     objectFit: "contain",
                     width: "100%",
                   }}
@@ -273,6 +273,7 @@ const Index = () => {
               <Typography
                 color="primary"
                 style={{ textDecoration: "underline" }}
+                textAlign="center"
               >
                 Consulta la convocatoria
               </Typography>
@@ -341,12 +342,16 @@ const Index = () => {
         >
           <Grid item>
             <Link to="request" style={{ textDecoration: "none" }}>
-              <Button variant="contained">Registro de expositor</Button>
+              <Button size="small" variant="contained">
+                Registro de expositor
+              </Button>
             </Link>
           </Grid>
           <Grid item>
             <Link to="status" style={{ textDecoration: "none" }}>
-              <Button variant="outlined">Estado de registro</Button>
+              <Button size="small" variant="outlined">
+                Estado de registro
+              </Button>
             </Link>
           </Grid>
         </Grid>
