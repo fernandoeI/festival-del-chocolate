@@ -10,7 +10,7 @@ import {
 import { grey } from "@mui/material/colors";
 import moment from "moment";
 import "moment/locale/es-mx";
-import { getStatusColor, removeDuplicates } from "../../utils/functions";
+import { getStatusColor } from "../../utils/functions";
 import { FiberManualRecord } from "@mui/icons-material";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import { app } from "../../utils/server/firebase";

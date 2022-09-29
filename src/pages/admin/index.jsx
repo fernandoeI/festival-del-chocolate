@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { collection, getDocs, getFirestore, query } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { getFirestore } from "firebase/firestore";
 import {
   Box,
   Container,
