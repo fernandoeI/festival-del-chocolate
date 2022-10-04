@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   List,
   Grid,
@@ -12,12 +12,11 @@ import moment from "moment";
 import "moment/locale/es-mx";
 import { getStatusColor } from "../../utils/functions";
 import { FiberManualRecord } from "@mui/icons-material";
-import { doc, getFirestore, onSnapshot } from "firebase/firestore";
-import { app } from "../../utils/server/firebase";
+import { RequestContext } from "../../context/RequestContext";
 
-const db = getFirestore(app);
+const RequestFeedbackHistory = () => {
+  const { requestSelected } = useContext(RequestContext);
 
-const RequestFeedbackHistory = ({ requestId }) => {
   const [loading, setLoading] = useState(false);
   const [feedbacks, setFeedbacks] = useState([]);
 
@@ -25,11 +24,7 @@ const RequestFeedbackHistory = ({ requestId }) => {
     const fetchData = () => {
       try {
         setLoading(true);
-        const unsub = onSnapshot(doc(db, "request", requestId), (doc) => {
-          const data = doc.data();
-          console.log(data.feedbacks);
-          setFeedbacks(data.feedbacks);
-        });
+        setFeedbacks(requestSelected.feedbacks);
       } catch (error) {
         console.error(error);
       } finally {
@@ -37,7 +32,7 @@ const RequestFeedbackHistory = ({ requestId }) => {
       }
     };
     fetchData();
-  }, []);
+  }, [requestSelected]);
 
   return (
     <Grid container bgcolor={grey[100]} borderRadius={1}>

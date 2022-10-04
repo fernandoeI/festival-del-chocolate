@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -11,11 +11,14 @@ import {
 } from "@mui/material";
 import moment from "moment";
 import { useForm } from "react-hook-form";
+import { RequestContext } from "../../context/RequestContext";
 import RequestFeedbackForm from "./RequestFeedbackForm";
 import RequestFeedbackHistory from "./RequestFeedbackHistory";
 import { saveFeedback } from "../../services/admin";
 
-const RequestDetails = ({ open, setOpen, request }) => {
+const RequestDetails = ({ open, setOpen }) => {
+  const { requestSelected: request, setRequestSelected } =
+    useContext(RequestContext);
   const [loading, setLoading] = useState(false);
   const {
     control,
@@ -41,8 +44,13 @@ const RequestDetails = ({ open, setOpen, request }) => {
     }
   };
 
+  const handleClose = () => {
+    setRequestSelected(null);
+    setOpen(false);
+  };
+
   return (
-    <Dialog maxWidth="lg" open={open} onClose={(e) => setOpen(false)}>
+    <Dialog maxWidth="lg" open={open} onClose={handleClose}>
       <DialogTitle>
         {request.nombre}
         <Typography variant="body2" color="GrayText">
@@ -80,7 +88,7 @@ const RequestDetails = ({ open, setOpen, request }) => {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
-            <RequestFeedbackHistory requestId={request.id} />
+            <RequestFeedbackHistory />
           </Grid>
         </Grid>
       </DialogContent>

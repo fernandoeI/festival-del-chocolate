@@ -9,6 +9,7 @@ import {
   updateDoc,
   doc,
   arrayUnion,
+  onSnapshot,
 } from "firebase/firestore";
 import { app } from "../utils/server/firebase";
 
@@ -28,12 +29,17 @@ export const saveFeedback = async (data, requestId) => {
 
 export const getRequests = async () => {
   const q = query(collection(db, "request"));
-  const snapshot = await getDocs(q);
-
   let docData = [];
-  snapshot.forEach((doc) => {
-    docData.push({ ...doc.data(), id: doc.id });
+  onSnapshot(q, (querySnapshot) => {
+    console.log(
+      "🚀 ~ file: admin.js ~ line 34 ~ snapshot ~ querySnapshot",
+      querySnapshot
+    );
+    // snapshot.forEach((doc) => {
+    //   docData.push({ ...doc.data(), id: doc.id });
+    // });
   });
+
   return docData;
 };
 
