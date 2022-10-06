@@ -25,17 +25,21 @@ const RequestDetails = ({ open, setOpen }) => {
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
   } = useForm({
     defaultValues: {
       status: "",
       observations: "",
+      squareMeter: "",
+      pricePerMeter: "",
+      total: "",
     },
   });
 
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      await saveFeedback(data, request.id);
+      await saveFeedback(data, request);
       reset({ status: "", observations: "" });
     } catch (error) {
       console.error(error);
@@ -63,6 +67,7 @@ const RequestDetails = ({ open, setOpen }) => {
             <Grid item xs={12}>
               <RequestFeedbackForm
                 control={control}
+                watch={watch}
                 handleSubmit={handleSubmit}
                 onSubmit={onSubmit}
                 loading={loading}

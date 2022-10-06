@@ -8,14 +8,22 @@ import {
   Typography,
 } from "@mui/material";
 import { Controller } from "react-hook-form";
+import {
+  ACEPT,
+  CANCEL,
+  COMPLETED,
+  IN_PROCESS,
+  NEED_MODIFY,
+} from "../../utils/constants";
 
-const RequestFeedbackForm = ({ control, handleSubmit, onSubmit, loading }) => {
-  const statuses = [
-    "En proceso de validación",
-    "Validación completada",
-    "Aceptado",
-    "Cancelado",
-  ];
+const RequestFeedbackForm = ({
+  control,
+  watch,
+  handleSubmit,
+  onSubmit,
+  loading,
+}) => {
+  const statuses = [IN_PROCESS, NEED_MODIFY, COMPLETED, ACEPT, CANCEL];
 
   return (
     <Grid
@@ -68,6 +76,60 @@ const RequestFeedbackForm = ({ control, handleSubmit, onSubmit, loading }) => {
           )}
         />
       </Grid>
+      {/* ACEPTED FIELDS */}
+      {watch("status") === ACEPT ? (
+        <>
+          <Grid item>
+            <Controller
+              name="squareMeter"
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  fullWidth
+                  size="small"
+                  label="Metro cuadrado*"
+                  multiline
+                />
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <Controller
+              name="pricePerMeter"
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  fullWidth
+                  size="small"
+                  label="Precio por metro*"
+                  multiline
+                />
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <Controller
+              name="total"
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  fullWidth
+                  size="small"
+                  label="Total*"
+                  multiline
+                />
+              )}
+            />
+          </Grid>
+        </>
+      ) : null}
+      {/* ACEPTED FIELDS */}
       <Grid item>
         <Button
           fullWidth

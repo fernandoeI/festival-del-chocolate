@@ -1,5 +1,6 @@
-import { green, orange, red, yellow } from "@mui/material/colors";
 import moment from "moment/moment";
+import { blueGrey, green, orange, red, yellow } from "@mui/material/colors";
+import { ACEPT, CANCEL, COMPLETED, IN_PROCESS, NEED_MODIFY } from "./constants";
 
 export function validateEmail(email) {
   const re =
@@ -9,13 +10,15 @@ export function validateEmail(email) {
 
 export const getStatusColor = (status) => {
   switch (status) {
-    case "En proceso de validación":
+    case IN_PROCESS:
+      return blueGrey[500];
+    case NEED_MODIFY:
       return orange[500];
-    case "Validación completada":
+    case COMPLETED:
       return yellow[600];
-    case "Aceptado":
+    case ACEPT:
       return green[500];
-    case "Cancelado":
+    case CANCEL:
       return red[500];
   }
 };

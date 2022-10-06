@@ -6,7 +6,6 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { app } from "../utils/server/firebase";
-import { getRequests } from "../services/admin";
 
 const db = getFirestore(app);
 
@@ -16,17 +15,6 @@ export const RequestProvider = ({ children }) => {
   const [requests, setRequests] = useState([]);
   const [requestSelected, setRequestSelected] = useState();
   const [loading, setLoading] = useState(true);
-
-  const fetchData = async () => {
-    try {
-      setLoading(true);
-      setRequests(await getRequests());
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
     const fetchData = () => {
