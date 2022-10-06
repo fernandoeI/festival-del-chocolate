@@ -17,15 +17,15 @@ const RequestTable = ({ setOpen }) => {
       const request = row.original;
 
       // validate if the request has been attended
-      // if (!request?.reviewer) {
-      //   const attend = window.confirm(
-      //     "Al aceptar, solo usted podrá dar seguimiento a la solicitud."
-      //   );
+      if (!request?.reviewer) {
+        const attend = window.confirm(
+          "Al aceptar, solo usted podrá dar seguimiento a la solicitud."
+        );
 
-      //   if (!attend) return;
+        if (!attend) return;
 
-      //   await assignReviewer(request.id, auth.currentUser.uid);
-      // }
+        await assignReviewer(request.id, auth.currentUser.uid);
+      }
 
       // open modal
       setRequestSelected(request);
