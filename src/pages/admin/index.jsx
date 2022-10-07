@@ -24,17 +24,12 @@ const Index = () => {
       });
   };
 
-  const fetchData = async () => {
-    try {
-      // if (!auth.currentUser) {
-      //   navigate("/admin/login");
-      // }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      if (!auth.currentUser) {
+        navigate("/admin/login");
+      }
+    };
     fetchData();
   }, []);
 

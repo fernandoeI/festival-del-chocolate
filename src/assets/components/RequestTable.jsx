@@ -6,6 +6,7 @@ import { FiberManualRecord, PlayArrow } from "@mui/icons-material";
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { RequestContext } from "../../context/RequestContext";
 import { getLastStatus, getStatusColor } from "../../utils/functions";
+import { assignReviewer } from "../../services/admin";
 
 const auth = getAuth();
 
