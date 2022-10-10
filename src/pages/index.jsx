@@ -16,8 +16,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import VanillaTilt from "vanilla-tilt";
 import Seo from "../assets/components/seo";
 
-import emailjs from "@emailjs/browser";
-
 const Index = () => {
   const theme = useTheme();
   const options = {
