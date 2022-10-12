@@ -1,391 +1,677 @@
 import {
-  Box,
   Button,
   Container,
   Divider,
   Grid,
+  MenuItem,
+  TextField,
   Typography,
   useTheme,
 } from "@mui/material";
-import { Link } from "gatsby";
-import React, { useRef, useEffect } from "react";
-import { COLORS } from "../utils/themes/constants";
-import { FacebookOutlined, Instagram, Twitter } from "@mui/icons-material";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react";
 
-import VanillaTilt from "vanilla-tilt";
 import Seo from "../assets/components/seo";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import { navigate } from "gatsby";
+
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Index = () => {
-  const theme = useTheme();
-  const options = {
-    speed: 500,
-    max: 15,
-    "full-page-listening": true,
+  const [data, setData] = useState({});
+  const actividades = [
+    {
+      title: "SALÓN CHOCOLATE",
+      content:
+        "Todo lo que hay que saber del chocolate reunido en este salón, donde habra conferencias, demo-conferencias y conversatorios impartidos por chefs y personalidades del mundo chocolatero.",
+    },
+    {
+      title: "SALÓN CACAO",
+      content:
+        "De la vista, el olfato y el sabor nace el conocimiento, en este salón podras conocer los diferentes productos derivados del cacao, de la mano de expertos que te guiarán en el mundo del chocolate.",
+    },
+    {
+      title: "CAVA-CAO",
+      content:
+        "En este espacio participa de la degustación de chocolates, vinos y quesos, acompañado de la mano de un chef invitado quien te platicará de sus características e ingredientes  al ritmo de musica viva.",
+    },
+    {
+      title: "PROMESAS DEL CACAO",
+      content:
+        "Conoce a las nuevas promesas de la gastronomía en este salón, Es un espacio destinado para universidades de gastronomía, donde desarrollarán actividades culinarias con platillos hechos con chocolate.",
+    },
+    {
+      title: "CHOCOLATEROS",
+      content:
+        "El cacao y chocolate de Tabasco presentado en una sala de exhibición donde podras encontrar mas de 120 expositores de cacao y chocolate así como los diferentes productos y servicios turísticos que el Estado ofrece.",
+    },
+    {
+      title: "SABOR A TABASCO",
+      content:
+        "Tabasco a través de su gastronomía. Disfruta de la cocina autóctona de las culturas Yokot’an, Zoque, Olmeca y Maya a través de sus cocineras tradiciónales y sus platillos prehispánicos hechos en cocina de leña.",
+    },
+    {
+      title: "EXPERIENCIA SENSORIAL",
+      content:
+        "Disfruta de un espectáculo de imagen, luces y sonido en una experiencia sensorial, a través de un viaje al mundo del cacao del Tabasco prehispánico, conoce los procesos y cómo surgió la bebida ancestral.",
+    },
+    {
+      title: "EXPLORA TABASCO",
+      content:
+        "Conoce todas las maravillas que Tabasco te ofrece a través de sus 7 Grandes Rutas. En esta área turística encuantra recorridos, exposiciones y tours y todo lo que te ofrecen las agencias de viaje y hoteles de Tabasco.",
+    },
+    {
+      title: "ZONA INFANTIL DIF",
+      content:
+        "La aventura y la diversión también es para los niños, lleva a tus pequeños a este espacio dedicado a los juegos para el desarrollo de la niñez y las actividades inclusivas que ayudan a la integración social infantil.",
+    },
+    {
+      title: "IFAT",
+      content:
+        "Conoce todo lo que manos tabasqueñas son capaces de hacer con materiales de la región y disfruta de todos los productos tabasqueños en este espacio dedicado para la promoción de los artesanos del Estado.",
+    },
+    {
+      title: "Sembrando Vida – SEDAFOP  |  Esencia Tabasco – SEDEC",
+      content:
+        "Espacio destinado para exposición de productos del Programa Sembrando Vida, de los productores tabasqueños en el tema de agroturismo",
+    },
+    {
+      title: "MEDIOS",
+      content:
+        "Disfruta de transmisiones en vivo y grabaciones de los programas de radio y televición, así como de lives de influencers que estaran en el festival con entrevistas a personalidades distinguidas del ambito chocolatero.",
+    },
+  ];
+  const estados = [
+    "Aguascalientes",
+    "Baja California",
+    "Baja California Sur",
+    "Campeche",
+    "Chiapas",
+    "Chihuahua",
+    "Coahuila",
+    "Colima",
+    "Ciudad de México",
+    "Durango",
+    "Guanajuato",
+    "Guerrero",
+    "Hidalgo",
+    "Jalisco",
+    "Estado de México",
+    "Michoacán",
+    "Morelos",
+    "Nayarit",
+    "Nuevo León",
+    "Oaxaca",
+    "Puebla",
+    "Querétaro",
+    "Quintana Roo",
+    "San Luis Potosí",
+    "Sinaloa",
+    "Sonora",
+    "Tabasco",
+    "Tamaulipas",
+    "Tlaxcala",
+    "Veracruz",
+    "Yucatán",
+    "Zacatecas",
+  ];
+
+  const handleSubmit = async () => {
+    if (
+      !data?.nombre?.trim() ||
+      !data?.apellido?.trim() ||
+      !data?.telefono?.trim() ||
+      !data?.email?.trim() ||
+      !data?.estado ||
+      !data?.medio ||
+      !data?.mensaje?.trim()
+    ) {
+      return toast.warning("Favor de llenar todos los campos");
+    }
+
+    await emailjs.send(
+      "service_q44o3po",
+      "template_o8xpl19",
+      {
+        name: data?.nombre,
+        lastName: data?.lastName,
+        tel: data?.telefono,
+        email: data?.email,
+        estado: data?.estado,
+        medio: data?.medio,
+        mensaje: data?.mensaje,
+      },
+      "s8gxbtmds2srypNlQ"
+    );
   };
-
-  const tilt = useRef(null);
-
-  useEffect(() => {
-    VanillaTilt.init(tilt.current, options);
-  }, [options]);
 
   return (
     <Container
       maxWidth={false}
-      style={{
-        height: "100vh",
-        backgroundColor: COLORS.white,
-      }}
+      sx={{ padding: "0 !important", margin: "0 !important" }}
     >
       <Seo />
+      <Grid container direction="column">
+        <Grid item width="100%">
+          <Splide
+            aria-label="My Favorite Images"
+            options={{ autoplay: true, speed: 1, type: "loop", perPage: 1 }}
+          >
+            <SplideSlide>
+              <img
+                src={require("../assets/images/BANNER1728x611px.png").default}
+                width="100%"
+                alt="Image 1"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src={require("../assets/images/catas.png").default}
+                width="100%"
+                alt="Image 1"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src={require("../assets/images/cena.png").default}
+                width="100%"
+                alt="Image 1"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src={require("../assets/images/convocatoria.png").default}
+                width="100%"
+                alt="Image 1"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src={require("../assets/images/invitados.png").default}
+                width="100%"
+                alt="Image 1"
+              />
+            </SplideSlide>
+          </Splide>
+        </Grid>
+      </Grid>
+      <Container maxWidth="xl">
+        <Grid container direction="column" py={6} px={4}>
+          <Grid
+            item
+            container
+            justifyContent="center"
+            spacing={{ xs: 3, md: 0 }}
+          >
+            <Grid item xs={12} md={6}>
+              <Typography fontSize={16} fontWeight="500" color="GrayText">
+                Eres cacaotero o chocolatero, participa como expositor y forma
+                parte de la experiencia memorable en el 11º Festival del
+                Chocolate Tabasco 2022.
+              </Typography>
+            </Grid>
+
+            <Grid item xs={4} md={2}>
+              <Button
+                variant="contained"
+                size="small"
+                onClick={() => navigate("/request")}
+                style={{
+                  borderRadius: 5,
+                  fontSize: 12,
+                  paddingTop: 3,
+                  paddingBottom: 3,
+                }}
+              >
+                REGISTRO DE EXPOSITOR
+              </Button>
+            </Grid>
+            <Grid item xs={4} md={2}>
+              <Button
+                variant="contained"
+                size="small"
+                onClick={() => navigate("/status")}
+                style={{
+                  borderRadius: 5,
+                  fontSize: 12,
+                  paddingTop: 3,
+                  paddingBottom: 3,
+                }}
+              >
+                ESTADO DE REGISTRO
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider />
+        <Grid container py={{ xs: 6, md: 12 }} px={12} rowSpacing={4}>
+          <Grid item xs={12} md={5} pr={{ md: 12 }}>
+            <Typography variant="h6" pb={4}>
+              FESTIVAL DEL CHOCOLATE
+            </Typography>
+            <Typography
+              variant="body2"
+              color="GrayText"
+              textAlign="justify"
+              lineHeight={1.5}
+              fontWeight="500"
+            >
+              El Festival del Chocolate Tabasco se presenta por primera vez en
+              el año 2010 como una alianza estratégica de la iniciativa privada,
+              prestadores de servicios y el Gobierno de Tabasco bajo el lema
+              “Origen y Sabor” con el objetivo de promover y difundir la
+              tradición cacaotera del Estado, su gastronomía y atraer el turismo
+              nacional e internacional, llevándose a cabo, en esa ocación en el
+              Centro de Convenciones Tabasco 2000.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={7}>
+            <div
+              style={{
+                position: "relative",
+                overflow: "hidden",
+                width: "100%",
+                paddingTop: "56.25%",
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Cx8iZyoXcZI"
+                title="11 Festival del Chocolate Tabasco | 11 años de herencia y trascendencia"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </div>
+          </Grid>
+        </Grid>
+        <Grid container justifyContent="center" py={6}>
+          <Grid item xs={12} pb={6}>
+            <Typography variant="h1" color="#6C3F37" textAlign="center">
+              DIMENSIONES
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={2} textAlign="center">
+            <img
+              src={
+                require("../assets/images/iconosdecolores/Productores.png")
+                  .default
+              }
+              width="100%"
+              style={{ maxWidth: 120 }}
+              alt="Image 1"
+            />
+            <Typography color="#6C3F37" fontWeight="bold" textAlign="center">
+              PRODUCTORES
+            </Typography>
+            <Typography color="GrayText" textAlign="left" fontSize={14}>
+              <ul>
+                <li>Mejores prácticas</li>
+                <li>Incremento de producción.</li>
+                <li>Nuevas técnicas.</li>
+                <li>Networking </li>
+                <li>Producción Orgánica.</li>
+                <li>
+                  Recuperación del concepto de Selva Domesticada (Agrofloresta).
+                </li>
+              </ul>
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={2} textAlign="center">
+            <img
+              src={
+                require("../assets/images/iconosdecolores/Post-productores.png")
+                  .default
+              }
+              width="100%"
+              style={{ maxWidth: 120 }}
+              alt="Image 1"
+            />
+            <Typography color="#6C3F37" fontWeight="bold" textAlign="center">
+              POST-PRODUCTORES
+            </Typography>
+            <Typography color="GrayText" textAlign="left" fontSize={14}>
+              <ul>
+                <li>Mejores prácticas </li>
+                <li>Cacao Grijalva.</li>
+                <li>Nuevas técnicas y tecnologías.</li>
+                <li>Procesos orgánicos.</li>
+                <li>Networking.</li>
+              </ul>
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={2} textAlign="center">
+            <img
+              src={
+                require("../assets/images/iconosdecolores/Chocolateros.png")
+                  .default
+              }
+              width="100%"
+              style={{ maxWidth: 120 }}
+              alt="Image 1"
+            />
+            <Typography color="#6C3F37" fontWeight="bold" textAlign="center">
+              CHOCOLATEROS
+            </Typography>
+            <Typography color="GrayText" textAlign="left" fontSize={14}>
+              <ul>
+                <li>Innovación</li>
+                <li>Cacao Grijalva.</li>
+                <li>Valor de la marca</li>
+                <li>Esencia Tabasco.</li>
+                <li>Nuevas técnicas y tecnología.</li>
+                <li>Networking.</li>
+              </ul>
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={2} textAlign="center">
+            <img
+              src={
+                require("../assets/images/iconosdecolores/Gastronomia.png")
+                  .default
+              }
+              width="100%"
+              style={{ maxWidth: 120 }}
+              alt="Image 1"
+            />
+            <Typography color="#6C3F37" fontWeight="bold" textAlign="center">
+              GASTRONOMÍA
+            </Typography>
+            <Typography color="GrayText" textAlign="left" fontSize={14}>
+              <ul>
+                <li>Nuevos platillos.</li>
+                <li>Chef innovadores con reconocimientos.</li>
+                <li>
+                  Sede de la innovación gastronómica con cacao y chocolate.
+                </li>
+                <li>Escuelas de gastronomía innovadoras.</li>
+              </ul>
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={2} textAlign="center">
+            <img
+              src={
+                require("../assets/images/iconosdecolores/Turismo.png").default
+              }
+              width="100%"
+              style={{ maxWidth: 120 }}
+              alt="Image 1"
+            />
+            <Typography color="#6C3F37" fontWeight="bold" textAlign="center">
+              TURISMO
+            </Typography>
+            <Typography color="GrayText" textAlign="left" fontSize={14}>
+              <ul>
+                <li>
+                  Principal destino turístico del cacao y el chocolate del
+                  mundo.
+                </li>
+                <li>
+                  Visitas y experiencias en campo y las haciendas que relacionen
+                  a los cinco sentidos en la Ruta del Cacaco al Chocolate.
+                </li>
+                <li>Networking Producción Orgánica.</li>
+              </ul>
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container justifyContent="center">
+          <Grid container maxWidth="lg" spacing={6} textAlign="center" py={10}>
+            <Grid item xs={12}>
+              <Typography variant="h1" color="#6C3F37" textAlign="center">
+                ACTIVIDADES
+              </Typography>
+            </Grid>
+            {actividades.map((item, key) => (
+              <Grid item xs={6} md={3} px={1}>
+                <img
+                  src={require("../assets/images/cacaIco.png").default}
+                  width="100%"
+                  style={{ maxWidth: 45, marginTop: 10, marginBottom: 10 }}
+                  alt="Image 1"
+                />
+                <Typography variant="h5" color="#6C3F37" mb={4}>
+                  {item.title}
+                </Typography>
+
+                <Divider />
+                <Typography
+                  color="GrayText"
+                  textAlign="left"
+                  fontSize={14}
+                  mt={4}
+                >
+                  {item.content}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+
+        <Grid container justifyContent="center" py={10} spacing={6}>
+          <Grid item xs={12}>
+            <Typography variant="h1" color="#6C3F37" textAlign="center">
+              HERENCIA Y TRASCENDENCIA
+            </Typography>
+          </Grid>
+          <Grid item xs={10}>
+            <div
+              style={{
+                position: "relative",
+                overflow: "hidden",
+                width: "100%",
+                paddingTop: "56.25%",
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/OLGPD6zBPpI"
+                title="11 Festival del Chocolate Tabasco | Historia del Cacao"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
       <Grid
         container
-        direction="column"
-        justifyContent="space-between"
-        spacing={2}
-        height="100%"
+        style={{ backgroundColor: "#6C3F37" }}
+        justifyContent="center"
       >
-        <Grid item xs container>
-          <Grid item container xs={3} justifyContent="flex-end">
-            <Grid item xs={6} width="100%" />
-            <Grid item container xs={6} justifyContent="right">
-              <StaticImage
-                src="../assets/images/elementosparalanding/Cacao 01.png"
-                alt="Semilla de cacao"
-                placeholder="none"
-                width={90}
-                imgStyle={{
-                  maxHeight: 90,
-                  maxWidth: 90,
-                  objectFit: "contain",
-                  width: "100%",
+        <Grid container maxWidth="lg" px={{ xs: 6 }} py={8} spacing={4}>
+          <Grid item container xs={12} md={6} spacing={2}>
+            <Grid item xs={12}>
+              <Typography variant="h4" color="white" textAlign="center">
+                CONTACTO
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                label="Nombre"
+                style={{ backgroundColor: "white", borderRadius: 5 }}
+                fullWidth
+                value={data?.nombre || ""}
+                onChange={(e) => {
+                  setData({ ...data, nombre: e.target.value });
                 }}
               />
             </Grid>
             <Grid item xs={6}>
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 04.png"
-                alt="Trozo de chocolate"
-                placeholder="none"
-                width={150}
-                imgStyle={{
-                  maxHeight: 120,
-                  maxWidth: 150,
-                  objectFit: "contain",
-                  width: "100%",
+              <TextField
+                label="Apellido"
+                style={{ backgroundColor: "white", borderRadius: 5 }}
+                fullWidth
+                value={data?.apellido || ""}
+                onChange={(e) => {
+                  setData({ ...data, apellido: e.target.value });
                 }}
               />
             </Grid>
-            <Grid item xs={6} width="100%" />
-          </Grid>
-          <Grid
-            item
-            xs={6}
-            container
-            direction="column"
-            justifyContent="flex-end"
-            alignItems="center"
-          >
-            <Grid item>
-              <StaticImage
-                src="../assets/images/icon.png"
-                alt="Logo"
-                placeholder="none"
-                width={310}
-                imgStyle={{
-                  maxHeight: 200,
-                  maxWidth: 310,
-                  objectFit: "contain",
-                  width: "100%",
+            <Grid item xs={6}>
+              <TextField
+                label="Teléfono"
+                style={{ backgroundColor: "white", borderRadius: 5 }}
+                fullWidth
+                value={data?.telefono || ""}
+                onChange={(e) => {
+                  setData({ ...data, telefono: e.target.value });
                 }}
               />
             </Grid>
-            <Grid item>
-              <Typography textAlign="center" variant="h4" color="primary.dark">
-                16 al 20 de noviembre
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item container xs={3} justifyContent="flex-end">
-            <Grid item container xs={6}>
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 02.png"
-                alt="Trozo de cacao"
-                placeholder="none"
-                width={110}
-                imgStyle={{
-                  maxHeight: 110,
-                  maxWidth: 110,
-                  objectFit: "contain",
-                  width: "100%",
+            <Grid item xs={6}>
+              <TextField
+                label="Dirección de correo electrónico"
+                style={{ backgroundColor: "white", borderRadius: 5 }}
+                fullWidth
+                value={data?.email || ""}
+                onChange={(e) => {
+                  setData({ ...data, email: e.target.value });
                 }}
               />
             </Grid>
-
-            <Grid item xs={6} width="100%" />
-            <Grid item xs={6} width="100%" />
-            <Grid item container xs={6} justifyContent="right">
-              <StaticImage
-                src="../assets/images/elementosparalanding/Canela 02.png"
-                alt="Canela"
-                placeholder="none"
-                width={110}
-                imgStyle={{
-                  maxHeight: 110,
-                  maxWidth: 110,
-                  objectFit: "contain",
-                  width: "100%",
+            <Grid item xs={6}>
+              <TextField
+                style={{
+                  textAlign: "left",
+                  backgroundColor: "white",
+                  borderRadius: 5,
                 }}
-              />
-            </Grid>
-          </Grid>
-
-          <Grid item container xs={3} justifyContent="flex-start">
-            <Grid item xs={6} width="100%" />
-            <Grid item container xs={6} justifyContent="right">
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 08.png"
-                alt="Trozo de chocolate"
-                placeholder="none"
-                width={130}
-                imgStyle={{
-                  maxHeight: 90,
-                  maxWidth: 130,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
-              />
-            </Grid>
-            <Grid item container xs={6}>
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 01.png"
-                alt="Trozo de chocolate"
-                placeholder="none"
-                width={130}
-                imgStyle={{
-                  maxHeight: 130,
-                  maxWidth: 130,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
-              />
-            </Grid>
-
-            <Grid item xs={6} width="100%" />
-
-            <Grid item xs={6} width="100%" />
-            <Grid item container xs={6} justifyContent="right">
-              <StaticImage
-                src="../assets/images/elementosparalanding/Canela 02.png"
-                alt="Canela"
-                placeholder="none"
-                width={110}
-                imgStyle={{
-                  maxHeight: 90,
-                  maxWidth: 110,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
-              />
-            </Grid>
-          </Grid>
-
-          <Grid
-            item
-            container
-            xs={6}
-            justifyContent="center"
-            alignItems="flex-start"
-          >
-            <Grid item>
-              <div ref={tilt}>
-                <StaticImage
-                  src="../assets/images/cacao.png"
-                  alt="Cacao"
-                  placeholder="none"
-                  width={480}
-                  imgStyle={{
-                    maxHeight: 480,
-                    maxWidth: 480,
-                    objectFit: "contain",
-                    width: "100%",
-                  }}
-                />
-              </div>
-            </Grid>
-            <Grid item container justifyContent="center" textAlign="center">
-              <Grid item>
-                <StaticImage
-                  src="../assets/images/Belgica.png"
-                  alt="Bandera belgica"
-                  placeholder="none"
-                  width={70}
-                  imgStyle={{
-                    maxHeight: 70,
-                    maxWidth: 70,
-                    objectFit: "contain",
-                    width: "100%",
-                  }}
-                />
-
-                <Typography variant="subtitle1" color="primary">
-                  PAÍS INVITADO
-                </Typography>
-              </Grid>
-              <Grid item display={{ xs: "none", sm: "flex" }}>
-                <Box
-                  sx={{
-                    content: '""',
-                    width: 2,
-                    height: "100%",
-                    backgroundColor: theme.palette.primary.main,
-                    marginX: 2,
-                  }}
-                ></Box>
-              </Grid>
-              <Grid item>
-                <StaticImage
-                  src="../assets/images/Baja Cal.png"
-                  alt="Bandera belgica"
-                  placeholder="none"
-                  width={70}
-                  imgStyle={{
-                    maxHeight: 70,
-                    maxWidth: 70,
-                    objectFit: "contain",
-                    width: "100%",
-                  }}
-                />
-
-                <Typography variant="subtitle1" color="primary">
-                  ESTADO INVITADO
-                </Typography>
-              </Grid>
-            </Grid>
-            <a
-              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria_compressed.pdf?alt=media&token=5085884e-fe80-479d-9cc4-db395ecbf562"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <Typography
+                select
+                fullWidth
+                label="De que ciudad nos contacta"
                 color="primary"
-                style={{ textDecoration: "underline" }}
-                textAlign="center"
+                name="estado"
+                value={data?.estado || ""}
+                onChange={(e) => {
+                  setData({ ...data, estado: e.target.value });
+                }}
               >
-                Consulta la convocatoria
-              </Typography>
-            </a>
-          </Grid>
-
-          <Grid item container xs={3} justifyContent="flex-start">
-            <Grid item container xs={6}>
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 07.png"
-                alt="Trozo de chocolate"
-                placeholder="none"
-                width={120}
-                imgStyle={{
-                  maxHeight: 120,
-                  maxWidth: 120,
-                  objectFit: "contain",
-                  width: "100%",
+                <MenuItem value="" disabled selected>
+                  Seleccione un estado
+                </MenuItem>
+                {estados.map((estado, key) => (
+                  <MenuItem key={key} value={estado}>
+                    {estado}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                style={{
+                  textAlign: "left",
+                  backgroundColor: "white",
+                  borderRadius: 5,
+                }}
+                select
+                fullWidth
+                label="Como podemos contactarle"
+                color="primary"
+                name="medio"
+                value={data?.medio || ""}
+                onChange={(e) => {
+                  setData({ ...data, medio: e.target.value });
+                }}
+              >
+                <MenuItem value="" disabled selected>
+                  Seleccione un medio
+                </MenuItem>
+                {["Teléfono", "Whatsapp", "Correo electrónico"].map(
+                  (medio, key) => (
+                    <MenuItem key={key} value={medio}>
+                      {medio}
+                    </MenuItem>
+                  )
+                )}
+              </TextField>
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                style={{
+                  textAlign: "left",
+                  backgroundColor: "white",
+                  borderRadius: 5,
+                }}
+                id="outlined-textarea"
+                label="Mensaje"
+                rows={6}
+                multiline
+                fullWidth
+                value={data?.mensaje || ""}
+                onChange={(e) => {
+                  setData({ ...data, mensaje: e.target.value });
                 }}
               />
             </Grid>
-
-            <Grid item xs={6} width="100%" />
-
-            <Grid item xs={6} width="100%" />
-            <Grid item container xs={6} justifyContent="right">
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 03.png"
-                alt="Trozo de chocolate"
-                placeholder="none"
-                width={120}
-                imgStyle={{
-                  maxHeight: 90,
-                  maxWidth: 120,
-                  objectFit: "contain",
-                  width: "100%",
+            <Grid item>
+              <Button
+                variant="outlined"
+                size="large"
+                style={{
+                  borderRadius: 3,
+                  color: "white",
+                  borderWidth: 2,
+                  borderColor: "white",
                 }}
-              />
-            </Grid>
-
-            <Grid item container xs={6}>
-              <StaticImage
-                src="../assets/images/elementosparalanding/Chocolate 04.png"
-                alt="Chocolate"
-                placeholder="none"
-                width={130}
-                imgStyle={{
-                  maxHeight: 130,
-                  maxWidth: 130,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
-              />
-            </Grid>
-
-            <Grid item xs={6} width="100%" />
-          </Grid>
-        </Grid>
-
-        <Grid
-          item
-          container
-          paddingTop={-16}
-          spacing={2}
-          justifyContent="center"
-        >
-          <Grid item>
-            <Link to="request" style={{ textDecoration: "none" }}>
-              <Button size="small" variant="contained">
-                Registro de expositor
+                onClick={handleSubmit}
+              >
+                Enviar
               </Button>
-            </Link>
+            </Grid>
+          </Grid>
+          <Grid item container xs={12} md={6}>
+            <div
+              style={{
+                position: "relative",
+                overflow: "hidden",
+                width: "100%",
+                paddingTop: "56.25%",
+              }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.3478469010856!2d-92.9670495!3d18.0090535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd7c5ed5e5927%3A0x8dd8cf8efa87ca3a!2sNave%203%2C%20Parque%20Tabasco%2C%2086037%20Villahermosa%2C%20Tab.!5e0!3m2!1ses-419!2smx!4v1665588686191!5m2!1ses-419!2smx"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </div>
           </Grid>
           <Grid item>
-            <Link to="status" style={{ textDecoration: "none" }}>
-              <Button size="small" variant="outlined">
-                Estado de registro
-              </Button>
-            </Link>
-          </Grid>
-        </Grid>
-
-        <Grid item container>
-          <Grid
-            item
-            container
-            spacing={2}
-            xs={12}
-            sm={6}
-            justifyContent={{ xs: "center", sm: "left" }}
-          >
-            <Grid item>
-              <a href="https://www.facebook.com/FestivaldelChocolate">
-                <FacebookOutlined color="disabled" />
-              </a>
-            </Grid>
-            <Grid item>
-              <a href="https://www.instagram.com/festivaldelchocolate/">
-                <Instagram color="disabled" />
-              </a>
-            </Grid>
-            <Grid item>
-              <a href="https://twitter.com/FestivalChoco">
-                <Twitter color="disabled" />
-              </a>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12} sm={6} textAlign={{ xs: "center", sm: "right" }}>
-            <a href="https://tabasco.gob.mx/turismo">
-              <Typography variant="caption" color="GrayText">
-                Secretaría de Turismo del estado de Tabasco
-              </Typography>
-            </a>
+            <Button
+              style={{ color: "white", textAlign: "center" }}
+              variant="text"
+              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FAviso%20de%20privacidad_.pdf?alt=media&token=a3687f36-429e-4d8d-b59f-2ba4f8ce88e2"
+            >
+              Aviso de privacidad
+            </Button>
           </Grid>
         </Grid>
       </Grid>
