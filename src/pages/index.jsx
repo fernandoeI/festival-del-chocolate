@@ -245,7 +245,12 @@ const Index = () => {
           </Grid>
         </Grid>
         <Divider />
-        <Grid container py={{ xs: 6, md: 12 }} px={12} rowSpacing={4}>
+        <Grid
+          container
+          py={{ xs: 6, md: 12 }}
+          px={{ xs: 4, md: 12 }}
+          rowSpacing={4}
+        >
           <Grid item xs={12} md={5} pr={{ md: 12 }}>
             <Typography variant="h6" pb={4}>
               FESTIVAL DEL CHOCOLATE
