@@ -120,6 +120,7 @@ const Login = () => {
                   {...field}
                   fullWidth
                   size="small"
+                  type="password"
                   label="Contraseña*"
                   error={!!errors.password?.type}
                   helperText={

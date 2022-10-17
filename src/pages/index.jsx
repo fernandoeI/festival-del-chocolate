@@ -144,6 +144,8 @@ const Index = () => {
       },
       "s8gxbtmds2srypNlQ"
     );
+
+    return toast.done("Su mensaje se ha enviado con éxito");
   };
 
   return (
@@ -540,6 +542,7 @@ const Index = () => {
                 onChange={(e) => {
                   setData({ ...data, telefono: e.target.value });
                 }}
+                type="tel"
               />
             </Grid>
             <Grid item xs={6}>
@@ -547,6 +550,7 @@ const Index = () => {
                 label="Dirección de correo electrónico"
                 style={{ backgroundColor: "white", borderRadius: 5 }}
                 fullWidth
+                type="email"
                 value={data?.email || ""}
                 onChange={(e) => {
                   setData({ ...data, email: e.target.value });

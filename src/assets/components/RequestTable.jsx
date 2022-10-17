@@ -45,6 +45,7 @@ const RequestTable = ({ setOpen }) => {
       accessorKey: "rfc",
       header: "RFC",
     },
+    { accessorKey: "giro", header: "Giro" },
     {
       accessorKey: "empresa",
       header: "Empresa",

@@ -5,6 +5,8 @@ import { getFirestore, updateDoc, doc, arrayUnion } from "firebase/firestore";
 import { app } from "../utils/server/firebase";
 import { ACEPT } from "../utils/constants";
 
+import emailjs from "@emailjs/browser";
+
 const db = getFirestore(app);
 
 export const saveFeedback = async (data, request) => {
@@ -29,6 +31,18 @@ export const saveFeedback = async (data, request) => {
       id: uuid4(),
     }),
   });
+
+  await emailjs.send(
+    "service_q44o3po",
+    "template_1nt3qwq",
+    {
+      name: request?.nombre,
+      to_email: request?.email,
+      empresa: request?.empresa,
+      folio: request?.folio,
+    },
+    "s8gxbtmds2srypNlQ"
+  );
 };
 
 export const assignReviewer = async (requestId, reviewer) => {

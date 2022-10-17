@@ -23,10 +23,19 @@ import {
 } from "firebase/firestore";
 import { app } from "../utils/server/firebase";
 import { toast } from "react-toastify";
-import { Upgrade } from "@mui/icons-material";
+import {
+  FiberManualRecord,
+  RequestPageTwoTone,
+  Upgrade,
+} from "@mui/icons-material";
 import moment from "moment";
 import "moment/locale/es-mx";
 import FileSelector from "../assets/components/FileSelector";
+import {
+  getLastFeedback,
+  getLastStatus,
+  getStatusColor,
+} from "../utils/functions";
 
 const db = getFirestore(app);
 
@@ -174,8 +183,17 @@ const Status = () => {
                   <TableCell>{request?.nombre}</TableCell>
                   <TableCell>{request?.empresa}</TableCell>
                   <TableCell>{request?.rfc}</TableCell>
-                  <TableCell>{request?.status}</TableCell>
-                  <TableCell>{request?.observaciones}</TableCell>
+                  <TableCell>
+                    <FiberManualRecord
+                      fontSize="small"
+                      style={{
+                        marginRight: 6,
+                        color: getStatusColor(getLastStatus(request)),
+                      }}
+                    />
+                    {getLastStatus(request)}
+                  </TableCell>
+                  <TableCell>{getLastFeedback(request)}</TableCell>
                   <TableCell>
                     {request?.createAt?.toDate().toLocaleDateString("es-MX")}
                   </TableCell>
@@ -184,9 +202,10 @@ const Status = () => {
                       variant="outlined"
                       startIcon={<Upgrade />}
                       disabled={
-                        request?.status === "En proceso de validación"
+                        true
+                        /* request?.status === "En proceso de validación"
                           ? true
-                          : false
+                          : false */
                       }
                     >
                       Modificar documentos

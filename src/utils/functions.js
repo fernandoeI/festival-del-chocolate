@@ -37,3 +37,18 @@ export const getLastStatus = (request) => {
     return request.status;
   }
 };
+
+export const getLastFeedback = (request) => {
+  if (request?.feedbacks) {
+    const status = request.feedbacks.sort((a, b) => {
+      const dateA = moment.utc(a.createAt * 1000);
+      const dateB = moment.utc(b.createAt * 1000);
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      return 0;
+    });
+    return status[0].observations;
+  } else {
+    return request.observations;
+  }
+};
