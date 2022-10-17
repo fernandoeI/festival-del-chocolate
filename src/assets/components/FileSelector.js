@@ -1,12 +1,14 @@
 import React, { useRef, useState } from "react";
-import { Button, Typography } from "@mui/material";
+import { Button, IconButton, Tooltip, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 import { toast } from "react-toastify";
+import { Visibility } from "@mui/icons-material";
 
 const useStyles = makeStyles({
   root: {
     margin: "20px 0",
+    width: "100%",
 
     "& div:nth-child(2)": {
       marginTop: 10,
@@ -31,6 +33,7 @@ const FileSelector = ({
   selectionButtonText,
   required = false,
   onChange,
+  currentDoc,
 }) => {
   const classes = useStyles();
   const inputRef = useRef(null);
@@ -59,14 +62,28 @@ const FileSelector = ({
     <div className={classes.root}>
       {label && <Typography color="textSecondary">{label}</Typography>}
       <div>
-        <Button
-          variant="outlined"
-          fullWidth
-          color="primary"
-          onClick={handleClick}
-        >
-          {selectionButtonText || "Seleccionar documento"}
-        </Button>
+        <div style={{ display: "flex", width: "100%" }}>
+          <Button
+            variant="outlined"
+            fullWidth
+            color="primary"
+            onClick={handleClick}
+          >
+            {selectionButtonText || "Seleccionar documento"}
+          </Button>
+          {currentDoc ? (
+            <Tooltip title="Ver documento subido previamente">
+              <IconButton
+                component="a"
+                href={currentDoc}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Visibility />
+              </IconButton>
+            </Tooltip>
+          ) : null}
+        </div>
 
         {file && (
           <Typography

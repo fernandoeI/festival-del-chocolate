@@ -932,11 +932,13 @@ const Documentation = ({ nextStep, prevStep, data }) => {
       ) : null}
 
       <Grid item container flexDirection="row" spacing={2}>
-        <Grid item>
-          <Button disabled={loading} variant="outlined" onClick={prevStep}>
-            Regresar
-          </Button>
-        </Grid>
+        {prevStep ? (
+          <Grid item>
+            <Button disabled={loading} variant="outlined" onClick={prevStep}>
+              Regresar
+            </Button>
+          </Grid>
+        ) : null}
         <Grid item>
           <Button disabled={loading} variant="contained" type="submit">
             Siguiente
