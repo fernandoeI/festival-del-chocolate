@@ -18,6 +18,8 @@ import { navigate } from "gatsby";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
+import { validateEmail } from "../utils/functions";
+
 const Index = () => {
   const [data, setData] = useState({});
   const actividades = [
@@ -122,30 +124,35 @@ const Index = () => {
       !data?.nombre?.trim() ||
       !data?.apellido?.trim() ||
       !data?.telefono?.trim() ||
-      !data?.email?.trim() ||
       !data?.estado ||
       !data?.medio ||
       !data?.mensaje?.trim()
     ) {
       return toast.warning("Favor de llenar todos los campos");
+    } else if (!validateEmail(data?.email?.trim())) {
+      return toast.info("Revise que el correo electrónico sea valido");
     }
 
-    await emailjs.send(
-      "service_q44o3po",
-      "template_o8xpl19",
-      {
-        name: data?.nombre,
-        lastName: data?.lastName,
-        tel: data?.telefono,
-        email: data?.email,
-        estado: data?.estado,
-        medio: data?.medio,
-        mensaje: data?.mensaje,
-      },
-      "s8gxbtmds2srypNlQ"
-    );
+    try {
+      await emailjs.send(
+        "service_q44o3po",
+        "template_o8xpl19",
+        {
+          name: data?.nombre,
+          lastName: data?.lastName,
+          tel: data?.telefono,
+          email: data?.email,
+          estado: data?.estado,
+          medio: data?.medio,
+          mensaje: data?.mensaje,
+        },
+        "s8gxbtmds2srypNlQ"
+      );
 
-    return toast.done("Su mensaje se ha enviado con éxito");
+      return toast.success("Su mensaje se ha enviado con éxito.");
+    } catch (error) {
+      return toast.warning("Ocurrio un error: por favor intente más tarde");
+    }
   };
 
   return (

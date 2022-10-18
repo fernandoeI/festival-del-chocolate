@@ -16,6 +16,8 @@ import { toast } from "react-toastify";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { app } from "../../utils/server/firebase";
 
+import emailjs from "@emailjs/browser";
+
 const db = getFirestore(app);
 
 const RequestCardInformation = ({ request }) => {
@@ -63,6 +65,16 @@ const RequestCardInformation = ({ request }) => {
       });
 
       toast.success("Documentos actualizados. La página se recargará.");
+      await emailjs.send(
+        "service_q44o3po",
+        "template_gn80i6k",
+        {
+          name: request?.nombre,
+          empresa: request?.empresa,
+          folio: request?.folio,
+        },
+        "s8gxbtmds2srypNlQ"
+      );
       setTimeout(() => window.location.reload(), 2000);
     } catch (error) {
       toast.error(

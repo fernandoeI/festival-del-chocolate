@@ -37,6 +37,7 @@ import {
   getStatusColor,
 } from "../utils/functions";
 import RequestCardInformation from "../assets/components/RequestCardInformation";
+import { navigate } from "gatsby";
 
 const db = getFirestore(app);
 
@@ -85,6 +86,7 @@ const Status = () => {
         <Grid item container spacing={2}>
           <Grid item xs={12} sm={4} textAlign="center">
             <StaticImage
+              onClick={() => navigate("/")}
               src="../assets/images/icon.png"
               alt="Logo"
               placeholder="none"
