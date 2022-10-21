@@ -19,6 +19,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 import { validateEmail } from "../utils/functions";
+import Navbar from "../assets/components/Navbar";
 
 const Index = () => {
   const [data, setData] = useState({});
@@ -161,6 +162,7 @@ const Index = () => {
       sx={{ padding: "0 !important", margin: "0 !important" }}
     >
       <Seo />
+      <Navbar />
       <Grid container direction="column">
         <Grid item width="100%">
           <Splide
