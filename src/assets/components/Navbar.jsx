@@ -1,9 +1,30 @@
-import React from "react";
-import { Grid, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Button, Grid, Menu, MenuItem, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
+import { makeStyles } from "@mui/styles";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
+const useStyles = makeStyles((theme) => ({
+  image: {
+    padding: 10,
+    width: "100%",
+    maxWidth: 300,
+    [theme.breakpoints.up("md")]: {
+      float: "right",
+    },
+  },
+}));
 
 const Navbar = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Grid
       container
@@ -12,7 +33,7 @@ const Navbar = () => {
       alignItems="center"
     >
       <Grid item container pl={8}>
-        <Grid item container xs={1} py={2}>
+        <Grid item container xs={3} lg={1} py={2}>
           <StaticImage
             onClick={() => navigate("/")}
             src="../images/logoNegativo.png"
@@ -26,6 +47,7 @@ const Navbar = () => {
             }}
           />
         </Grid>
+
         <Grid
           item
           container
@@ -34,6 +56,7 @@ const Navbar = () => {
           justifyContent="space-evenly"
           alignItems="center"
           px={2}
+          display={{ xs: "none", lg: "flex" }}
         >
           <Grid item>
             <Typography
@@ -50,7 +73,7 @@ const Navbar = () => {
               color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/festival")}
             >
               | Festival del Chocolate
             </Typography>
@@ -60,7 +83,7 @@ const Navbar = () => {
               color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/programa")}
             >
               | Programa
             </Typography>
@@ -70,17 +93,21 @@ const Navbar = () => {
               color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/historia")}
             >
               | Historia del Chocolate
             </Typography>
           </Grid>
-          {/*    <Grid item>
-            <Typography  color="#F9DC9B"
+          <Grid item>
+            <Typography
+              color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/status")}>|    Ven al Festival</Typography>
-          </Grid> */}
+              onClick={() => navigate("/ven-al-festival")}
+            >
+              | Ven al Festival
+            </Typography>
+          </Grid>
           <Grid item>
             <Typography
               color="#F9DC9B"
@@ -101,7 +128,8 @@ const Navbar = () => {
         <Grid
           item
           container
-          xs={2}
+          xs={6}
+          lg={2}
           spacing={1}
           justifyContent="center"
           alignItems="center"
@@ -162,6 +190,45 @@ const Navbar = () => {
               }}
             />
           </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          justifyContent="center"
+          alignItems="center "
+          xs={3}
+          display={{ xs: "flex", lg: "none" }}
+        >
+          <MenuRoundedIcon
+            id="basic-button"
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            htmlColor="#f9dc9b"
+          />
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
+            <MenuItem onClick={() => navigate("/festival")}>
+              Festival del Chocolate
+            </MenuItem>
+            <MenuItem onClick={() => navigate("/programa")}>Programa</MenuItem>
+            <MenuItem onClick={() => navigate("/historia")}>
+              Historia del Chocolate
+            </MenuItem>
+            <MenuItem onClick={() => navigate("/ven-al-festival")}>
+              Ven al Festival
+            </MenuItem>
+            <MenuItem onClick={() => navigate("/")}>Expositores</MenuItem>
+          </Menu>
         </Grid>
       </Grid>
     </Grid>

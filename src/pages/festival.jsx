@@ -199,7 +199,7 @@ const Tours = () => {
             ))}
           </ButtonGroup>
         </Grid>
-        <Grid item container maxWidth="lg">
+        <Grid item container maxWidth="lg" ml={5} bgcolor="white">
           {loading ? (
             <Grid item xs={12}>
               <div
@@ -216,6 +216,94 @@ const Tours = () => {
           ) : (
             <Fest image={buttonSelected.image} text={buttonSelected.text} />
           )}
+        </Grid>
+        <Grid item container maxWidth="lg" spacing={6}>
+          <Grid item xs={12}>
+            <Typography
+              color="#6C3F37"
+              fontSize={{ xs: 26, md: 30 }}
+              textAlign="center"
+            >
+              UNA EXPERIENCIA MEMORABLE
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/01.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/02.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/03.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/04.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <img
+              src={require("../assets/images/05.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <img
+              src={require("../assets/images/06.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <img
+              src={require("../assets/images/07.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/08.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/09.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/10.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <img
+              src={require("../assets/images/11.jpg").default}
+              width="100%"
+              alt="Image 1"
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Container>

@@ -15,6 +15,8 @@ import { RequestContext } from "../../context/RequestContext";
 import RequestFeedbackForm from "./RequestFeedbackForm";
 import RequestFeedbackHistory from "./RequestFeedbackHistory";
 import { saveFeedback } from "../../services/admin";
+import { FILES } from "../../utils/constants";
+import { toast, useToast } from "react-toastify";
 
 const RequestDetails = ({ open, setOpen }) => {
   const { requestSelected: request, setRequestSelected } =
@@ -53,6 +55,24 @@ const RequestDetails = ({ open, setOpen }) => {
     setOpen(false);
   };
 
+  const getName = (document) => {
+    if (document.split("/")[7].includes(`Fcsf_`)) {
+      return "Constancia de situación fiscal";
+    }
+    if (document.split("/")[7].includes(`Fcd_`)) {
+      return "Comprobante de domicilio";
+    }
+    if (document.split("/")[7].includes(`Fiov_`)) {
+      return "Identificación oficial vigente";
+    }
+    if (document.split("/")[7].includes(`F32d_`)) {
+      return "Opinión de cumplimiento de obligaciones ficales (32D)";
+    }
+    if (document.split("/")[7].includes(`F34bis_`)) {
+      return "Opinión de cumplimiento de obligaciones ficales (34bis)";
+    }
+  };
+
   return (
     <Dialog maxWidth="lg" open={open} onClose={handleClose}>
       <DialogTitle>
@@ -86,7 +106,7 @@ const RequestDetails = ({ open, setOpen }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ListItemText primary={document} />
+                    <ListItemText primary={getName(document)} />
                   </ListItemButton>
                 ))}
               </List>

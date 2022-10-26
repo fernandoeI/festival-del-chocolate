@@ -39,7 +39,7 @@ const Tours = () => {
         </Typography>
       </div>
       <Grid container justifyContent="center" p={8} spacing={6}>
-        <Grid
+        {/*  <Grid
           item
           container
           alignItems="center"
@@ -69,7 +69,7 @@ const Tours = () => {
               Descargar
             </Button>
           </Grid>
-        </Grid>
+        </Grid> */}
         <Grid
           item
           container
@@ -95,7 +95,7 @@ const Tours = () => {
           <Grid item>
             <Button
               variant="contained"
-              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FCATALOGO%20COMPLETO.pdf?alt=media&token=d30617c2-730d-4904-af4c-257fb7589cda"
+              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FCATALOGO_NUEVO%20-%20U%CC%81LTIMO_ok.pdf?alt=media&token=fede0f9a-f90e-433a-8f87-091a0698e197"
             >
               Descargar
             </Button>
