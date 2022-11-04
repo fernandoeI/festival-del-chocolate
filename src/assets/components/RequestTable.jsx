@@ -17,16 +17,16 @@ const RequestTable = ({ setOpen }) => {
     try {
       const request = row.original;
 
-      // validate if the request has been attended
-      if (!request?.reviewer) {
-        const attend = window.confirm(
-          "Al aceptar, solo usted podrá dar seguimiento a la solicitud."
-        );
+      // // validat<e if the request has been attended
+      // if (!request?.reviewer) {
+      //   const attend = window.confirm(
+      //     "Al aceptar, solo usted podrá dar seguimiento a la solicitud."
+      //   );
 
-        if (!attend) return;
+      //   if (!attend) return;
 
-        await assignReviewer(request.id, auth.currentUser.uid);
-      }
+      //   await assignReviewer(request.id, auth.currentUser.uid);
+      // }>
 
       // open modal
       setRequestSelected(request);
@@ -115,10 +115,10 @@ const RequestTable = ({ setOpen }) => {
             <span>
               <IconButton
                 onClick={(e) => handleAttendRequest(row)}
-                disabled={
-                  row.original?.reviewer &&
-                  row.original?.reviewer !== auth.currentUser.uid
-                }
+                // disabled={
+                //   row.original?.reviewer &&
+                //   row.original?.reviewer !== auth.currentUser.uid
+                // }
               >
                 <PlayArrow />
               </IconButton>

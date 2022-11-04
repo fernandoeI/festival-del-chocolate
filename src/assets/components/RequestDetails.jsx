@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
+  Button,
 } from "@mui/material";
 import moment from "moment";
 import { useForm } from "react-hook-form";
@@ -15,12 +16,15 @@ import { RequestContext } from "../../context/RequestContext";
 import RequestFeedbackForm from "./RequestFeedbackForm";
 import RequestFeedbackHistory from "./RequestFeedbackHistory";
 import { saveFeedback } from "../../services/admin";
+import { RemoveRedEyeOutlined } from "@mui/icons-material";
 import { FILES } from "../../utils/constants";
 import { toast, useToast } from "react-toastify";
+import RequestInformation from "./RequestInformation";
 
 const RequestDetails = ({ open, setOpen }) => {
   const { requestSelected: request, setRequestSelected } =
     useContext(RequestContext);
+  const [openInneDialog, setOpenInneDialog] = useState(false);
   const [loading, setLoading] = useState(false);
   const {
     control,
@@ -37,6 +41,8 @@ const RequestDetails = ({ open, setOpen }) => {
       total: "",
     },
   });
+
+  console.log(request);
 
   const onSubmit = async (data) => {
     try {
@@ -85,6 +91,13 @@ const RequestDetails = ({ open, setOpen }) => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} container spacing={2}>
             <Grid item xs={12}>
+              <Button
+                style={{ marginBottom: "1rem" }}
+                onClick={() => setOpenInneDialog(true)}
+                startIcon={<RemoveRedEyeOutlined fontSize="small" />}
+              >
+                Ver información completa
+              </Button>
               <RequestFeedbackForm
                 control={control}
                 watch={watch}
@@ -117,6 +130,25 @@ const RequestDetails = ({ open, setOpen }) => {
           </Grid>
         </Grid>
       </DialogContent>
+
+      {open ? (
+        <Dialog
+          maxWidth="xl"
+          open={openInneDialog}
+          onClose={() => setOpenInneDialog(false)}
+        >
+          <DialogContent>
+            <Grid container>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Nombre del representante legal"
+                  description="hola"
+                />
+              </Grid>
+            </Grid>
+          </DialogContent>
+        </Dialog>
+      ) : null}
     </Dialog>
   );
 };
