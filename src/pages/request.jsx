@@ -36,6 +36,7 @@ import { validateEmail } from "../utils/functions";
 import { navigate } from "gatsby";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 const db = getFirestore(app);
 
@@ -55,6 +56,29 @@ const Request = () => {
 
   return (
     <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      textAlign="center"
+      height={500}
+    >
+      <StaticImage
+        src="../assets/images/icon.png"
+        alt="Logo"
+        placeholder="none"
+        width={300}
+        imgStyle={{
+          maxWidth: 300,
+          objectFit: "contain",
+          width: "100%",
+        }}
+      />
+      <Typography variant="h2" width="90%">
+        Gracias por tu interés en participar como expositor, hemos concluído con
+        el proceso de registro, nos vemos en 2023!!!
+      </Typography>
+    </Grid>
+    /*  <Grid
       container
       spacing={4}
       textAlign="center"
@@ -114,7 +138,7 @@ const Request = () => {
           />
         ) : null}
       </Grid>
-    </Grid>
+    </Grid> */
   );
 };
 

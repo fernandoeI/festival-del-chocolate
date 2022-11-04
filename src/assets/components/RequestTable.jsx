@@ -38,6 +38,10 @@ const RequestTable = ({ setOpen }) => {
 
   const columns = [
     {
+      accessorKey: "folio",
+      header: "Folio",
+    },
+    {
       accessorKey: "nombre",
       header: "Nombre",
     },

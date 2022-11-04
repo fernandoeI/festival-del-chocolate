@@ -169,40 +169,51 @@ const Index = () => {
             aria-label="My Favorite Images"
             options={{ autoplay: true, speed: 1, type: "loop", perPage: 1 }}
           >
-            <SplideSlide>
+            <SplideSlide onClick={() => navigate("/")}>
               <img
-                src={require("../assets/images/BANNER1728x611px.png").default}
+                src={require("../assets/images/banner/1.jpg").default}
                 width="100%"
                 alt="Image 1"
               />
             </SplideSlide>
             <SplideSlide>
               <img
-                src={require("../assets/images/catas.png").default}
+                src={require("../assets/images/banner/2.jpg").default}
                 width="100%"
                 alt="Image 1"
               />
             </SplideSlide>
             <SplideSlide>
               <img
-                src={require("../assets/images/cena.png").default}
+                src={require("../assets/images/banner/3.jpg").default}
                 width="100%"
                 alt="Image 1"
               />
             </SplideSlide>
             <SplideSlide>
               <img
-                src={require("../assets/images/convocatoria.png").default}
+                src={require("../assets/images/banner/4.jpg").default}
                 width="100%"
                 alt="Image 1"
               />
             </SplideSlide>
             <SplideSlide>
-              <img
-                src={require("../assets/images/invitados.png").default}
-                width="100%"
-                alt="Image 1"
-              />
+              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria_compressed.pdf?alt=media&token=12ca083e-b1af-484b-8ae9-055b7208a475">
+                <img
+                  src={require("../assets/images/banner/5.jpg").default}
+                  width="100%"
+                  alt="Image 1"
+                />
+              </a>
+            </SplideSlide>
+            <SplideSlide>
+              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FConvocatoria%20Fotografi%CC%81a_compressed.pdf?alt=media&token=8ee92f45-0004-4b25-a07a-5d9747104089">
+                <img
+                  src={require("../assets/images/banner/6.jpg").default}
+                  width="100%"
+                  alt="Image 1"
+                />
+              </a>
             </SplideSlide>
           </Splide>
         </Grid>
@@ -223,7 +234,7 @@ const Index = () => {
               </Typography>
             </Grid>
 
-            <Grid item xs={4} md={2}>
+            {/*  <Grid item xs={4} md={2}>
               <Button
                 variant="contained"
                 size="small"
@@ -237,7 +248,7 @@ const Index = () => {
               >
                 REGISTRO DE EXPOSITOR
               </Button>
-            </Grid>
+            </Grid> */}
             <Grid item xs={4} md={2}>
               <Button
                 variant="contained"
@@ -313,7 +324,7 @@ const Index = () => {
         <Grid container justifyContent="center" py={6}>
           <Grid item xs={12} pb={6}>
             <Typography variant="h1" color="#6C3F37" textAlign="center">
-              DIMENSIONES
+              5 DIMENSIONES
             </Typography>
           </Grid>
           <Grid item xs={6} md={2} textAlign="center">

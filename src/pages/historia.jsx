@@ -40,6 +40,15 @@ const Historia = () => {
         </Typography>
       </div>
       <Grid container justifyContent="center" p={8} spacing={6}>
+        <Grid item xs={12}>
+          <Typography
+            color="#6C3F37"
+            fontSize={{ xs: 26, md: 30 }}
+            textAlign="center"
+          >
+            Patria del cacao y cuna del chocolate
+          </Typography>
+        </Grid>
         <Grid item container spacing={4} maxWidth="lg">
           <Grid item container xs={12} lg={6} direction="column">
             <Grid item>

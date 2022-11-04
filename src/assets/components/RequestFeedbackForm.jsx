@@ -15,6 +15,7 @@ import {
   IN_PROCESS,
   NEED_MODIFY,
 } from "../../utils/constants";
+import { RemoveRedEyeOutlined } from "@mui/icons-material";
 
 const RequestFeedbackForm = ({
   control,
@@ -34,10 +35,25 @@ const RequestFeedbackForm = ({
       onSubmit={handleSubmit(onSubmit)}
     >
       <Grid item>
+        <Button
+          startIcon={
+            <RemoveRedEyeOutlined
+              fontSize="small"
+              style={{
+                marginRight: 6,
+              }}
+            />
+          }
+        >
+          Ver información completa
+        </Button>
+      </Grid>
+      <Grid item>
         <Typography marginBottom={2} color="primary">
           Agregar observaciones
         </Typography>
       </Grid>
+
       <Grid item>
         <Controller
           name="status"

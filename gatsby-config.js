@@ -9,6 +9,29 @@ module.exports = {
     keywords: `Cacao, Chocolate, Olmeca, Maya, Azteca, Haciendas, Comalcalco, Cunduacán, Gastronomía, Memorable, Catas`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-DD6L98EXGB", // Google Analytics / GA
+        ],
+
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-K9Q27K3",
+        includeInDevelopment: false,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
