@@ -138,11 +138,115 @@ const RequestDetails = ({ open, setOpen }) => {
           onClose={() => setOpenInneDialog(false)}
         >
           <DialogContent>
-            <Grid container>
+            <Typography
+              variant="body1"
+              color="primary"
+              fontWeight={500}
+              marginBottom={1}
+            >
+              Información del solicitante
+            </Typography>
+            <Grid container spacing={1}>
               <Grid item xs={12} sm={6} md={4}>
                 <RequestInformation
                   title="Nombre del representante legal"
-                  description="hola"
+                  description={request.nombre}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation title="RFC" description={request.rfc} />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation title="Calle" description={request.calle} />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="No. exterior"
+                  description={request.ext}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Colonia"
+                  description={request.colonia}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Municipio"
+                  description={request.municipio}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Código postal"
+                  description={request.cp}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Estado"
+                  description={request.estado}
+                />
+              </Grid>
+            </Grid>
+
+            <Typography
+              variant="body1"
+              color="primary"
+              fontWeight={500}
+              marginTop={3}
+              marginBottom={1}
+            >
+              Datos generales de la empresa
+            </Typography>
+            <Grid container spacing={1}>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Nombre de la empresa"
+                  description={request.empresa}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Teléfono"
+                  description={request.telefono}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Correo eléctronico"
+                  description={request.email}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Facebook"
+                  description={request.facebook}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Instagram"
+                  description={request.instagram}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Twitter"
+                  description={request.twitter}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Giro o actividad"
+                  description={request.giro}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Años de experiencia"
+                  description="N/A"
                 />
               </Grid>
             </Grid>
