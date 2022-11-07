@@ -2,6 +2,7 @@ import {
   Button,
   ButtonGroup,
   CircularProgress,
+  Divider,
   Grid,
   Typography,
   useMediaQuery,
@@ -11,8 +12,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Fest from "../assets/components/Fest";
 import Seo from "../assets/components/seo";
-
 import Navbar from "../assets/components/Navbar";
+import data from "../utils/data.json";
 
 const Tours = () => {
   const matches = useMediaQuery("(min-width: 900px)");
@@ -129,7 +130,7 @@ const Tours = () => {
         </Typography>
       </div>
       <Grid container justifyContent="center" p={8} spacing={6}>
-        <Grid item container maxWidth="lg">
+        {/* <Grid item container maxWidth="lg">
           <ButtonGroup
             orientation={matches ? "horizontal" : "vertical"}
             variant="contained"
@@ -174,6 +175,85 @@ const Tours = () => {
           ) : (
             <img src={buttonSelected.image} width="100%" alt="Image 1" />
           )}
+        </Grid> */}
+        <Grid item container maxWidth="md">
+          {data.map((item, key) => (
+            <Grid
+              item
+              container
+              bgcolor={item.bgColor}
+              justifyContent="center"
+              key={key}
+            >
+              <div
+                style={{
+                  backgroundColor: "white",
+                  width: "90%",
+                  height: 3,
+                  marginTop: 10,
+                  display: item.title ? "none" : "flex",
+                }}
+              ></div>
+              <Grid
+                item
+                container
+                justifyContent="center"
+                alignItems="center"
+                xs={12}
+                display={!item.title ? "none" : "flex"}
+                pt={item.title ? 2 : 0}
+              >
+                <Typography color="white" fontSize={28} textAlign="center">
+                  {item.title}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                container
+                xs={4}
+                justifyContent="center"
+                alignItems="center"
+                display={item.title ? "none" : "flex"}
+              >
+                <Grid item>
+                  <Typography color="white" textAlign="center" fontSize={24}>
+                    {item.time}
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                item
+                container
+                direction="column"
+                xs={8}
+                justifyContent="center"
+                alignItems="center"
+                p={1}
+                display={item.title ? "none" : "flex"}
+              >
+                <Grid item>
+                  <Typography
+                    color={item.color}
+                    textTransform="uppercase"
+                    fontSize={18}
+                    textAlign="center"
+                  >
+                    {item.event}
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography color="white" fontSize={16}>
+                    {item.speaker}
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography color={item.color} fontSize={16}>
+                    Salón: {item.hall}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          ))}
         </Grid>
         <Grid item container maxWidth="lg" spacing={6}>
           <Grid item xs={12}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Grid, Menu, MenuItem, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { makeStyles } from "@mui/styles";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
@@ -34,18 +34,14 @@ const Navbar = () => {
     >
       <Grid item container pl={8}>
         <Grid item container xs={3} lg={1} py={2}>
-          <StaticImage
-            onClick={() => navigate("/")}
-            src="../images/logoNegativo.png"
-            alt="Logo"
-            placeholder="none"
-            width={120}
-            imgStyle={{
-              maxWidth: 120,
-              objectFit: "contain",
-              width: "100%",
-            }}
-          />
+          <Link to="/">
+            <img
+              src={require("../images/logoNegativo.png").default}
+              width="100%"
+              style={{ maxHeight: 90, objectFit: "contain" }}
+              alt="Image 1"
+            />
+          </Link>
         </Grid>
 
         <Grid
@@ -136,64 +132,43 @@ const Navbar = () => {
         >
           <Grid item>
             <a href="https://www.facebook.com/FestivaldelChocolate">
-              <StaticImage
-                src="../images/ícono facebook.png"
-                alt="Logo"
-                placeholder="none"
-                width={30}
-                imgStyle={{
-                  maxWidth: 30,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
+              <img
+                src={require("../images/ícono facebook.png").default}
+                width="100%"
+                style={{ maxHeight: 30, objectFit: "contain" }}
+                alt="Image 1"
               />
             </a>
           </Grid>
           <Grid item>
             <a href="https://www.instagram.com/festivaldelchocolate/">
-              <StaticImage
-                onClick={() => navigate("/")}
-                src="../images/ícono instagram.png"
-                alt="Logo"
-                placeholder="none"
-                width={30}
-                imgStyle={{
-                  maxWidth: 30,
-                  objectFit: "contain",
-                  width: "100%",
-                }}
+              <img
+                src={require("../images/ícono instagram.png").default}
+                width="100%"
+                style={{ maxHeight: 30, objectFit: "contain" }}
+                alt="Image 1"
               />
             </a>
           </Grid>
           <Grid item>
-            <a href="https://www.tiktok.com/@festivaldelchocolatetab"></a>
-            <StaticImage
-              onClick={() => navigate("/")}
-              src="../images/ícono tiktok.png"
-              alt="Logo"
-              placeholder="none"
-              width={30}
-              imgStyle={{
-                maxWidth: 30,
-                objectFit: "contain",
-                width: "100%",
-              }}
-            />
+            <a href="https://www.tiktok.com/@festivaldelchocolatetab">
+              <img
+                src={require("../images/ícono tiktok.png").default}
+                width="100%"
+                style={{ maxHeight: 30, objectFit: "contain" }}
+                alt="Image 1"
+              />
+            </a>
           </Grid>
           <Grid item>
-            <a href="https://twitter.com/FestivalChoco"></a>
-            <StaticImage
-              onClick={() => navigate("/")}
-              src="../images/ícono twitter.png"
-              alt="Logo"
-              placeholder="none"
-              width={30}
-              imgStyle={{
-                maxWidth: 30,
-                objectFit: "contain",
-                width: "100%",
-              }}
-            />
+            <a href="https://twitter.com/FestivalChoco">
+              <img
+                src={require("../images/ícono twitter.png").default}
+                width="100%"
+                style={{ maxHeight: 30, objectFit: "contain" }}
+                alt="Image 1"
+              />
+            </a>
           </Grid>
         </Grid>
         <Grid

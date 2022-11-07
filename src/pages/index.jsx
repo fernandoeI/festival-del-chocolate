@@ -6,9 +6,8 @@ import {
   MenuItem,
   TextField,
   Typography,
-  useTheme,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Seo from "../assets/components/seo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -20,6 +19,9 @@ import { toast } from "react-toastify";
 
 import { validateEmail } from "../utils/functions";
 import Navbar from "../assets/components/Navbar";
+import Video from "@splidejs/splide-extension-video";
+import "@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css";
+import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 
 const Index = () => {
   const [data, setData] = useState({});
@@ -155,6 +157,93 @@ const Index = () => {
       return toast.warning("Ocurrio un error: por favor intente más tarde");
     }
   };
+
+  const ids = [
+    "Y1vXQBCmbKc",
+    "O5gPuhHo0Pg",
+    "_RkPwCZJf80",
+    "4I0Xp583NxA",
+    "LpevbZuwbp0",
+    "c9AjVg63o2k",
+    "8d0Bi6c7SiY",
+    "0lufAjchLuA",
+    "gPETavffQo4",
+    "nKn6Gg5BWhU",
+  ];
+
+  const SPLIDE_OPTIONS_show = {
+    video: {
+      autoplay: false,
+      mute: false,
+    },
+  };
+
+  const SPLIDE_OPTIONS_thumb = {
+    video: {
+      autoplay: false,
+      mute: true,
+    },
+    fixedWidth: 100,
+    fixedHeight: 60,
+    gap: 10,
+    rewind: true,
+    pagination: false,
+    isNavigation: true,
+    breakpoints: {
+      600: {
+        fixedWidth: 60,
+        fixedHeight: 44,
+      },
+    },
+    isNavigation: true,
+  };
+
+  const Videos = ({ ids, big }) => (
+    <>
+      {ids.map((id, key) => (
+        <li
+          className="splide__slide"
+          data-splide-youtube={`https://www.youtube.com/embed/${id}`}
+          key={key}
+        >
+          <iframe
+            width="100%"
+            height="650"
+            src={`https://www.youtube.com/embed/${id}`}
+          ></iframe>
+        </li>
+      ))}
+    </>
+  );
+
+  const Images = ({ ids, big }) => (
+    <>
+      {ids.map((id, key) => (
+        <li
+          className="splide__slide"
+          data-splide-youtube={`https://www.youtube.com/embed/${id}`}
+          key={key}
+        >
+          <img
+            src={
+              `https://img.youtube.com/vi/${id}/` +
+              (big ? "hqdefault.jpg" : "mqdefault.jpg")
+            }
+            width="100%"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            alt="video thumbnail"
+          />
+        </li>
+      ))}
+    </>
+  );
+
+  const slider1 = useRef();
+  const slider2 = useRef();
+
+  useEffect(() => {
+    slider1.current.sync(slider2.current.splide);
+  }, [slider1, slider2]);
 
   return (
     <Container
@@ -529,6 +618,34 @@ const Index = () => {
                 }}
               />
             </div>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          py={10}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item container maxWidth="lg">
+            <Grid item>
+              <Splide
+                ref={(slider) => (slider1.current = slider)}
+                options={SPLIDE_OPTIONS_show}
+                Extensions={{ Video }}
+              >
+                <Videos ids={ids} big={true} />
+              </Splide>
+            </Grid>
+            <Grid item>
+              <Splide
+                ref={(slider) => (slider2.current = slider)}
+                options={SPLIDE_OPTIONS_thumb}
+                Extensions={{ Video }}
+              >
+                <Images ids={ids} big={true} />
+              </Splide>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
