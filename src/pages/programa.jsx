@@ -12,6 +12,8 @@ import React, { useState } from "react";
 import Fest from "../assets/components/Fest";
 import Seo from "../assets/components/seo";
 
+import Navbar from "../assets/components/Navbar";
+
 const Tours = () => {
   const matches = useMediaQuery("(min-width: 900px)");
 
@@ -42,37 +44,44 @@ const Tours = () => {
     {
       title: "Explora Tabasco",
       text: "Conoce todas las maravillas que Tabasco te ofrece a través de sus 7 Grandes Rutas. En esta área turística encuentra recorridos, exposiciones y tours y todo lo que te ofrecen las agencias de viaje y hoteles de Tabasco.",
-      image: "https://i.ibb.co/Tvmtc3Q/Chocolateros.png",
+
+      image: "https://i.ibb.co/xg420m3/Explora-Tabasco.png",
     },
     {
       title: "Sabor a Tabasco",
       text: "Tabasco a través de su gastronomía. Disfruta de la cocina autóctona de las culturas Yokot’an, Zoque, Olmeca y Maya a través de sus cocineras tradicionales y sus platillos prehispánicos hechos en cocina de leña. Además de restaurantes y espectáculos musicales.",
-      image: "https://i.ibb.co/wdzkjYW/Experiencia-Sensorial.png",
+
+      image: "https://i.ibb.co/R6Ps04Y/Sabor-a-tabasco.png",
     },
     {
       title: "Experencia Sensorial",
       text: "Disfruta de un espectáculo de imagen, luces y sonido en una experiencia sensorial, a través de un viaje al mundo del cacao del Tabasco prehispánico, conoce los procesos y cómo surgió la bebida ancestral.",
-      image: "https://i.ibb.co/xg420m3/Explora-Tabasco.png",
+
+      image: "https://i.ibb.co/wdzkjYW/Experiencia-Sensorial.png",
     },
     {
       title: "Chocolateros",
       text: "El cacao y chocolate de Tabasco presentado en una sala de exhibición donde podras encontrar mas de 120 expositores de cacao y chocolate así como los diferentes productos y servicios turísticos que el Estado ofrece.",
-      image: "https://i.ibb.co/vHsH7px/IFAT.png",
+
+      image: "https://i.ibb.co/Tvmtc3Q/Chocolateros.png",
     },
     {
       title: "Zona DIF",
       text: "La aventura y la diversión también es para los niños, lleva a tus pequeños a este espacio dedicado a los juegos para el desarrollo de la niñez y las actividades inclusivas que ayudan a la integración social infantil y actividades específicas para conocer la historia e importancia del cacao y el chocolate.",
-      image: "https://i.ibb.co/R6Ps04Y/Sabor-a-tabasco.png",
+
+      image: "https://i.ibb.co/HT9VtLt/Zona-DIF.png",
     },
     {
       title: "IFAT",
       text: "Conoce todo lo que manos tabasqueñas son capaces de hacer con materiales de la región y disfruta de todos los productos tabasqueños en este espacio dedicado para la promoción de los artesanos del Estado.",
-      image: "https://i.ibb.co/ygmLvRf/Sembrando-Vida.png",
+
+      image: "https://i.ibb.co/vHsH7px/IFAT.png",
     },
     {
       title: "Sembrando Vida",
       text: "Espacio destinado para exposición de productos del Programa Sembrando Vida, de los productores tabasqueños en el tema de agroturismo",
-      image: "https://i.ibb.co/HT9VtLt/Zona-DIF.png",
+
+      image: "https://i.ibb.co/ygmLvRf/Sembrando-Vida.png",
     },
   ];
   const [loading, setLoading] = useState(false);
@@ -90,6 +99,7 @@ const Tours = () => {
       sx={{ padding: "0 !important", margin: "0 !important" }}
     >
       <Seo />
+      <Navbar />
 
       <div
         style={{

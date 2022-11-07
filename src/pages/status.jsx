@@ -14,6 +14,8 @@ import {
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState, useRef } from "react";
 import Seo from "../assets/components/seo";
+
+import Navbar from "../assets/components/Navbar";
 import {
   collection,
   getDocs,
@@ -73,93 +75,100 @@ const Status = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth={false}
+      sx={{ padding: "0 !important", margin: "0 !important" }}
+    >
       <Seo />
-      <Grid
-        container
-        direction="column"
-        height={!request ? "100vh" : "100%"}
-        alignItems="center"
-        justifyContent="center"
-        marginY={!request ? 0 : 3}
-      >
-        <Grid item container spacing={2}>
-          <Grid item xs={12} sm={4} textAlign="center">
-            <StaticImage
-              onClick={() => navigate("/")}
-              src="../assets/images/icon.png"
-              alt="Logo"
-              placeholder="none"
-              width={250}
-              imgStyle={{
-                maxWidth: 250,
-                objectFit: "contain",
-                width: "100%",
-              }}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm
-            container
-            direction="column"
-            component="form"
-            spacing={2}
-          >
-            <Grid item>
-              <Typography variant="h3" component="h1" color="primary">
-                Consulta de estado
-              </Typography>
-              <Typography variant="body2" marginTop={1}>
-                Aquí podrás consultar el estado de tu solicitud para ser parte
-                de los expositores del 11° Festival del Chocolate
-              </Typography>
+      <Navbar />
+      <Grid container justifyContent="center">
+        <Grid
+          container
+          direction="column"
+          height={!request ? "100vh" : "100%"}
+          alignItems="center"
+          justifyContent="center"
+          maxWidth="md"
+          marginY={!request ? 0 : 3}
+        >
+          <Grid item container spacing={2}>
+            <Grid item xs={12} sm={4} textAlign="center">
+              <StaticImage
+                onClick={() => navigate("/")}
+                src="../assets/images/icon.png"
+                alt="Logo"
+                placeholder="none"
+                width={250}
+                imgStyle={{
+                  maxWidth: 250,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
             </Grid>
+            <Grid
+              item
+              xs={12}
+              sm
+              container
+              direction="column"
+              component="form"
+              spacing={2}
+            >
+              <Grid item>
+                <Typography variant="h3" component="h1" color="primary">
+                  Consulta de estado
+                </Typography>
+                <Typography variant="body2" marginTop={1}>
+                  Aquí podrás consultar el estado de tu solicitud para ser parte
+                  de los expositores del 11° Festival del Chocolate
+                </Typography>
+              </Grid>
 
-            <Grid item>
-              <TextField
-                fullWidth
-                variant="outlined"
-                label="RFC con homoclave"
-                size="small"
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    rfc: e.target.value,
-                  })
-                }
-                value={formData?.rfc || ""}
-                inputProps={{ maxLength: 13 }}
-              />
-            </Grid>
-            <Grid item>
-              <TextField
-                fullWidth
-                variant="outlined"
-                label="Folio de registro"
-                size="small"
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    folio: e.target.value.toLowerCase(),
-                  })
-                }
-                value={formData?.folio || ""}
-              />
-            </Grid>
-            <Grid item>
-              <Button fullWidth variant="contained" onClick={handleSubmit}>
-                Consultar
-              </Button>
+              <Grid item>
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  label="RFC con homoclave"
+                  size="small"
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      rfc: e.target.value,
+                    })
+                  }
+                  value={formData?.rfc || ""}
+                  inputProps={{ maxLength: 13 }}
+                />
+              </Grid>
+              <Grid item>
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  label="Folio de registro"
+                  size="small"
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      folio: e.target.value.toLowerCase(),
+                    })
+                  }
+                  value={formData?.folio || ""}
+                />
+              </Grid>
+              <Grid item>
+                <Button fullWidth variant="contained" onClick={handleSubmit}>
+                  Consultar
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
+          {request ? (
+            <Grid item>
+              <RequestCardInformation request={request} />
+            </Grid>
+          ) : null}
         </Grid>
-        {request ? (
-          <Grid item>
-            <RequestCardInformation request={request} />
-          </Grid>
-        ) : null}
       </Grid>
     </Container>
   );

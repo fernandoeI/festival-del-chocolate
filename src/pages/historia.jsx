@@ -4,6 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Seo from "../assets/components/seo";
 
+import Navbar from "../assets/components/Navbar";
+
 const Historia = () => {
   return (
     <Container
@@ -11,6 +13,7 @@ const Historia = () => {
       sx={{ padding: "0 !important", margin: "0 !important" }}
     >
       <Seo />
+      <Navbar />
 
       <div
         style={{

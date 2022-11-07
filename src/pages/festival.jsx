@@ -11,6 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import Fest from "../assets/components/Fest";
 import Seo from "../assets/components/seo";
+import Navbar from "../assets/components/Navbar";
 
 const Tours = () => {
   const matches = useMediaQuery("(min-width: 900px)");
@@ -82,6 +83,7 @@ const Tours = () => {
       sx={{ padding: "0 !important", margin: "0 !important" }}
     >
       <Seo />
+      <Navbar />
 
       <div
         style={{
@@ -138,7 +140,7 @@ const Tours = () => {
               lineHeight={1.5}
               fontWeight="500"
             >
-              "El origen del cacao nace en Tabasco con los olmecas, cultura que
+              El origen del cacao nace en Tabasco con los olmecas, cultura que
               dio vida al chocolate, y que con honor, ha sido orgullo para
               muchas generaciones. El cacao fue considerado para los Olmecas
               alimento, medicina y formó parte de la moneda de cambio. Siendo el

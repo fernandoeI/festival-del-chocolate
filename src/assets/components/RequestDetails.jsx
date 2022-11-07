@@ -245,8 +245,79 @@ const RequestDetails = ({ open, setOpen }) => {
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
                 <RequestInformation
-                  title="Años de experiencia"
-                  description="N/A"
+                  title="Años de operación"
+                  description={request.operacion}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Forma parte de Escencia Tabasco"
+                  description={request.escencia}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Nombre de la marca"
+                  description={request.marca}
+                />
+              </Grid>
+            </Grid>
+            <Typography
+              variant="body1"
+              color="primary"
+              fontWeight={500}
+              marginTop={3}
+              marginBottom={1}
+            >
+              Requerimientos adicionales
+            </Typography>
+            <Grid container spacing={1}>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Nombre del primer acompañante"
+                  description={request.partner1}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Nombre del segundo acompañante"
+                  description={request.partner2}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Conexión doble sencilla"
+                  description={request.adicional1}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Conexión 110v especial"
+                  description={request.adicional2}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Conexión 220v"
+                  description={request.adicional3}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Mandiles adicionales"
+                  description={request.mandil}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="¿Participó en la edición anterior?"
+                  description={request.participo}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <RequestInformation
+                  title="Quiere utilizar el espacio de la edición anterior"
+                  description={request.reutilizaLugar}
                 />
               </Grid>
             </Grid>

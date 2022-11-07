@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import Seo from "../assets/components/seo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
@@ -169,7 +169,7 @@ const Index = () => {
             aria-label="My Favorite Images"
             options={{ autoplay: true, speed: 1, type: "loop", perPage: 1 }}
           >
-            <SplideSlide onClick={() => navigate("/")}>
+            <SplideSlide>
               <img
                 src={require("../assets/images/banner/1.jpg").default}
                 width="100%"
@@ -184,21 +184,25 @@ const Index = () => {
               />
             </SplideSlide>
             <SplideSlide>
-              <img
-                src={require("../assets/images/banner/3.jpg").default}
-                width="100%"
-                alt="Image 1"
-              />
+              <Link to="/catas">
+                <img
+                  src={require("../assets/images/banner/3.jpg").default}
+                  width="100%"
+                  alt="Image 1"
+                />
+              </Link>
             </SplideSlide>
             <SplideSlide>
-              <img
-                src={require("../assets/images/banner/4.jpg").default}
-                width="100%"
-                alt="Image 1"
-              />
+              <Link to="/catas">
+                <img
+                  src={require("../assets/images/banner/4.jpg").default}
+                  width="100%"
+                  alt="Image 1"
+                />
+              </Link>
             </SplideSlide>
             <SplideSlide>
-              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria_compressed.pdf?alt=media&token=12ca083e-b1af-484b-8ae9-055b7208a475">
+              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria%20seleccion%20cacaos_compressed%20(1).pdf?alt=media&token=57877fab-ad4c-448e-b2d8-0b9f68fef7ed">
                 <img
                   src={require("../assets/images/banner/5.jpg").default}
                   width="100%"
@@ -210,6 +214,15 @@ const Index = () => {
               <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FConvocatoria%20Fotografi%CC%81a_compressed.pdf?alt=media&token=8ee92f45-0004-4b25-a07a-5d9747104089">
                 <img
                   src={require("../assets/images/banner/6.jpg").default}
+                  width="100%"
+                  alt="Image 1"
+                />
+              </a>
+            </SplideSlide>
+            <SplideSlide>
+              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria%20de%20pintura.pdf?alt=media&token=295dd5b3-7997-48be-87ea-09f949ffc699">
+                <img
+                  src={require("../assets/images/banner/7.jpg").default}
                   width="100%"
                   alt="Image 1"
                 />

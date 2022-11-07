@@ -113,7 +113,7 @@ const Navbar = () => {
               color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/status")}
             >
               | Expositores
             </Typography>
@@ -135,34 +135,38 @@ const Navbar = () => {
           alignItems="center"
         >
           <Grid item>
-            <StaticImage
-              onClick={() => navigate("/")}
-              src="../images/ícono facebook.png"
-              alt="Logo"
-              placeholder="none"
-              width={30}
-              imgStyle={{
-                maxWidth: 30,
-                objectFit: "contain",
-                width: "100%",
-              }}
-            />
+            <a href="https://www.facebook.com/FestivaldelChocolate">
+              <StaticImage
+                src="../images/ícono facebook.png"
+                alt="Logo"
+                placeholder="none"
+                width={30}
+                imgStyle={{
+                  maxWidth: 30,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </a>
           </Grid>
           <Grid item>
-            <StaticImage
-              onClick={() => navigate("/")}
-              src="../images/ícono instagram.png"
-              alt="Logo"
-              placeholder="none"
-              width={30}
-              imgStyle={{
-                maxWidth: 30,
-                objectFit: "contain",
-                width: "100%",
-              }}
-            />
+            <a href="https://www.instagram.com/festivaldelchocolate/">
+              <StaticImage
+                onClick={() => navigate("/")}
+                src="../images/ícono instagram.png"
+                alt="Logo"
+                placeholder="none"
+                width={30}
+                imgStyle={{
+                  maxWidth: 30,
+                  objectFit: "contain",
+                  width: "100%",
+                }}
+              />
+            </a>
           </Grid>
           <Grid item>
+            <a href="https://www.tiktok.com/@festivaldelchocolatetab"></a>
             <StaticImage
               onClick={() => navigate("/")}
               src="../images/ícono tiktok.png"
@@ -177,6 +181,7 @@ const Navbar = () => {
             />
           </Grid>
           <Grid item>
+            <a href="https://twitter.com/FestivalChoco"></a>
             <StaticImage
               onClick={() => navigate("/")}
               src="../images/ícono twitter.png"
@@ -227,7 +232,7 @@ const Navbar = () => {
             <MenuItem onClick={() => navigate("/ven-al-festival")}>
               Ven al Festival
             </MenuItem>
-            <MenuItem onClick={() => navigate("/")}>Expositores</MenuItem>
+            <MenuItem onClick={() => navigate("/status")}>Expositores</MenuItem>
           </Menu>
         </Grid>
       </Grid>
