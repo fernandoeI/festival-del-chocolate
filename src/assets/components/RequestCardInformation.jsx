@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Grid } from "@mui/material";
 import RequestInformation from "./RequestInformation";
 import { grey } from "@mui/material/colors";
 import { v4 } from "uuid";
 import {
+  getLastAceptedStatus,
   getLastFeedback,
   getLastStatus,
+  getQRValue,
   getStatusColor,
 } from "../../utils/functions";
 import { FiberManualRecord, Upgrade } from "@mui/icons-material";
-import { NEED_MODIFY } from "../../utils/constants";
+import { ACEPT, NEED_MODIFY } from "../../utils/constants";
 import SelectDocumentsForm from "./SelectDocumentsForm";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { toast } from "react-toastify";
@@ -17,14 +19,19 @@ import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { app } from "../../utils/server/firebase";
 
 import emailjs from "@emailjs/browser";
+import ReactToPrint from "react-to-print";
+import { ComponentToPrint } from "./ComponentToPrint";
+import { QRCodeSVG } from "qrcode.react";
 
 const db = getFirestore(app);
 
 const RequestCardInformation = ({ request }) => {
   const status = getLastStatus(request);
+  const lastAccepted = getLastAceptedStatus(request.feedbacks);
   const [open, setOpen] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [documents, setDocuments] = useState([]);
+  const componentRef = useRef();
 
   const handleSubmit = async () => {
     try {
@@ -150,6 +157,43 @@ const RequestCardInformation = ({ request }) => {
             Modificar documentos
           </Button>
         </Grid>
+        {status === ACEPT ? (
+          <>
+            <ReactToPrint
+              trigger={() => (
+                <Button color="primary" variant="contained">
+                  Descargar pase de caja
+                </Button>
+              )}
+              content={() => componentRef.current}
+            />
+
+            <div style={{ display: "none" }}>
+              <ComponentToPrint
+                ref={componentRef}
+                data={{
+                  ...request,
+                  noMetros: lastAccepted.squareMeter,
+                  costoM2: lastAccepted.pricePerMeter,
+                  montoPago: lastAccepted.total,
+                }}
+                qr={
+                  <QRCodeSVG
+                    value={getQRValue({
+                      nombre: request.nombre,
+                      rfc: request.rfc,
+                      empresa: request.empresa,
+                      municipio: request.municipio,
+                      noMetros: lastAccepted.squareMeter,
+                      costoM2: lastAccepted.pricePerMeter,
+                      montoPago: lastAccepted.total,
+                    })}
+                  />
+                }
+              />
+            </div>
+          </>
+        ) : null}
       </Grid>
 
       <SelectDocumentsForm
