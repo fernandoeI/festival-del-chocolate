@@ -21,6 +21,7 @@
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.2",
     "@mui/styles": "^5.10.2",
+    "@react-pdf/renderer": "^3.0.0",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-video": "^0.8.0",
     "firebase": "^9.9.3",

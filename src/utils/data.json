@@ -7,46 +7,28 @@
     "date": "16/11/2022",
     "bgColor": "#8BD8D2",
     "color": "#3EA9A3",
-    "time": "12:00 - 13:30",
-    "event": "Inauguración del festival del chocolate",
+    "time": "10:00- 22:00",
+    "event": "Venta de comida tradicional y otros",
+    "hall": "Sabor a Tabasco"
+  },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "11:00 - 21:00",
+    "event": "Degustación y venta. Vinos, Charcutería, cena 4 tiempos",
     "speaker": "Impartido por:",
-    "hall": "Chocolate"
+    "hall": "Cavacao"
   },
+
   {
     "date": "16/11/2022",
     "bgColor": "#8BD8D2",
     "color": "#3EA9A3",
-    "time": "13: 30 - 14:30",
-    "event": "Conferencia Magistral Beyond Chocolate- Asociación para un sector de chocolate sustentable, Profesor Patrick Van Damme Universidad de Gante/Praga) (Programa Gubernamental)",
-    "speaker": "Impartido por:",
-    "hall": "Chocolate"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "14:50- 15:50",
-    "event": "Conversatorio-Panorama Institucional en el Sector Cacaotero",
-    "speaker": "Impartido por: 1.- Lic. Rafael Vila Arboleya, presidente nacional del Sistema Producto Cacao, (SISPRO) \n2.-Víctor Manuel Correa Gutiérrez, Director especialista en Desarrollo Rural, Programa Sembrando Vida.\n3.- Dra. Elsa Chávez García, Colegio de Postgraduados, Campus Tabasco.\n4.- Dr. Luciano Martínez Bolaños, Universidad de Chapingo\n",
-    "hall": "Chocolate"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "16:00",
-    "event": "Demo conferencia 'La Cocina de Agua y Humo de Tabasco'",
-    "speaker": "Impartido por: Chef Lupita Vidal",
-    "hall": "Chocolate"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "18:00",
-    "event": "Demo conferencia - 'Bélgica rinde tributo a la cocina mexicana a través de un perfecto postre de fusión de chocolates'",
-    "speaker": "Impartido por:  Chocolatier Pieter Vaes",
-    "hall": "Chocolate"
+    "time": "11:00 - 23:00",
+    "event": "Cena a 6 manos",
+    "speaker": "Impartido por: Lautt",
+    "hall": "Cavacao"
   },
   {
     "date": "16/11/2022",
@@ -61,10 +43,57 @@
     "date": "16/11/2022",
     "bgColor": "#8BD8D2",
     "color": "#3EA9A3",
+    "time": "12:00 - 13:30",
+    "event": "Inauguración del festival del chocolate",
+    "speaker": "Impartido por:",
+    "hall": "Chocolate"
+  },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "13: 30 - 14:30",
+    "event": "Conferencia Magistral Beyond Chocolate- Asociación para un sector de chocolate sustentable, Profesor Patrick Van Damme Universidad de Gante/Praga) (Programa Gubernamental de Belgica)",
+    "speaker": "Impartido por:",
+    "hall": "Chocolate"
+  },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "14:50- 15:50",
+    "event": "Conversatorio-Panorama Institucional en el Sector Cacaotero",
+    "speaker": "Impartido por: 1.- Lic. Rafael Vila Arboleya, presidente nacional del Sistema Producto Cacao, (SISPRO) \n2.-Víctor Manuel Correa Gutiérrez, Director especialista en Desarrollo Rural, Programa Sembrando Vida.\n3.- Dra. Elsa Chávez García, Colegio de Postgraduados, Campus Tabasco.\n4.- Dr. Luciano Martínez Bolaños, Universidad de Chapingo\n",
+    "hall": "Chocolate"
+  },
+
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
     "time": "15:00",
     "event": "Cata",
     "speaker": "Impartido por: Luis Carlos Morales Gezelle, Xocobel",
     "hall": "Cacao"
+  },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "15:00",
+    "event": "Demo Experiencia - 'La variedad de la Bebida Prehispánica “Alimentos de los Dioses'",
+    "speaker": "Impartido por: Chef Oyuki Ramos",
+    "hall": "Sabor a Tabasco",
+    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón"
+  },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "16:00",
+    "event": "Demo conferencia 'La Cocina de Agua y Humo de Tabasco'",
+    "speaker": "Impartido por: Chef Lupita Vidal",
+    "hall": "Chocolate"
   },
   {
     "date": "16/11/2022",
@@ -75,6 +104,17 @@
     "speaker": "Impartido por: Chocolatier Stephan Dumon",
     "hall": "Cacao"
   },
+
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "17:00",
+    "event": "Demo experiencia",
+    "speaker": "Impartido por: Jaqueline Pérez Jiméne- Cocinera Tradicional",
+    "hall": "Sabor a Tabasco",
+    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón"
+  },
   {
     "date": "16/11/2022",
     "bgColor": "#8BD8D2",
@@ -84,6 +124,16 @@
     "speaker": "Impartido por:  Chef Jorge Orozco",
     "hall": "Cacao"
   },
+  {
+    "date": "16/11/2022",
+    "bgColor": "#8BD8D2",
+    "color": "#3EA9A3",
+    "time": "18:00",
+    "event": "Demo conferencia - 'Bélgica rinde tributo a la cocina mexicana a través de un perfecto postre de fusión de chocolates'",
+    "speaker": "Impartido por:  Chocolatier Pieter Vaes",
+    "hall": "Chocolate"
+  },
+
   {
     "date": "16/11/2022",
     "bgColor": "#8BD8D2",
@@ -120,52 +170,7 @@
     "speaker": "Impartido por: Olivier Wilems (Bélgica)",
     "hall": "Cacao"
   },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "11:00 - 21:00",
-    "event": "Degustación y venta. Vinos, Charcutería, cena 4 tiempos",
-    "speaker": "Impartido por:",
-    "hall": "Cavacao"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "11:00 - 23:00",
-    "event": "Cena a 6 manos",
-    "speaker": "Impartido por: Lautt",
-    "hall": "Cavacao"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "10:00- 22:00",
-    "event": "Venta de comida tradicional y otros",
-    "hall": "Sabor a Tabasco"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "15:00",
-    "event": "Demo Experiencia - 'La variedad de la Bebida Prehispánica “Alimentos de los Dioses'",
-    "speaker": "Impartido por: Chef Oyuki Ramos",
-    "hall": "Sabor a Tabasco",
-    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón"
-  },
-  {
-    "date": "16/11/2022",
-    "bgColor": "#8BD8D2",
-    "color": "#3EA9A3",
-    "time": "17:00",
-    "event": "Demo experiencia",
-    "speaker": "Impartido por: Jaqueline Pérez Jiméne- Cocinera Tradicional",
-    "hall": "Sabor a Tabasco",
-    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón"
-  },
+
   {
     "title": "Jueves 17",
     "bgColor": "#A065A5"
@@ -176,7 +181,7 @@
     "color": "#76357A",
     "time": "9:00 - 10:00",
     "event": "Conferencia - 'Prácticas Agroecológicas para una Producción de Cacao más Sostenible', Profesor Van Damme, Universidad de Gante/Praga",
-    "speaker": "Impartido por: -Lic. Rafael Vila Arboleya (SISPRO)\n-Dr. Pedro García Alamilla (Investigador de la UJAT)\n-Félix Rodríguez (Nestlé)",
+    "speaker": "Profesor Van Damme, Universidad de Gante/Praga",
     "hall": "Chocolate"
   },
   {
@@ -193,7 +198,7 @@
     "bgColor": "#A065A5",
     "color": "#76357A",
     "time": "11:35 - 12:30",
-    "event": "Conversatorio - Juventud Cacaoteras",
+    "event": "Conversatorio - Juventudes Cacaoteras",
     "hall": "Chocolate",
     "description": "Empresas participantes:\n1.-  Rosy Gutiérrez Sánchez.\nVicente Gutiérrez Sánchez.\nHacienda Jesús María.\n2.- Srta. Andrea Vila Contreras, Hacienda Napaná\n3.- Leonel Sastré Lázaro.\nEmbajadoras del Cacao\n4.- Gerardo Valenzuela.\nEscuela Agroecológica del Cacao\n5.- Sembrando Vida\n\nCurador:\nUTTA"
   },
