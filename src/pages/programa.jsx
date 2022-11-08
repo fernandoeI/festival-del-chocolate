@@ -129,7 +129,7 @@ const Tours = () => {
           PROGRAMA
         </Typography>
       </div>
-      <Grid container justifyContent="center" p={8} spacing={6}>
+      <Grid container justifyContent="center" p={1} spacing={6}>
         {/* <Grid item container maxWidth="lg">
           <ButtonGroup
             orientation={matches ? "horizontal" : "vertical"}
@@ -183,6 +183,7 @@ const Tours = () => {
               container
               bgcolor={item.bgColor}
               justifyContent="center"
+              maxWidth="md"
               key={key}
             >
               <div
@@ -210,14 +211,18 @@ const Tours = () => {
               <Grid
                 item
                 container
-                xs={4}
+                xs={3}
                 justifyContent="center"
                 alignItems="center"
                 display={item.title ? "none" : "flex"}
               >
                 <Grid item>
-                  <Typography color="white" textAlign="center" fontSize={24}>
-                    {item.time}
+                  <Typography
+                    color="white"
+                    textAlign="center"
+                    fontSize={{ xs: 16, md: 20 }}
+                  >
+                    {item.time} hrs.
                   </Typography>
                 </Grid>
               </Grid>
@@ -225,7 +230,7 @@ const Tours = () => {
                 item
                 container
                 direction="column"
-                xs={8}
+                xs={9}
                 justifyContent="center"
                 alignItems="center"
                 p={1}
@@ -235,21 +240,42 @@ const Tours = () => {
                   <Typography
                     color={item.color}
                     textTransform="uppercase"
-                    fontSize={18}
+                    fontSize={{ xs: 14, md: 18 }}
                     textAlign="center"
                   >
                     {item.event}
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <Typography color="white" fontSize={16}>
+                  <Typography color="white" fontSize={{ xs: 12, md: 16 }}>
                     {item.speaker}
                   </Typography>
                 </Grid>
-                <Grid item>
-                  <Typography color={item.color} fontSize={16}>
-                    Salón: {item.hall}
-                  </Typography>
+                <Grid
+                  item
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={1}
+                >
+                  <Grid item>
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        width="100%"
+                        style={{ maxWidth: 40 }}
+                        alt="Image 1"
+                      />
+                    ) : null}
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      color={item.color}
+                      fontSize={{ xs: 12, md: 16 }}
+                    >
+                      Salón: {item.hall}
+                    </Typography>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>

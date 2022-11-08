@@ -162,12 +162,12 @@ const Index = () => {
     "Y1vXQBCmbKc",
     "O5gPuhHo0Pg",
     "_RkPwCZJf80",
-    "4I0Xp583NxA",
-    "LpevbZuwbp0",
-    "c9AjVg63o2k",
-    "8d0Bi6c7SiY",
-    "0lufAjchLuA",
-    "gPETavffQo4",
+    "V3RSEG-XXy0",
+    "6ku8esv5rDY",
+    "JTT-4gNv-zw",
+    "H-QXSg3PZww",
+    "SY6sheP2keE",
+    "QjAgBVNwod8",
     "nKn6Gg5BWhU",
   ];
 
@@ -637,7 +637,7 @@ const Index = () => {
                 <Videos ids={ids} big={true} />
               </Splide>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <Splide
                 ref={(slider) => (slider2.current = slider)}
                 options={SPLIDE_OPTIONS_thumb}
