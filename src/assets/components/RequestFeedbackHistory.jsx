@@ -6,25 +6,38 @@ import {
   ListItemText,
   ListItem,
   CircularProgress,
+  Button,
 } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import moment from "moment";
 import "moment/locale/es-mx";
-import { getStatusColor } from "../../utils/functions";
+import {
+  getLastAceptedStatus,
+  getQRValue,
+  getStatusColor,
+} from "../../utils/functions";
 import { FiberManualRecord } from "@mui/icons-material";
 import { RequestContext } from "../../context/RequestContext";
+import { ACEPT } from "../../utils/constants";
+import { QRCodeSVG } from "qrcode.react";
+import ReactToPrint from "react-to-print";
+import { ComponentToPrint } from "./ComponentToPrint";
+import { useRef } from "react";
 
 const RequestFeedbackHistory = () => {
+  const componentRef = useRef();
   const { requestSelected } = useContext(RequestContext);
 
   const [loading, setLoading] = useState(false);
   const [feedbacks, setFeedbacks] = useState([]);
+  const [lastAccepted, setlastAccepted] = useState(null);
 
   useEffect(() => {
     const fetchData = () => {
       try {
         setLoading(true);
         setFeedbacks(requestSelected.feedbacks);
+        setlastAccepted(getLastAceptedStatus(requestSelected.feedbacks));
       } catch (error) {
         console.error(error);
       } finally {
@@ -74,6 +87,43 @@ const RequestFeedbackHistory = () => {
                             }}
                           />
                           <Typography>{feedback.observations}</Typography>
+                          {lastAccepted && lastAccepted.id === feedback.id ? (
+                            <>
+                              <ReactToPrint
+                                trigger={() => (
+                                  <Button color="primary" variant="contained">
+                                    Descargar
+                                  </Button>
+                                )}
+                                content={() => componentRef.current}
+                              />
+
+                              <div style={{ display: "none" }}>
+                                <ComponentToPrint
+                                  ref={componentRef}
+                                  data={{
+                                    ...requestSelected,
+                                    noMetros: lastAccepted.squareMeter,
+                                    costoM2: lastAccepted.pricePerMeter,
+                                    montoPago: lastAccepted.total,
+                                  }}
+                                  qr={
+                                    <QRCodeSVG
+                                      value={getQRValue({
+                                        nombre: requestSelected.nombre,
+                                        rfc: requestSelected.rfc,
+                                        empresa: requestSelected.empresa,
+                                        municipio: requestSelected.municipio,
+                                        noMetros: lastAccepted.squareMeter,
+                                        costoM2: lastAccepted.pricePerMeter,
+                                        montoPago: lastAccepted.total,
+                                      })}
+                                    />
+                                  }
+                                />
+                              </div>
+                            </>
+                          ) : null}
                         </div>
                       }
                       secondary={

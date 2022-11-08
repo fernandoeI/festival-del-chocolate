@@ -52,3 +52,29 @@ export const getLastFeedback = (request) => {
     return request.observations;
   }
 };
+
+export const getLastAceptedStatus = (feedbacks) => {
+  const status = feedbacks
+    .filter((feed) => feed.status === ACEPT)
+    .sort((a, b) => {
+      const dateA = moment.utc(a.createAt * 1000);
+      const dateB = moment.utc(b.createAt * 1000);
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      return 0;
+    });
+  return status[0];
+};
+
+export const getQRValue = (data) => {
+  const baseUrl = "https://festivaldelchocolate.mx/ficha-pago";
+  let params = "";
+
+  for (const key in data) {
+    if (Object.hasOwnProperty.call(data, key)) {
+      params += key + "=" + data[key] + "&";
+    }
+  }
+
+  return baseUrl + "?" + params;
+};

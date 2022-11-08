@@ -33,6 +33,12 @@ video {
   width: 100%;
 }
 
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
 .swiper-slide {
   width: max-content !important;
 }
