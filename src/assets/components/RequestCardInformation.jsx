@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import RequestInformation from "./RequestInformation";
 import { grey } from "@mui/material/colors";
 import { v4 } from "uuid";
@@ -157,6 +157,7 @@ const RequestCardInformation = ({ request }) => {
             Modificar documentos
           </Button>
         </Grid>
+
         {status === ACEPT ? (
           <>
             <ReactToPrint
@@ -194,6 +195,20 @@ const RequestCardInformation = ({ request }) => {
             </div>
           </>
         ) : null}
+
+        <Grid item xs={12}>
+          <Typography fontWeight="bold">
+            Consulta los{" "}
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2FLineamientos%20%202022.pdf?alt=media&token=8c5e7644-6ced-45ca-bfd6-ea1bf7775069"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              lineamientos
+            </a>{" "}
+            para el funcionamiento del Festival del Chocolate 2022
+          </Typography>
+        </Grid>
       </Grid>
 
       <SelectDocumentsForm

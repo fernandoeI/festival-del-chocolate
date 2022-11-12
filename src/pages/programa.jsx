@@ -3,6 +3,7 @@ import {
   ButtonGroup,
   CircularProgress,
   Divider,
+  Fab,
   Grid,
   Typography,
   useMediaQuery,
@@ -99,6 +100,15 @@ const Tours = () => {
       maxWidth={false}
       sx={{ padding: "0 !important", margin: "0 !important" }}
     >
+      <Fab
+        variant="extended"
+        style={{ position: "fixed", bottom: 10, right: 10 }}
+        color="primary"
+      >
+        <a style={{ color: "inherit" }} href="https://registro-6cead.web.app/">
+          Reserva tu cata
+        </a>
+      </Fab>
       <Seo />
       <Navbar />
 
@@ -129,6 +139,7 @@ const Tours = () => {
           PROGRAMA
         </Typography>
       </div>
+
       <Grid container justifyContent="center" p={1} spacing={6}>
         {/* <Grid item container maxWidth="lg">
           <ButtonGroup
@@ -176,7 +187,7 @@ const Tours = () => {
             <img src={buttonSelected.image} width="100%" alt="Image 1" />
           )}
         </Grid> */}
-        <Grid item container maxWidth="md">
+        <Grid item container maxWidth="md" justifyContent="center">
           {data.map((item, key) => (
             <Grid
               item
@@ -241,6 +252,7 @@ const Tours = () => {
                     color={item.color}
                     textTransform="uppercase"
                     fontSize={{ xs: 14, md: 18 }}
+                    fontWeight={item.date === "11/17/2022" ? "600" : "normal"}
                     textAlign="center"
                   >
                     {item.event}

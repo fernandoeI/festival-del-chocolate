@@ -38,7 +38,7 @@ const Tours = () => {
             width: "100%",
           }}
         >
-          VEN AL FESTIVAL
+          TOURS
         </Typography>
       </div>
       <img

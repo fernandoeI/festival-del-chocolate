@@ -122,6 +122,86 @@ const Index = () => {
     "Zacatecas",
   ];
 
+  const chefs = [
+    "https://i.ibb.co/Rzpdhrv/AGUSTIN-BUENDIA.png",
+
+    "https://i.ibb.co/MM11y6p/ALFONSO-CASTAN-EDA.png",
+
+    "https://i.ibb.co/7Y1vZm1/ALFREDO-MARTINEZ-ROBLEDO.png",
+
+    "https://i.ibb.co/M8T4M4X/ANA-LAURA-MTZ.png",
+
+    "https://i.ibb.co/prqzXBC/ANA-LEY-SOMMELIER.png",
+
+    "https://i.ibb.co/vcwP5xn/ARMANDO-PRATS.png",
+
+    "https://i.ibb.co/6shk3Y9/CARMEN-BALCAZAR.png",
+
+    "https://i.ibb.co/vmVRRnT/CESAR-AGUILAR.png",
+
+    "https://i.ibb.co/q0mCJtL/CHEFS-BELGICA-MINI-WEB.png",
+
+    "https://i.ibb.co/pJnMdcX/CHRISTIAN-HERRERA-BAJA-CALIF.png",
+
+    "https://i.ibb.co/jhPw85m/DANIELA-MIER-Y-TERAN.png",
+
+    "https://i.ibb.co/wNwzjbm/EFREN-HERNANDEZ.png",
+
+    "https://i.ibb.co/bLjnPNL/ELY-OSORIO.png",
+
+    "https://i.ibb.co/zxTQrX2/FERNANDO-MARRUFO.png",
+
+    "https://i.ibb.co/9NwVpdR/FREDERIC-VACHERON.png",
+
+    "https://i.ibb.co/pLgpRCp/Joel-Torrijos.png",
+
+    "https://i.ibb.co/8MTpHKY/Jorge-Llanderal.png",
+
+    "https://i.ibb.co/JjWXRrd/JORGE-OROZCO.png",
+
+    "https://i.ibb.co/wyL7SWg/Jose-Burela-Picazzo.png",
+
+    "https://i.ibb.co/xqSBgjB/JOSE-LO-PEZ-GANEM.png",
+
+    "https://i.ibb.co/rQqJGfP/Karen-Cordo-n.png",
+
+    "https://i.ibb.co/nnTRsJt/Kwinten-de-Paepe.png",
+
+    "https://i.ibb.co/xGWbPk8/LUCIO-HERNANDEZ.png",
+
+    "https://i.ibb.co/93Rzc8j/LUPITA-VIDAL.png",
+
+    "https://i.ibb.co/Qb5NRpp/MARCELO-HISAKI.png",
+
+    "https://i.ibb.co/Sc7Qh49/Maria-D-Alo.png",
+
+    "https://i.ibb.co/Bny8s4M/MARICEL-PRESILLA.png",
+
+    "https://i.ibb.co/YW3v9cC/MAU-ROMO.png",
+
+    "https://i.ibb.co/qjzfZqJ/Melanie-Lemmens.png",
+
+    "https://i.ibb.co/p4nCj7P/NELLY-CORDOVA.png",
+
+    "https://i.ibb.co/dBPqfwp/Olivier-Wilems.png",
+
+    "https://i.ibb.co/b2CSjXv/Patric-Van-Damme.png",
+
+    "https://i.ibb.co/YP5xyR0/Pieter-Vaes.png",
+
+    "https://i.ibb.co/SKk4Myj/REINA-FLORES.png",
+
+    "https://i.ibb.co/Q8ZDHcB/RUBI-VAZQUEZ.png",
+
+    "https://i.ibb.co/LN1Mz7q/Slawomir-Korczak-Polska.png",
+
+    "https://i.ibb.co/yS5nX06/SOFIA-CORTINA-CMDX.png",
+
+    "https://i.ibb.co/CWjrvVy/Sthephan-Dumon.png",
+
+    "https://i.ibb.co/Wy0HMLg/VERO-CANDELERO.png",
+  ];
+
   const handleSubmit = async () => {
     if (
       !data?.nombre?.trim() ||
@@ -291,7 +371,7 @@ const Index = () => {
               </Link>
             </SplideSlide>
             <SplideSlide>
-              <a href="https://firebasestorage.googleapis.com/v0/b/festival-del-chocolate.appspot.com/o/docs%2Fconvocatoria%20seleccion%20cacaos_compressed%20(1).pdf?alt=media&token=57877fab-ad4c-448e-b2d8-0b9f68fef7ed">
+              <a href="https://bit.ly/3U2ZQHP">
                 <img
                   src={require("../assets/images/banner/5.jpg").default}
                   width="100%"
@@ -317,6 +397,32 @@ const Index = () => {
                 />
               </a>
             </SplideSlide>
+          </Splide>
+        </Grid>
+      </Grid>
+      <Grid container direction="column">
+        <Grid item>
+          <Typography variant="h6" py={4} width="100%" textAlign="center">
+            CHEFS INVITADOS
+          </Typography>
+        </Grid>
+        <Grid item width="100%">
+          <Splide
+            aria-label="My Favorite Images"
+            options={{
+              type: "loop",
+              perPage: 10,
+              perMove: 1,
+            }}
+          >
+            {chefs.map((chef, key) => (
+              <SplideSlide
+                key={key}
+                style={{ marginRight: 10, marginLeft: 10 }}
+              >
+                <img src={chef} width="" alt="Image 1" />
+              </SplideSlide>
+            ))}
           </Splide>
         </Grid>
       </Grid>

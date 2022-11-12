@@ -99,9 +99,9 @@ const Navbar = () => {
               color="#F9DC9B"
               component="span"
               style={{ cursor: "pointer" }}
-              onClick={() => navigate("/ven-al-festival")}
+              onClick={() => navigate("/tours")}
             >
-              | Ven al Festival
+              | Tours
             </Typography>
           </Grid>
           <Grid item>
@@ -204,9 +204,7 @@ const Navbar = () => {
             <MenuItem onClick={() => navigate("/historia")}>
               Historia del Chocolate
             </MenuItem>
-            <MenuItem onClick={() => navigate("/ven-al-festival")}>
-              Ven al Festival
-            </MenuItem>
+            <MenuItem onClick={() => navigate("/tours")}>Tours</MenuItem>
             <MenuItem onClick={() => navigate("/status")}>Expositores</MenuItem>
           </Menu>
         </Grid>

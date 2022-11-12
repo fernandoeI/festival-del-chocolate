@@ -7,182 +7,252 @@
   {
     "date": "11/16/2022",
     "time": "11:00- 13:00",
-    "event": "Conferencias y Conversatorios",
-    "speaker": "Impartido por: Los Hijos del Cacao",
-    "hall": "Cacao",
+    "event": "Conferencias y Conversatorios.",
+    "speaker": "Los Hijos del Cacao.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "11:00 - 21:00",
-    "event": "Degustación y venta. Vinos, Charcutería, cena 6 tiempos",
-    "hall": "Cavacao",
+    "event": "Degustación y Venta: Vinos, Charcutería.",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "12:00 - 13:30",
-    "event": "Inauguración del Festival del Chocolate",
-    "hall": "Chocolate",
+    "event": "Inauguración del Festival del Chocolate.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "13:00",
+    "event": "Demostraciones de Enjambres de Chocolate y Fresas de Chocolate, postres ideales para las festividades decembrinas.",
+    "speaker": "Impartido por: Chef Luca López Hernández, Instructor del Ifortab.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "12:00- 13:30",
+    "event": "Música para todos.",
+    "speaker": "Impartido por: DIF Tabasco.",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "13: 30 - 14:30",
-    "event": "Conferencia Magistra: Beyond Chocolate- Asociación para un sector de chocolate sustentable",
-    "speaker": "Impartido por: Profesor Patrick Van Damme Universidad de Gante/Praga",
-    "hall": "Chocolate",
+    "event": "Conferencia Magistral: Beyond Chocolate- Asociación para un sector de chocolate sustentable.",
+    "speaker": "Impartido por: Profesor Patrick Van Damme Universidad de Gante/Praga.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "14:50- 15:50",
-    "event": "Conversatorio-Panorama Institucional en el Sector Cacaotero",
-    "speaker": "Impartido por: 1.- Lic. Rafael Vila Arboleya, presidente nacional del Sistema Producto Cacao, (SISPRO)\n2.-Víctor Manuel Correa Gutiérrez, Director especialista en Desarrollo Rural, Programa Sembrando Vida.\n3.- Dra. Elsa Chávez García, Colegio de Postgraduados, Campus Tabasco.\n4.- Dr. Luciano Martínez Bolaños, Universidad de Chapingo\n5.- Dr. Martín Gaona Ponce, Universidad de Chapingo\n- Moderador: Ing Pedro alamilla",
-    "hall": "Chocolate",
+    "time": "14:40- 15:50",
+    "event": "Conversatorio: Panorama Institucional en el Sector Cacaotero.",
+    "speaker": "Participantes: 1.- Lic. Rafael Vila Arboleya, Presidente Nacional del Sistema Producto Cacao, (SISPRO).\n2.-M.V.Z Víctor Manuel Correa Gutiérrez, Director especialista en Desarrollo Rural, Programa Sembrando Vida.\n3.- Dra. Elsa Chávez García, Colegio de Postgraduados, Campus Tabasco.\n4.- Dr. Luciano Martínez Bolaños, Universidad de Chapingo.\n5.- Dr. Martín Gaona Ponce, Universidad de Chapingo. \n- Moderador: Ing. Pedro Alamilla.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "15:00",
-    "event": "Cata   Luis Carlos Morales Gezelle, Xocobel",
-    "speaker": "Impartido por: Luis Carlos Morales Gezelle, Xocobel",
-    "hall": "Cacao",
+    "event": "Cata.",
+    "speaker": "Impartido por: Luis Carlos Morales Gezelle, Xocobel.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "15:00- 16:00",
-    "event": "\"Experiencia Cacao\"",
-    "speaker": "Verónica Candelero",
-    "hall": "Cavacao",
+    "event": "\"Experiencia Cacao\".",
+    "speaker": "Impartido por: Verónica Candelero.",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "15:00",
-    "event": "Demo Experiencia - La variedad de la Bebida Prehispánica “Alimentos de los Dioses\"",
-    "speaker": "Impartido por: Chef Oyuki Ramos",
-    "hall": "Sabor a Tabasco",
+    "time": "14:00 - 15:00",
+    "event": "Demo Experiencia: La variedad de la Bebida Prehispánica “Alimentos de los Dioses\".",
+    "speaker": "Impartido por: Chef Ana Oyuki Ramos.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón.",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "16:00",
-    "event": "Taller  Taller - Deliciosos bombones en forma de corazón que con amor van directo desde el corazón de Europa a tu boca”",
-    "speaker": "Impartido por: Chocolatier Stephan Dumon",
-    "hall": "Cacao",
+    "event": "Taller: Deliciosos bombones en forma de corazón que con amor van directo desde el corazón de Europa a tu boca.",
+    "speaker": "Impartido por: Chocolatier Stephan Dumon.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "16:00",
-    "event": "Demo conferencia \"La Cocina de Agua y Humo de Tabasco\"",
-    "speaker": "Impartido por: Chef Lupita Vidal",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"La Cocina de Agua y Humo de Tabasco\".",
+    "speaker": "Impartido por: Chef Lupita Vidal.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "17:00",
-    "event": "Taller- \"Uso del Chocolate en la Tradicional Gastronomía Mexicana\"",
-    "speaker": "Impartido por:  Chef Jorge Orozco",
-    "hall": "Cacao",
-    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "time": "16:00",
+    "event": "Experiencias Rucu.",
+    "speaker": "Impartido por: María Caso.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "17:00",
-    "event": "Demo experiencia",
-    "speaker": "Impartido por: Jaqueline Pérez Jiméne- Cocinera Tradicional",
-    "hall": "Sabor a Tabasco",
+    "time": "16:00",
+    "event": "Demo experiencia.",
+    "speaker": "Impartido por: Jaqueline Pérez Jiménez- Cocinera Tradicional.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "description": "El taller de cocina tradicional es una demo conferencia impartida por una cocinera tradicional que usará fogón.",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "18:00",
-    "event": "Demo conferencia - \"Bélgica rinde tributo a la cocina mexicana a través de un perfecto postre de fusión de chocolates\"",
-    "speaker": "Impartido por:  Chocolatier Pieter Vaes",
-    "hall": "Chocolate",
-    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
-  },
-  {
-    "date": "11/16/2022",
-    "time": "18:00",
-    "event": "Cata- Bomboneria con Barras de Mezcal",
-    "speaker": "Impartido por: Chef Christian Martínez",
-    "hall": "Cacao",
+    "time": "17:00",
+    "event": "Taller: \"Uso del Chocolate en la Tradicional Gastronomía Mexicana\".",
+    "speaker": "Impartido por: Chef Jorge Orozco.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "17:00",
+    "event": "Artista D´j",
+    "speaker": "Impartido por: Yungdupe.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "18:00",
+    "event": "Demo conferencia: \"Bélgica rinde tributo a la cocina mexicana a través de un perfecto postre de fusión de chocolates\".",
+    "speaker": "Impartido por: Chocolatier Pieter Vaes.",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "18:00",
+    "event": "Cata: Bomboneria con Barras de Mezcal.",
+    "speaker": "Impartido por: Chef Christian Martínez.",
+    "hall": "Cacao.",
+    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "18:00",
+    "event": "Representación de Guitarrista de música electrónica",
+    "speaker": "Impartido por: AMARU",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "19:00",
-    "event": "Cata Chocolates Siij",
-    "speaker": "Impartido por: Reyna Flores",
-    "hall": "Cacao",
+    "event": "Representación de Danza: Ballet",
+    "speaker": "Impartido por: Ballet Anahuacalli de Cunduacán.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "19:00",
+    "event": "Cata Chocolates Siij.",
+    "speaker": "Impartido por: Reyna Flores.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "20:00",
-    "event": "Charla/Taller - \"Delikawa\"",
-    "speaker": "Impartido por: Delia Cristina Marí Bolio",
-    "hall": "Cacao",
+    "event": "Representación de Danza.",
+    "speaker": "Impartido por: DANZARTE.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
+  },
+  {
+    "date": "11/16/2022",
+    "time": "20:00",
+    "event": "Charla/Taller: \"Delikawa\".",
+    "speaker": "Impartido por: Delia Cristina Marí Bolio.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
     "time": "21:00",
-    "event": "Cata - Descubriendo los sabores del mar, la cerveza belga y el tequila mexicano a través de mis bombones exclusivos\", \"Chocolatero del mar\"",
-    "speaker": "Impartido por: Olivier Wilems (Bélgica)",
-    "hall": "Cacao",
+    "event": "Cata: Descubriendo los sabores del mar, la cerveza belga y el tequila mexicano a través de mis bombones exclusivos, \"Chocolatero del mar\".",
+    "speaker": "Impartido por: Olivier Wilems (Bélgica).",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "date": "11/16/2022",
-    "time": "21:00 - 23:00",
-    "event": "Cena a 6 manos",
-    "speaker": "Impartido por: Lautt",
-    "hall": "Cavacao",
-    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#8BD8D2",
-    "color": "#277D6F "
+    "time": "21:00",
+    "event": "Representación de Música Tabasqueña.",
+    "speaker": "Impartido por: AGALAMBARILEROS",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#277D6F",
+    "bgColor": "#8BD8D2"
   },
   {
     "title": "Jueves 17",
@@ -192,190 +262,271 @@
   {
     "date": "11/17/2022",
     "time": "9:00 - 10:00",
-    "event": "Conferencia - \"Prácticas Agroecológicas para una Producción de Cacao más Sostenible/ CACAOLAB\", Profesor Van Damme, Universidad de Gante/Praga",
-    "speaker": "Impartido por: -Lic. Rafael Vila Arboleya (SISPRO)\n-Dr. Pedro García Alamilla (Investigador de la UJAT)\n-Félix Rodríguez (Nestlé)",
-    "hall": "Chocolate",
+    "event": "Conferencia: \"Prácticas Agroecológicas para una Producción de Cacao más Sostenible/CACAOLAB\", Profesor Van Damme, Universidad de Gante/Praga.",
+    "speaker": "Impartido por: Profesor Van Damme, Universidad de Gante/Praga.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "11:00",
+    "event": "Demostración de Chocolaterapia.",
+    "speaker": "Impartido por: Egresados de Ifortab e Instructora Yara Javier Alfaro.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "10:15- 11:30",
-    "event": "Conversatorio - El Cacao Como Medicina y Alimentos",
-    "speaker": "Impartido por: Participantes:\n1.-Dr. Roberto Weber Burque Palacios, \nServicios Médicos,         UJAT\n2.- Dr. Pedro García Alamilla, UJAT\n3.- Heber Castellanos Ramírez, Kakaw Museo, San Cristóbal de las Casas\nChiapas.\n4 .- Verónica Caldelero García\nChocolate Cacastes\nModerador: Maestro José Padilla Vega,\nCoordinador de Programa Académico de Desarrollo Rural Sustentable\nUniversidad Intercultural",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "event": "Conversatorio: El Cacao Como Medicina y Alimentos.",
+    "speaker": "Impartido por: Participantes:\n1.-Dr. Roberto Weber Burque Palacios, \nServicios Médicos, (UJAT).\n2.- Dr. Pedro García Alamilla, (UJAT).\n3.-Sr. Herbert Adolfo Castellanos Ramírez, Kakaw Museo, San Cristóbal de las Casas\nChiapas.\n4 .-Lic. Verónica Candelero García\nChocolate Cacaste.\nModerador: Maestro José Padilla Vega.\nCoordinador de Programa Académico de Desarrollo Rural Sustentable\nUniversidad Intercultural.",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "11:00 - 21:00",
-    "event": "Degustación y venta",
+    "event": "Degustación y Venta.",
     "speaker": "Impartido por:",
-    "hall": "Cavacao",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
-    "time": "11:00- 13:00 ",
-    "event": "Conferencias y Conversatorios - Los Hijos del Cacao",
-    "speaker": "Impartido por: ",
-    "hall": "Cacao",
+    "time": "11:00- 13:00",
+    "event": "Conferencias y Conversatorios.",
+    "speaker": "Los hijos del cacao.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "11:35 - 12:45",
-    "event": "Conversatorio - Juventudes Cacaoteras",
-    "speaker": "1.-  Rosy Gutiérrez Sánchez.\nVicente Gutiérrez Sánchez.\nHacienda Jesús María.\n2.- Srta. Andrea Vila Contreras, Hacienda Napaná\n3.- Leonel Sastré Lázaro.\nEmbajadoras del Cacao\n4.- Gerardo Valenzuela.\nEscuela Agroecológica del Cacao\n5.- Sembrando Vida\n\nModerador: Isaí Córdova Sastré\nSADER\nSecretaría de Agricultura Ganadería Desarrollo Rural Pesca y Alimentación",
-    "hall": "Chocolate",
+    "event": "Conversatorio: Juventudes Cacaoteras.",
+    "speaker": "1.- Rosy Gutiérrez Sánchez.\nVicente Gutiérrez Sánchez.\nHacienda Jesús María.\n2.- Leonel Sastré Lázaro.\nEmbajadoras del Cacao.\n3.- Gerardo Valenzuela.\nEscuela Agroecológica del Cacao.\n4.- Lic. Alma Delia Herrera Magaña, Administradora de la Hacienda las Delicias, Comalcalco.\n\nModerador: Isaí Córdova Sastré.\nSADER.\nSecretaría de Agricultura y Desarrollo Rural.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "12:00",
+    "event": "\"Dulce de Corazón de Cacao\" y \"Galletas de Cacao\"",
+    "speaker": "Impartido por: Jesús Geovany Gómez Martínez y Manuela Gómez Martínez de la Universidad Intercultural del Estado de Tabasco.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "12:30 - 14:00",
-    "event": "Demo conferencia - \"Bomboneria de Competencia\"",
-    "speaker": "Impartido por: Chocolatier Slawomir Korczak",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Bomboneria de Competencia\".",
+    "speaker": "Impartido por: Chocolatier Slawomir Korczak.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
-    "time": "15:00",
-    "event": "Cata, Diferenciación de pastas de Cacao dependiendo de la calidad de la cosecha",
-    "speaker": "Impartido por: Chocolatier, Chocolatera y juez Sophie Vanderbecken Le Cameleón con coinvitada María D´alo (Bélgica)",
-    "hall": "Cacao",
-    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
-  },
-  {
-    "date": "11/17/2022",
-    "time": "15:00",
-    "event": "Demo conferencia - \"Importancia de la promoción y difusión de la gastronomía tabasqueña a nivel nacional e internacional\"",
-    "speaker": "Impartido por: Chef Jesús Manuel Hernández",
-    "hall": "Sabor a Tabasco",
+    "time": "14:00",
+    "event": "Demo conferencia: \"Importancia de la promoción y difusión de la gastronomía tabasqueña a nivel nacional e internacional\".",
+    "speaker": "Impartido por: Chef Jesús Manuel Hernández.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
-    "time": "16:00",
-    "event": "Demo conferencia- \"El dulce menos dulce\"",
-    "speaker": "Impartido por: Chef Sofia Cortina (Lavitrine, CDMX)",
-    "hall": "Chocolate",
-    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
-  },
-  {
-    "date": "11/17/2022",
-    "time": "16:00",
-    "event": "Cata - \"Transformando sentimientos y experiencias de vida en sabores\"",
-    "speaker": "Impartido por: Chocolatier Pieter Vaes (Bélgica)",
-    "hall": "Cacao",
+    "time": "15:00",
+    "event": "Cata: Diferenciación de pastas de Cacao dependiendo de la calidad de la cosecha.",
+    "speaker": "Impartido por: Chocolatier y juez Sophie Vanderbecken Le Cameleón con coinvitada María D´alo (Bélgica).",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "16:00",
+    "event": "Demo conferencia: \"El dulce menos dulce\".",
+    "speaker": "Impartido por: Chef Sofía Cortina (Lavitrine, CDMX).",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "16:00",
+    "event": "Cata: \"Transformando sentimientos y experiencias de vida en sabores\".",
+    "speaker": "Impartido por: Chocolatier Pieter Vaes (Bélgica).",
+    "hall": "Cacao.",
+    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "16:00",
+    "event": "Expierencias Rucu.",
+    "speaker": "Impartido por : María Caso.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "16:00",
+    "event": "Demo experiencia.",
+    "speaker": "Impartido por: C.T. Clotilde Pérez Luna (Emiliano Zapata).",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "17:00",
     "event": "Taller- \"Anatomía de bombón de Chocolate\"",
-    "speaker": "Impartido por: Chocolatier Jorge Llanderal ",
-    "hall": "Cacao",
+    "speaker": "Impartido por: Chocolatier Jorge Llanderal.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "17:00",
-    "event": "Demo experiencia, (Emiliano Zapata)",
-    "speaker": "Impartido por: Chef Clotilde",
-    "hall": "Sabor a Tabasco",
+    "event": "Pastel gigante (Pirámide Maya).",
+    "speaker": "Impartido por: Universidad LICEO.",
+    "hall": "Área de esculturas.",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "17:00",
+    "event": "Artista D´j",
+    "speaker": "Impartido por: Yungdupe.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "18:00",
-    "event": "Demo conferencia \"Texturas de Chocolate Tabasqueño\"",
-    "speaker": "Impartido por: Chef Daniela Mier y Terán, Restaurante Rizoma",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Texturas de Chocolate Tabasqueño.\"",
+    "speaker": "Impartido por: Chef Daniela Mier y Terán, Restaurante Rizoma.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "18:00",
-    "event": "Charla/degustación: Puente de Memorias",
-    "speaker": "Impartido  por: Nelly Cordoba y Sophie Vanderbecken",
-    "hall": "Cacao",
+    "event": "Charla/Degustación: Puente de Memorias.",
+    "speaker": "Impartido por: Nelly Córdoba y Sophie Vanderbecken.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "18:00",
+    "event": "Representación: De Banda de Música Tabasqueña",
+    "speaker": "Impartido por: BANDA DE MÚSICA DEL GOBIERNO DEL ESTADO DE TABASCO",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "19:00",
-    "event": "Cata de Vinos de Baja California",
-    "speaker": "Impartido por: Ana Laura Martínez del Culinary Scool",
-    "hall": "Cacao",
+    "event": "Cata: De Vinos de Baja California.",
+    "speaker": "Impartido por: Ana Laura Martínez del Culinary School.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "20:00",
-    "event": "Cata de Oaxaca Mezcal con Chocolate Tabasqueño",
-    "speaker": "Impartido por: Chef Alfonso Castañeda",
-    "hall": "Cacao",
+    "event": "Cata: De Oaxaca Mezcal con Chocolate Tabasqueño.",
+    "speaker": "Impartido por: Mestro Mezcalero Alberto Morales, Casa Wahaka, Chef Alfonso Castañeda, Agustín López Buendia, Chocolates Hacienda de los Abuelos.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "20:00",
-    "event": "Demo confernecia , - \"Animales del Mar\"",
-    "speaker": "Impartido por: Chocolatier Olivier Wilems (Bélgica)",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Animales del Mar.\"",
+    "speaker": "Impartido por: Chocolatier Olivier Wilems (Bélgica).",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "20:00",
+    "event": "Representación de Danza Folklórica",
+    "speaker": "Impartido por: COMPAÑÍA DE DANZA FOLKLÓRICA DE LA CIUDAD DE VILLAHERMOSA",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
+  },
+  {
+    "date": "11/17/2022",
+    "time": "21:00",
+    "event": "Representación de música electro acústico",
+    "speaker": "Impartido por: Acoustic Sounds",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "21:00- 22:00",
-    "event": "Cata de cerveza Célebre , Olmeca y Chocolate Cacep",
+    "event": "Cata: de cerveza Célebre , Olmeca y Chocolate CACEP.",
     "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "date": "11/17/2022",
     "time": "21:00- 23:00",
-    "event": "Cena a 6 manos",
+    "event": "Cena a 6 manos.",
     "speaker": "Impartido por:",
-    "hall": "Cavacao",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#A065A5",
-    "color": "#542F5B "
+    "color": "#542F5B",
+    "bgColor": "#A065A5"
   },
   {
     "title": "Viernes 18",
@@ -385,202 +536,280 @@
   {
     "date": "11/18/2022",
     "time": "9:00 - 10:00",
-    "event": "Conversatorio - \"Cultura del Cacao & Desarrollo Sustentable\" Mesa de Diálogo UNESCO",
-    "speaker": "Impartido por: 1.- Frédéric Vacheron (UNESCO México).\n2.- Prof. Patrick Van Damme (Universidad de Gante/Praga)\n3.- Dra. Ana Luisa Quezadas Barahona, Enlace Estatal de PNUD en Tabasco.\n4.- Maestro Hugo Chávez Ayala, Agrofloresta.\n\nCurador:\nMaestra Dalila Rueda Vázquez, Directora Ejecutiva de FUJAT\nEsmeralda Baeza Sosa. De la PNUD",
-    "hall": "Chocolate",
+    "event": "Conversatorio: \"Cultura del Cacao & Desarrollo Sustentable\" Mesa de Diálogo UNESCO.",
+    "speaker": "Participantes: 1.- Frédéric Vacheron (UNESCO México).\n2.- Prof. Patrick Van Damme (Universidad de Gante/Praga).\n3.- Dra. Ana Luisa Quezadas Barahona, Enlace Estatal de PNUD en Tabasco.\n4.- Maestro Hugo Chávez Ayala, Agrofloresta.\n5.- Gloria Ivonne Miguel Rodríguez, Consejera de la Reserva de la Biosfera volcán\nTacana – CONAMP \n6.- Sr. Florencio Sánchez Rodríguez – Coordinador de Agroturismo de la Hacienda\nCacaotera Jesús María. \n\nModerador:\nMaestra Dalila Rueda Vázquez, Directora Ejecutiva de FUJAT y Lic. Ana Rosa Rodriguez Luna, Punto focal en Tabasco para la UNESCO México. \nRelatora:\nLic. Esmeralda Baeza Sosa. De la PNUD.\n",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "10:00 - 11:00",
-    "event": "\nConversatorio - Gobernanza en el Sector Cacaotero",
-    "speaker": "Impartido por: 1.- Lic. Guadalupe Aquino.\nRepresentante de la Oficina de la  Secretaría de Economía en Tabasco\n2.- SEDAFOP\n3.- Carlos Avendaño Arrazate, INIFAP \nInstituto Nacional de Investigaciones Forestales Agrícolas y Pecuarias.\n\nModerador:\nMaestro José López Ganem, Fine Cacao and Chocolate Institute (FCCI) \ny Universidad de Harvard (USA).\n\nRelator:\nLic. Iván Augusto Arce Santana, Universidad de Chapingo",
-    "hall": "Chocolate",
+    "event": "\nConversatorio: Gobernanza en el Sector Cacaotero.",
+    "speaker": "Participantes: 1.- Lic. Guadalupe Aquino.\nRepresentante de la Oficina de la Secretaría de Economía en Tabasco.\n2.- Lic. Irving Alberto Hernández Ramos, oficial de Certificación para Rainforest Alliance\n3.- Dra. Carolina Zequeira Larios, Docente investigadora de la UJAT 4.-Dr. Alfonso Azpeitia Morales\nInvestigador del Instituto Nacional de Investigaciones\nForestales Agrícolas y Pecuarias, INIFAP\nModerador:\nMaestro José López Ganem, Fine Cacao and Chocolate Institute (FCCI).\ny Universidad de Harvard (USA).\nRelator: Ing. Julio Cámara Córdova, Universidad Juárez Autónoma de Tabasco, UJAT",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
-  },
-  {
-    "date": "11/18/2022",
-    "time": "11:00 - 12:00",
-    "event": "Conversatorio- Desarrollo de PYMES en la Industria del Chocolate",
-    "speaker": "Impartido por:  Participantes:\n1.- Vicente Alberto Gutiérrez, Cacep\nHacienda Jesús María. \n2.- Lic. Ana Rita García-Lascurain, Directora del Museo MUCHO, Chiapas\n3.- Karla Guerra Ruiz\nChocolatería Artesanal Tierra Cacao\n4.- Sra. Reyna Flores Hernández, Chocolate Ancestral.\n5.- Cutberto Lázaro Cepeda, Chocolatería Artesanal.\n\nModerador:\nUniversidad de Chapingo\n\nRelator:\nMaestra Elizabeth Pérez Montejo, Universidad de Chapingo",
-    "hall": "Chocolate",
-    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
-  },
-  {
-    "date": "11/18/2022",
-    "time": "11:00- 13:00",
-    "event": "Conferencias y Conversatorios - Los Hijos del Cacao",
-    "speaker": "Impartido por:",
-    "hall": "Cacao",
-    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
-  },
-  {
-    "date": "11/18/2022",
-    "time": "11:00- 21.00",
-    "event": "Degustación y venta",
-    "speaker": "Impartido por: ",
-    "hall": "Cavacao",
-    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "12:00",
-    "event": "Demo conferencia- \"Sugerencias y Trucos para el Bean to Bar\"",
-    "speaker": "Impartido por: Chocolatier María D'alo ( Bélgica)",
-    "hall": "Chocolate",
+    "event": "\"Chocolate en Bola\".",
+    "speaker": "Impartido por: Rosy Gómez Morales, de la Universidad Intercultural del Estado de Tabasco.",
+    "hall": "Sabor a tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "11:00 - 12:00",
+    "event": "Conversatorio: Desarrollo de PYMES en la Industria del Chocolate.",
+    "speaker": "Particpantes: \n1.- Ing. Vicente Alberto Gutiérrez, CACEP.\nHacienda Jesús María. \n2.-Lic. Karla Guerra Ruiz\nChocolatería Artesanal Tierra Kakao.\n3.- Dra. Reyna Flores Hernández, Chocolate Ancestral Síij.\n4.- Maestro en Ciencias Cutberto Lázaro Cepeda, Chocolatería Artesanal Citlalli.\nModerador: Maestra Verónica Bautista Carrera, UTTAB.\nRelator: Dr. Antonio Acosta Solorzano, UTTAB",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "11:00- 13:00",
+    "event": "Conferencias y Conversatorios.",
+    "speaker": "Los Hijos del Cacao.",
+    "hall": "Cacao.",
+    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "11:00",
+    "event": "Demostración de Chocolaterapia.",
+    "speaker": "Impartido por: Egresados de Ifortab e Instructora Yara Javier Alfaro.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "11:00- 21.00",
+    "event": "Degustación y venta.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "12:00",
+    "event": "Demo conferencia: \"Sugerencias y Trucos para el Bean to Bar\".",
+    "speaker": "Impartido por: Chocolatier María D'alo ( Bélgica).",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "14:00",
-    "event": "Demo Conferencia",
-    "speaker": "Impartido por: Chef Lucio Hernández, Baja California",
-    "hall": "Chocolate",
+    "event": "Demo Conferencia.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
-    "time": "15:00",
-    "event": "Charla: \"Cree siempre en tus sueños (de chocolate)\"",
-    "speaker": "Impartido por: María D´alo",
-    "hall": "Cacao",
-    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
-  },
-  {
-    "date": "11/18/2022",
-    "time": "15:00",
-    "event": "Demo experiencia",
-    "speaker": "Impartido por:  Chef, Daniel Alejandro Mayo, Luxury Catering",
-    "hall": "Sabor a Tabasco",
+    "time": "14:00",
+    "event": "Demo experiencia.",
+    "speaker": "Impartido por: Chef Daniel Alexander Mayo y Chef Luxury Catering.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "15:00",
+    "event": "Charla: \"Cree siempre en tus sueños (de chocolate)\".",
+    "speaker": "Impartido por: María D´alo.",
+    "hall": "Cacao.",
+    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "16:00",
-    "event": "Demo conferencia ",
-    "speaker": "Impartido por:  Chef Silvia Mazaba, Restaurante Bruma y Fauna, Baja California",
-    "hall": "Chocolate",
+    "event": "Demo conferencia.",
+    "speaker": "Impartido por: Chef Silvia Mazaba, Restaurante Bruma y Fauna, Baja California.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "16:00",
+    "event": "Experiencias Rucu.",
+    "speaker": "Impartido por: María Caso.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "16:00",
+    "event": "Demo experiencia: \"Horneado tabasqueño, con costra de chocolate\".",
+    "speaker": "Impartido por: Ely Osorio \"El sazón de Ely\".",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "16:00- 18:00",
-    "event": "Taller: Elaboración de Trufas Artesanales",
-    "speaker": "Impartido por: Chocolatier Silvia Guedez",
-    "hall": "Cacao",
+    "event": "Taller: Elaboración de Trufas Artesanales.",
+    "speaker": "Impartido por: Chocolatier Silvia Guédez.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "17:00",
-    "event": "Demo experiencia \"Horneado trabasqueño, con costra de chocolate\"",
-    "speaker": "Impartido por: Ely Osorio \"El sazón de Ely\"",
-    "hall": "Sabor a Tabasco",
+    "event": "Artista D´j",
+    "speaker": "Impartido por: Yungdupe.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "18:00",
-    "event": "Demo conferencia ",
-    "speaker": "Impartido por:  Chef Fernando Marrufo",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Ostiones del Edén\".",
+    "speaker": "Impartido por: Chef Fernando Marrufo.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "18:00",
-    "event": "Cata - Chocolates Siij",
-    "speaker": "Impartido por:  Reina Flores",
-    "hall": "Cacao",
+    "event": "Cata: Chocolates Síij.",
+    "speaker": "Impartido por: Dra. Reyna Flores.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "18:00",
+    "event": "Representación de música tabasqueña modernizada",
+    "speaker": "Impartido por: DARUMA.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "19:00",
-    "event": "Cata - Museo Kakaw de San Cristóbal",
-    "speaker": "Impartido por: Mayari Castellanos",
-    "hall": "Cacao",
+    "event": "Cata: Museo Kakaw de San Cristóbal.",
+    "speaker": "Impartido por: Mayari Castellanos.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "19:00",
+    "event": "Representación del Grupo artístico representativo de ISSET.",
+    "speaker": "Impartido por: RONDALLA ISSET.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "19:00- 20:00",
-    "event": "Premiación 1era conferencia para cerveceros caseros",
-    "speaker": "Impartido por: ",
-    "hall": "Cavacao",
+    "event": "Premiación 1era conferencia para cerveceros caseros.",
+    "speaker": "Impartido por:",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "20:00",
-    "event": "Demo conferencia ",
-    "speaker": "Impartido por:  Chef Christian Herrera. ",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: Cocina de Baja con Cacao\".",
+    "speaker": "Impartido por: Chef Christian Herrera.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "20:00",
+    "event": "Representación del Grupo versátil con su música con tintes y sabores tabasqueños, (Cunduacán).",
+    "speaker": "Impartido por: SON ACÚSTICA.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "20:00- 21:00",
-    "event": "Cata - \"Sabores de Chocolate",
-    "speaker": "Impartido por: Chef Rubí Vázquez",
-    "hall": "Cacao",
+    "event": "Cata: \"Sabores de Chocolate\".",
+    "speaker": "Impartido por: Chef Rubí Vázquez.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "21:00",
-    "event": "Cata : El sueño de Don Julio.... del Coco al Chocolate, Agustín Buendia (Chocolate Hacienda de los Abuelos)",
+    "event": "Cata: El sueño de Don Julio.... del Coco al Chocolate, Agustín Buendía (Chocolate Hacienda de los Abuelos).",
     "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
+  },
+  {
+    "date": "11/18/2022",
+    "time": "21:00",
+    "event": "Representación cantante solista.",
+    "speaker": "Impartido por: Alejandra Domz. \n",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "date": "11/18/2022",
     "time": "21:00- 23:00",
-    "event": "Cena a 6 manos",
-    "speaker": "Impartido por: Chef Rubí, Chef Daniela",
-    "hall": "Cavacao",
+    "event": "Cena a 6 manos.",
+    "speaker": "Impartido por: Chef Rubí, Chef Daniela.",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#FF8B5C",
-    "color": "#823F27 "
+    "color": "#823F27",
+    "bgColor": "#FF8B5C"
   },
   {
     "title": "Sábado 19",
@@ -590,251 +819,328 @@
   {
     "date": "11/19/2022",
     "time": "9:00 - 10:00",
-    "event": "Conversatorio - El Mercado del Cacao y Chocolate en México.",
-    "speaker": "Impartido por:1.- Dra. Manuela Camacho, UJAT.\n2.- Rafael Vila Arboleya, SISPRO Nacional \n3.- Maestro José López Ganem, Fine Cacao and Chocolate Institute (FCCI) \ny Universidad de Harvard (USA).\n4.- IMPI.\n5.- Hugo Chávez Ayala, Agrofloresta\n6.- Chef Joel Torrijos Alva\nDirección General de Televisión Universitaria, \nUniversidad Nacional Autónoma de México, (UNAM).",
-    "hall": "Chocolate",
+    "event": "Conversatorio: El Mercado del Cacao y Chocolate en México.",
+    "speaker": "Participantes: \n1.-Lic. Rafael Vila Arboleya, SISPRO Nacional \n2.- Maestro José López Ganem, Fine Cacao and Chocolate Institute (FCCI) y Universidad de Harvard (USA). \n3.- Maestro Hugo Chávez Ayala, Agrofloresta.\n\nModerador:\nChef Joel Torrijos Alva.\nDirección General de Televisión Universitaria, Universidad Nacional Autónoma de México, (UNAM).\n\nRelatora:\nDra. Manuela Camacho, UJAT.\n",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "10:00- 10:30",
-    "event": "Influencia de la imagen en las comunidades de aves y murciélagos en plantaciones agroforestales de cacao en la región soque",
-    "speaker": "Impartido por:Aymeric Oliveira Xavier",
-    "hall": "Cacao",
-    "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "event": "Influencia del paisaje en las comunidades de aves y murciélagos en plantaciones agroforestales de cacao en la región zoque, Tabasco.",
+    "speaker": "Impartido por: Master Aymeric Oliveira Xavier\nUniversité de Sherbrooke, Canadá.\n",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "10:00-11:00",
     "event": "Charla- Espiritualidad y Ceremonia Desagrado Cacao",
-    "speaker": "Impartido por: Enfren Hernández maldonado ",
-    "hall": "Cacao",
+    "speaker": "Impartido por: Efrén Hernández Maldonado",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "11:00",
+    "event": "Cacao Acaramelado.",
+    "speaker": "Impartido por: Mayra del Carmen, alumna de la Universidad Intercultural del Estado de Tabasco.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "10:30- 11:00",
-    "event": "Conferencia - “Camino Cacao, El Camino a la Agricultura Sintropica”",
-    "speaker": "Impartido por: Ing. Félix David Rodríguez Moral, Director Operativo del Proyecto Camino Cacao \n\nModerador:\nMaestro de Ceremonia",
-    "hall": "Chocolate",
+    "event": "Conferencia: “Camino Cacao, El Camino a la Agricultura Sintrópica”.",
+    "speaker": "Impartido por: Ing. Félix David Rodríguez Moran, Director Operativo del Proyecto Camino Cacao.\n\n",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "11:00 - 12:00",
-    "event": "Conversatorio - Financiamiento para proyectos Rurales y Agroturísticos",
-    "speaker": "Impartido por: Participantes:\nSEDEC/FIRA/SEDAFOT/NAFIN/FND/SOFAGRO\n\nModerador:\nSEDAFOT\n\nRelator:\nSEDEC",
-    "hall": "Chocolate",
+    "event": "Conversatorio: Financiamiento para proyectos Rurales y Agroturísticos.",
+    "speaker": "Participantes:\nLic. Rodger del Jesús Herrera Rodríguez, Director de Organización para la Producción, SEDAFOP\nLic. Arnulfo Hernández Morales, FND.\nLic. Dan Jonatan Sánchez Carmona, Agente de la Agencia Villahermosa, FIRA/\nSEDEC\n\n\n",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
-    "time": "11:00- 13:00",
-    "event": "Conferencias y conversatorios - Los Hijos del Cacao",
-    "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "time": "11:30- 13:00",
+    "event": "Foro: Cacao del Grijalva, Denominación de Orígen.",
+    "speaker": "Participantes: Empresarios e Instituciones.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "11:00- 21.00",
-    "event": "Degustación y venta",
-    "speaker": "Impartido por: ",
-    "hall": "Cavacao",
+    "event": "Degustación y Venta.",
+    "speaker": "Impartido por:",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "12:00",
-    "event": "Demo conferencia - \"Sabores, Recuerdos y Tradición\"",
-    "speaker": "Impartido por:  Chef Amparo Torres, Cafetería La Tradición Palenque",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Sabores, Recuerdos y Tradición\".",
+    "speaker": "Impartido por: Chef Amparo Torres, Cafetería La Tradición Palenque.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "13:00",
-    "event": "Gastronomía Tabasqueña",
-    "speaker": "Impartido por: Carmen Balcazar",
-    "hall": "Cacao",
+    "event": "Charla: \"Gastronomía Tabasqueña\".",
+    "speaker": "Impartido por: Carmen Balcazar.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "14:00",
-    "event": "Demo conferencia - \"Consejos y trucos para los bombones belgas perfectos: pintados a mano con sutil toque personal\"",
-    "speaker": "Impartido por: Mélanie Lemmens",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: \"Consejos y trucos para los bombones belgas perfectos: pintados a mano con sutil toque personal\".",
+    "speaker": "Impartido por: Mélanie Lemmens.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "15:00",
-    "event": "Charla/Degustación: Puente de Memorias",
-    "speaker": "Impartido por: ",
-    "hall": "Cacao",
+    "event": "Charla/Degustación: Puente de Memorias.",
+    "speaker": "Impartido por: Celia Margarita Andrade.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "14:00",
+    "event": "Demo Experiencia-Platillos de Autor con ingredientes Locales.",
+    "speaker": "Impartido por: Chef Ediberto Madrigal Hernández (Tacotalpa).",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "15:00-16:00",
-    "event": "Experiencia Cacao",
-    "speaker": "Impartido por: Veronica Candelero",
-    "hall": "Cavacao",
+    "event": "Experiencia Cacao.",
+    "speaker": "Impartido por: Verónica Candelero.",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "16:00",
-    "event": "Demo conferencia - “Exquisitas combinaciones de chocolate con ingredientes inesperados para novedosos bocadillos que compartirás con amigos y colegas”",
-    "speaker": "Impartido por: Chocolatier Stephan Dumon (Bélgica)",
-    "hall": "Chocolate",
+    "event": "Demo conferencia: “Exquisitas combinaciones de chocolate con ingredientes inesperados para novedosos bocadillos que compartirás con amigos y colegas”.",
+    "speaker": "Impartido por: Chocolatier Stephan Dumon (Bélgica).",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "16:00",
-    "event": "Cata- Gastronomía cientifica y el chocolate ",
-    "speaker": "Impartido por:  José Burela Picazzo",
-    "hall": "Cacao",
+    "event": "Cata- Gastronomía científica y el Chocolate.",
+    "speaker": "Impartido por: José Burela Picazzo.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
-    "time": "15:00",
-    "event": "Demo Experiencia-Platillos de Autor con ingredientes Locales",
-    "speaker": "Impartido por: Chef Ediberto Madrigal Hernández (Tacotalpa)",
-    "hall": "Sabor a Tabasco",
+    "time": "16:00",
+    "event": "Experiencias Rucu Rucu.",
+    "speaker": "Impartido por: María Caso.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "16:00",
+    "event": "Demo Experiencia: Chocolate Herencia y Trascendencia.",
+    "speaker": "Impartido por: Chef Ana Oyuki Ramos.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "17:00",
-    "event": "Taller Chocolate, Mezcal y Tequila Chocolate",
-    "speaker": "Impartido por: Joel Torrijos de Alba",
-    "hall": "Cacao",
+    "event": "Cata:",
+    "speaker": "Impartido por: Joel Torrijos de Alba.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "17:00",
-    "event": "Demo Experiencia ",
-    "hall": "Sabor a Tabasco",
+    "event": "Representación de Marimba",
+    "speaker": "Impartido por: Marimba Lira de Villahermosa.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "17:00",
+    "event": "Pastel gigante (Reno Navideño).",
+    "speaker": "Impartido: Alejandro Rodríguez de la pasteleria Badiane Pastissere.",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "18:00",
-    "event": "Demo conferencia, Chef Kwinten de Paepe",
-    "speaker": "Impartido por: ",
-    "hall": "Chocolate",
+    "event": "Demo conferencia.",
+    "speaker": "Impartido por: Chef Kwinten de Paepe.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "18:00",
-    "event": "Cata de Chocolates Premium",
-    "speaker": "Impartido por:  Silvia Guedez",
-    "hall": "Cacao",
+    "event": "Cata: De Chocolates Premium.",
+    "speaker": "Impartido por: Silvia Guédez.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "18:00",
+    "event": "Representación de grupo de música",
+    "speaker": "Impartido por: Rondalla Cantares.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "19:00",
-    "event": "Cata: Celebración de la nueva colección XVIII cerveza de chocolate, Le Cameleon",
-    "speaker": "Impartido por: Sophie Vanderbecken",
-    "hall": "Cacao",
+    "event": "Cata: Celebración de la nueva colección XVIII cerveza de chocolate, Le Cameleon.",
+    "speaker": "Impartido por: Sophie Vanderbecken.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "19:00",
+    "event": "Representación de cantante solista.",
+    "speaker": "Impartido por: Ángel Valencia",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "19:00- 20:00",
-    "event": "Premiación 1era conferencia para cerveceros caseros",
-    "speaker": "Impartido por: ",
-    "hall": "Cavacao",
+    "event": "Premiación 1era conferencia para cerveceros caseros.",
+    "speaker": "Impartido por:",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "20:00",
-    "event": "Demo conferencia -\"Xibalbá: La puerta hacia los sabores del cacao\"",
-    "speaker": "Impartido por: Chef Christian Martínez",
-    "hall": "Chocolate",
+    "event": "Demo conferencia -\"Xibalbá: La puerta hacia los sabores del cacao\".",
+    "speaker": "Impartido por: Chef Christian Martínez.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "20:00",
-    "event": "Cata de vino y chocolate",
-    "speaker": "Impartido por: Wine Maker Daniel Almanza, Baja California",
-    "hall": "Cacao",
+    "event": "Cata: De vino y chocolate.",
+    "speaker": "Impartido por: Wine Maker Diego Almanza, Baja California.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "20:00",
+    "event": "\nRepresentación de una Agrupación Folklórica \n",
+    "speaker": "Impartido por: Ballet Independiente Tradicionalista. \nDirigido por: Mtro. Luis Jiménez.",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "21:00",
-    "event": "Cata de Chocolate y Ron Tabasqueño ( Ron San Emiliano)",
-    "speaker": "Impartido por:  Chef Mauricio Romo",
-    "hall": "Cacao",
+    "event": "Cata: De Chocolate y Ron Tabasqueño ( Ron San Emiliano).",
+    "speaker": "Impartido por: Chef Mauricio Romo.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
+  },
+  {
+    "date": "11/19/2022",
+    "time": "21:00",
+    "event": "Representación de cantante solista.",
+    "speaker": "Impartido por: Freddy Persa.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "date": "11/19/2022",
     "time": "21:00- 23:00",
-    "event": "Cena a 6 manos",
-    "speaker": "Impartido por: ",
-    "hall": "Cavacao",
+    "event": "Cena a 6 manos, \"Noches de Cacao\"",
+    "speaker": "Impartido por: Chef Alex Collado, Chef Christian Martínez, Maridaje por, Alejandra Bueno",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#EB5270",
-    "color": "#873446 "
+    "color": "#873446",
+    "bgColor": "#EB5270"
   },
   {
     "title": "Domingo 20",
@@ -844,141 +1150,230 @@
   {
     "date": "11/20/2022",
     "time": "9:00 - 10:15",
-    "event": "Conversatorio - Historia del Cacao en México y Tabasco",
-    "speaker": "Participantes:\n1.- Dr. Julio Cámara Córdoba, Ciencias Agropecuarias, UJAT\n2.- Dra. Graciela Beauregard, Unidad Ciencias Biológicas de la  UJAT\n3.- Arq. Ricardo Armijo Torres, INAH\n4.-Dra. Ena Mata Zayas, Ciencias Biológicas, UJAT\n5.- Sr. Heber Castellanos Ramírez, Kakaw Museo, San Cristóbal de las Casas\nChiapas.\n\nModerador:\nDra. Erika Morales Mateos, Ciencias de la Tecnología de la Información UJAT \n\nRelator:\nDra. Ma. Areli López Garrido, Ciencias Básicas de la UJAT\n",
-    "hall": "Chocolate",
+    "event": "Conversatorio: Historia del Cacao en México y Tabasco.",
+    "speaker": "Participantes:\n1.- Dr. Julio Cámara Córdova, Ciencias Agropecuarias, UJAT.\n2.- Dra. Graciela Beauregard Solís, Unidad Ciencias Biológicas de la UJAT.\n3.- Arq. Ricardo Armijo Torres, INAH.\n4.-Dra. Ena Mata Zayas, Ciencias Biológicas, (UJAT).\n5.- Sr. Herbert Castellanos Ramírez, Kakaw Museo, San Cristóbal de las Casas\nChiapas.\n\nModerador:\nDra. Erika Morales Mateos, Ciencias de la Tecnología de la Información UJAT.\n\nRelatora:\nDra. María Arely López Garrido, Ciencias Básicas de la UJAT.\n",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "10:30 - 12:00",
-    "event": "Conversatorio - Oportunidades para el Desarrollo de Productos Agroturísticos y Bienestar.",
-    "speaker": "Participantes:\n1.- Secretario de Turismo, T.T.\nJosé Antonio Nieves Rodríguez.\n2.- Lic. Jorge Luis Ruiz Pérez, Presidente AMAV Delegación Tabasco.\n3.- Sra. Estela Lázaro, Embajadoras del Cacao\n4.- Maestra Diana Margarita Chávez Etchechury, Directora de la A.C. Ranchos Regenerativos. \n5.- Pita Rosales, Club Integral Spa´s \n6.- Funcionario en representación del Secretario de Turismo de Baja California\n\nModerador:\nLic. Jorge Belmonte Martínez, Director General de CENLATUR \n\nRelator:\nUTTA",
-    "hall": "Chocolate",
+    "event": "Conversatorio: Oportunidades para el Desarrollo de Productos Agroturísticos y Bienestar.",
+    "speaker": "Participantes:\n1.- Secretario de Turismo, T.T.\nJosé Antonio Nieves Rodríguez.\n2.- Lic. Jorge Luis Ruiz Pérez, Presidente AMAV Delegación Tabasco.\n3.- Sra. Estela Lázaro, Embajadoras del Cacao.\n4.- Maestra Diana Margarita Chávez Etchechury, Directora de la A.C. Ranchos Regenerativos. \n5.- Lic. Pita Rosales, Club Integral Spa´s.\n6.- Funcionario en representación del Secretario de Turismo de Baja California.\n\nModerador:\nLic. Jorge Belmonte Martínez, Director General de CENLATUR. \n\nRelator:\nUTTAB.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "11:00- 13:00",
-    "event": "Conferencias y Conversatorios - Los Hijos del Cacao",
-    "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "event": "Conferencias y Conversatorios.",
+    "speaker": "Los Hijos del Cacao",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "11:00",
+    "event": "\"Cho'lColate\" y \"Macal con Costra de Cacao\" .",
+    "speaker": "Impartido por: Abel Lozano Castellano y Manuel Eduardo García Hernández.",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "11:00.- 21:00",
-    "event": "Degustación y venta",
+    "event": "Degustación y Venta.",
     "speaker": "Impartido por:",
-    "hall": "Cavacao",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "12:00",
-    "event": "Demo conferencia",
-    "speaker": "Impartido por: Chef Armando Prats",
-    "hall": "Chocolate",
+    "event": "Demo conferencia.",
+    "speaker": "Impartido por: Chef Armando Prats.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "12:00",
+    "event": "Representación “Coronabicho y yo”.",
+    "speaker": "Impartido por: Adriana Calvo.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "13:00",
-    "event": "Premiación de Concurso de Dibujo Infantil de Pueblos Mágicos",
-    "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "event": "Premiación de Concurso de Dibujo Cultura Turística Infantil: Pueblos Mágicos.",
+    "speaker": "Participantes: Categoría Mini y Junior.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "13:00",
+    "event": "Representación del cuento \"La abuela estrella\".",
+    "speaker": "Impartido por: Citlallin De Dios.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "15:00",
-    "event": "Charla/Degustación - Puente de Memorias",
+    "event": "Charla/Degustación: Puente de Memorias.",
     "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "15:00-16:00",
-    "event": "Experiencia Cacao",
-    "speaker": "Impartido por: Veronica Candelero",
-    "hall": "Cavacao",
+    "event": "Experiencia Cacao.",
+    "speaker": "Impartido por: Verónica Candelero.",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "14:00",
+    "event": "Demo conferencia: \"La transformación del cacao a la actualidad\".",
+    "speaker": "Impartido por: Estela Lázaro, Embajadoras del Cacao.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "15:00",
-    "event": "Demo conferencia - \"La transformación del cacao a la actualidad \", Estela Lázaro, Embajadoras del Cacao",
-    "speaker": "Impartido por:",
-    "hall": "Sabor a Tabasco",
+    "event": "Interpretación de canciones tabasqueñas y danzas indígenas a ritmos de tambores y flauta. \n",
+    "speaker": "Impartido por: Choco Chepe y los Tamborileros Aj Joben.",
+    "hall": "Sabor a Tabasco.",
     "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "16:00",
-    "event": "Demo conferencia país o estado invitado",
-    "speaker": "Impartido por: ",
-    "hall": "Chocolate",
+    "event": "Demo conferencia país o estado invitado.",
+    "speaker": "Impartido por:",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "16:00",
-    "event": "Cata - Ron San Emiliano",
-    "speaker": "Impartido por: Chef Alfonso Castañeda",
-    "hall": "Cacao",
+    "event": "Cata: Ron San Emiliano.",
+    "speaker": "Impartido por: Chef Alfonso Castañeda.",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "16:00",
+    "event": "Experiencias Rucu",
+    "speaker": "Impartido por: María Caso",
+    "hall": "Cavacao.",
+    "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "16:00",
+    "event": "Representación de Danza de Ballet",
+    "speaker": "Impartido por: Ballet Juvenil de Jalpa de Méndez.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "17:00",
+    "event": "Artista D´j",
+    "speaker": "Impartido por: Yung Dupe.",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "18:00",
-    "event": "Clausura Festival del Chocolate",
-    "speaker": "Impartido por:",
-    "hall": "Chocolate",
+    "event": "Clausura Festival del Chocolate.",
+    "hall": "Chocolate.",
     "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "18:00",
+    "event": "Música para todos.",
+    "speaker": "Impartido por: DIF Tabasco.",
+    "hall": "Chocolate.",
+    "image": "https://i.ibb.co/ssPJYBK/SALON-CHOCOLATE-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
     "time": "19:00",
-    "event": "Cata",
+    "event": "Cata.",
     "speaker": "Impartido por:",
-    "hall": "Cacao",
+    "hall": "Cacao.",
     "image": "https://i.ibb.co/MRmp8g3/SALON-CACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   },
   {
     "date": "11/20/2022",
-    "time": "21:00- 23:00 ",
-    "event": "Cena a 4 manos",
-    "speaker": "Impartido por:",
-    "hall": "Cavacao",
+    "time": "19:00",
+    "event": "Representación de Ballet Folklorico.",
+    "speaker": "Impartido por: Ballet Folkloriko de Paraíso",
+    "hall": "Sabor a Tabasco.",
+    "image": "https://i.ibb.co/6HSwTm3/SABOR-A-TABASCO-1.png",
+    "color": "#3E693B",
+    "bgColor": "#70C675"
+  },
+  {
+    "date": "11/20/2022",
+    "time": "19:00",
+    "event": "Charla: \"Dieta Mediterranea, Mexicanizada y el Cacao\".",
+    "speaker": "Impartido por: Dr. Ángel Ernesto Sierra Ovando de la Universidad Olmeca y el Dr. Jorge Vergara Galicia de la UDG ( Universidad de Guadalajara).",
+    "hall": "Cavacao.",
     "image": "https://i.ibb.co/D5VbMQp/CAVACAO-1.png",
-    "bgColor": "#70C675",
-    "color": "#3E693B "
+    "color": "#3E693B",
+    "bgColor": "#70C675"
   }
 ]
