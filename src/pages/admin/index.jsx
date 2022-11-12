@@ -56,6 +56,14 @@ const Index = () => {
               Cerrar sesión
             </Button>
           </Grid>
+          <Grid item container justifyContent="flex-end">
+            <Button
+              variant="contained"
+              onClick={() => navigate("/admin/request")}
+            >
+              Añadir nuevo registro
+            </Button>
+          </Grid>
 
           <Grid item width="100%">
             <RequestTable setOpen={setOpen} />

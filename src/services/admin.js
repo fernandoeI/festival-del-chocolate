@@ -45,6 +45,12 @@ export const saveFeedback = async (data, request) => {
   );
 };
 
+export const updateUserInfo = async (data, request) => {
+  const docRef = doc(db, "request", request.id);
+
+  await updateDoc(docRef, data);
+};
+
 export const assignReviewer = async (requestId, reviewer) => {
   const docRef = doc(db, "request", requestId);
   await updateDoc(docRef, {
